@@ -1,0 +1,169 @@
+
+
+body
+{
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul
+{
+	padding:0;
+}	
+a
+{
+	text-decoration:none;
+	color:white;
+}
+.brochure
+{
+	height:auto;
+	min-height:450px;
+	width:70%;
+	background:white;
+	margin-left:13%;
+	margin-left:13%;
+	width:74%;
+	position:relative
+}
+.brochure div div
+{
+	display:inline-block;
+	width:40%;
+	vertical-align:middle;
+}	
+.brochure div img
+{
+	vertical-align:middle;
+	
+}
+.brochure div.inner_content.fade img
+{
+	width:40%;
+}
+.inner_content.fade div div	
+{
+	width:58%;
+	color:black;
+}	
+.contains > div
+{
+	margin-top:70px;
+	margin-bottom:110px;
+}	
+.contains > div
+{
+	width:100% !important;
+}	
+.inner_content
+{
+	margin-left:15%;
+	width:82% !important;
+	-webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+}	
+#right
+{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}	
+#active
+{
+	    display: block;
+    float: right;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+	
+}	
+.contains
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:100% !important;
+}
+.contains > *
+{
+	vertical-align:middle;
+}	
+.second ul
+{
+	text-transform:none !important;
+	margin: 60px 0px 40px;
+}		
+.second.menu ul li
+{
+	margin-right:13%;
+	font-weight:bold;
+}	
+.second.menu ul li:last-of-type
+{
+	margin-right:0;
+}	
+/*Slider*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.prev,.next
+{
+	    position: absolute;
+    top: 40%;
+}	
+.next
+{
+	right:0;
+}	
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+	
+@media only screen and (max-width:1024px)
+{
+	.brochure
+	{
+		margin-left: 0;
+		width: 100%;
+	}	
+}	
+@media only screen and (max-width:860px)
+{
+	.brochure div div div.inner_content div
+	{
+		display:block;
+		width:100%;
+		text-align:center;
+	}
+	.inner_content {
+    margin-left: 9%;
+	}
+	.brochure div div div.inner_content div img
+	{
+		width:20% !important;
+	}	
+}
+@media only screen and (max-width:460px)	
+{
+	#active
+	{
+		width:100%;
+	}
+	.brochure
+	{
+		margin-left: 0;
+		width: 100%;
+	}	
+	.prev, .next {
+    top: 50%;
+	}
+}
