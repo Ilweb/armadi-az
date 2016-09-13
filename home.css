@@ -4,6 +4,41 @@ header div:first-of-type div {
 	margin-left:auto;
 	margin-right:auto;
 }	
+header div:nth-of-type(2) div
+{
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+	background:transparent;
+}	
+.margin-lr div:first-of-type
+{
+	margin-right:41%;
+}
+header div:nth-of-type(3)
+{
+	margin-top:50px;
+}
+header div:nth-of-type(3),header div:nth-of-type(3) div
+{
+	height:200px;
+	background:transparent;
+	display:inline-block;
+}
+.brochure
+{
+	height:auto;
+	min-height:450px;
+	background:white;
+	margin-left:2.5%;
+	margin-left:2.5%;
+	width:95%;
+	position:relative
+}	
+/*Product HEADER*/
+
+
+
 
 /*HEADER*/
 	
@@ -90,15 +125,13 @@ header div
 {
 	width:74%;
 }
-header div:nth-of-type(3)
+.home header div:nth-of-type(3)
 {
-margin-top:100px;
+	margin-top:100px;
 }	
-header div:nth-of-type(3),header div:nth-of-type(3) div
+.home header div:nth-of-type(3),header div:nth-of-type(3) div
 {
 	height:auto;
-	background:transparent;
-	display:inline-block;
 }	
 #welcome
 {
@@ -119,7 +152,7 @@ header div:nth-of-type(3),header div:nth-of-type(3) div
 {
 	width:100%;
 }	
-.margin-lr div:first-of-type
+.home .margin-lr div:first-of-type
 {
 	margin-right:20%;
 }
@@ -195,7 +228,7 @@ header div:nth-of-type(2) span:first-of-type,header div:nth-of-type(2) span:nth-
 	margin-top:15px;
     font-weight: bold;
 }	
-header div:nth-of-type(2) div
+.home header div:nth-of-type(2) div
 {
 	width:74%;
 	margin-left:auto;
@@ -271,16 +304,11 @@ a
 	color:white;
 }
 
-.brochure
+.home .brochure
 {
-	height:auto;
-	min-height:450px;
-	width:70%;
-	background:white;
-	margin-left:13%;
-	margin-left:13%;
 	width:74%;
-	position:relative
+	margin-left:13%;
+	margin-left:13%;
 }
 .brochure div div
 {
@@ -516,7 +544,7 @@ footer #sec_input
 }	
 @media screen and (max-width: 1252px) and (min-width: 1024px)
 {
-	.lang a
+	.home .lang a
 	{
 		color:white;
 	}
