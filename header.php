@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 </head>
-<body onload="labelPosition()">
+<body class="home" onload="labelPosition()">
 <header>
 <div>
 	<div>

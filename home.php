@@ -3,7 +3,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="home.css">
-	<link rel="stylesheet" href="header.css">
 <script type="text/javascript" SRC="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" SRC="js/main.js?ver=1"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -18,7 +17,7 @@
 <div class="brochure">
 	<div class="contains">
 		<div><img src="images/left.png" class="prev" onclick="plusSlides(-1)">
-			<div class="inner_content fade">
+			<div class="inner_content fade js-fade fade-in is-paused">
 				<div>
 				<a href="#">
 					<img src="images/product1.png">
@@ -58,7 +57,6 @@
 	</ul>
 </div>
 <?php require 'footer.php';?>
-</body>
 <script>
 		var slideIndex = 0;
 showSlides();
@@ -90,16 +88,15 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("inner_content");
-  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
+  
   slides[slideIndex-1].style.display = "inline-block";
   dots[slideIndex-1].className += " active";
 }
+
 </script>
+
