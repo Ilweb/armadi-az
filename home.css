@@ -1,6 +1,8 @@
 /* Products Header*/
 header div:first-of-type div {
     width: 95%;
+	margin-left:auto;
+	margin-right:auto;
 }	
 
 /*HEADER*/
@@ -87,8 +89,6 @@ header div
 .home header div:first-of-type div
 {
 	width:74%;
-	margin-left:auto;
-	margin-right:auto;
 }
 header div:nth-of-type(3)
 {
