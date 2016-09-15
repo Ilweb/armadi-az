@@ -93,12 +93,12 @@ require 'brochure.php';
 <div class="generals supply">
 	<div>Recommended products</div>
 	<div>
-	<div style="background:url('images/zaabar.png')"></div>
-	<div style="background:url('images/monte.png')"></div>
-	<div style="background:url('images/planthouse.png')"></div>
-	<div style="background:url('images/zaabar2.png')"></div>
-	<div style="background:url('images/zaabar.png')"></div>
-	<div style="background:url('images/zaabar.png')"></div>
+	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
+	<div style="background:url('images/monte.png')"><div>Zaabar</div></div>
+	<div style="background:url('images/planthouse.png')"><div>Zaabar</div></div>
+	<div style="background:url('images/zaabar2.png')"><div>Zaabar</div></div>
+	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
+	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
 	</div>
 </div>	
 </div>
