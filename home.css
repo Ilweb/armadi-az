@@ -141,7 +141,7 @@ font-size:24px;
 	height:100%;
 	max-height: 273px;
 }	
-.supply img:hover,.supply img:hover span
+div.chapter:hover img
 {
 	opacity:0.5;
 }	
@@ -151,6 +151,16 @@ font-size:24px;
 -moz-box-shadow: inset 0px 0px 0px 40px rgba(255,255,255,1);
 box-shadow: inset 0px 0px 0px 40px rgba(255,255,255,1);
 
+}
+
+div.chapter span
+{
+	display: none;
+}
+
+div.chapter:hover span
+{
+	display: block;
 }
 
 .supply div div
@@ -174,14 +184,23 @@ box-shadow: inset 0px 0px 0px 40px rgba(255,255,255,1);
     left: 0;
     vertical-align: middle;
 }	
-.supply span
+
+.chapter
 {
-	margin-top: -50%;
+	position: relative;
+}
+
+.chapter span
+{
+	top: 0;
     width: 100%;
+	height: calc(50% + 15px);
     left: 0;
     position: absolute;
 	font-size:30px;
-	font-weight:bolder;
+	line-height: 30px;
+	padding-top: calc(50% - 15px);
+	font-weight: bolder;
 	letter-spacing:3px;
 	display:none;
 }	

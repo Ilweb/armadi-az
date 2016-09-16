@@ -135,7 +135,7 @@ require 'brochure.php';
 </div>
 <?php require 'footer.php';?>
 <script>
-
+/*
 $( "div.chapter" )
   .mouseover(function() {
     
@@ -144,5 +144,5 @@ $( "div.chapter" )
   .mouseout(function() {
     $( this ).find( "span" ).css("display","none");
   });
- 
+ */
 </script>
