@@ -93,14 +93,56 @@ require 'brochure.php';
 <div class="generals supply">
 	<div>Recommended products</div>
 	<div>
-	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
-	<div style="background:url('images/monte.png')"><div>Zaabar</div></div>
-	<div style="background:url('images/planthouse.png')"><div>Zaabar</div></div>
-	<div style="background:url('images/zaabar2.png')"><div>Zaabar</div></div>
-	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
-	<div style="background:url('images/zaabar.png')"><div>Zaabar</div></div>
+		<div class="chapter">
+			<div>
+				<img src="images/zaabar.png">
+				<div><span>Zaabar</span></div>
+			</div>
+		</div>
+		<div class="chapter">
+			<div>
+				<img src="images/monte.png">
+				<div><span>Monte universales</span></div>
+			</div>
+		</div>
+		<div class="chapter">
+			<div>
+				<img src="images/planthouse.png">
+				<div><span>Planthouse</span></div>
+			</div>
+		</div>
+		<div class="chapter">
+			<div>
+				<img src="images/zaabar.png">
+				<div><span>Zaabar</span></div>
+			</div>
+		</div>
+		<div class="chapter">
+			<div>
+				<img src="images/zaabar2.png">
+				<div><span>Zaabar</span></div>
+			</div>
+		</div>
+		<div class="chapter">
+			<div>
+				<img src="images/monte2.png">
+				<div><span>Monte universales</span></div>
+			</div>
+		</div>
 	</div>
 </div>	
 </div>
 </div>
 <?php require 'footer.php';?>
+<script>
+
+$( "div.chapter" )
+  .mouseover(function() {
+    
+    $( this ).find( "span" ).css("display","block");
+  })
+  .mouseout(function() {
+    $( this ).find( "span" ).css("display","none");
+  });
+ 
+</script>
