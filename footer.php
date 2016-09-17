@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="footer.css">
-</head>
-<body onload="labelPosition()">
 <footer class="footer_menu margin-lr">
 	<div>
 		<ul><li><a href="#"><h4>More info</h4></a></li>
@@ -45,8 +38,3 @@
 	</div>
 </footer>
 </body>
-<script>
-    function labelPosition() {
-        document.getElementById("name").style.position="absolute"; 
-    }
-</script>
