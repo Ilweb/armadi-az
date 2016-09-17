@@ -11,19 +11,19 @@ require 'brochure.php';
 <div class="left_menu">
 	<ul>
 		<li><a href="#">Categories</a></li>
-		<li><a href="#">Drinks</a></li>
-		<li><a href="#">Process meats</a></li>
-		<li><a href="#">Cans & edible</a></li>
-		<li><a href="#">Sweets</a></li>
-		<li><a href="#">Super food</a></li>
-		<li><a href="#">Bio/organic</a></li>
+		<li><a href="#">Drinks</a><i class="fa fa-glass"  aria-hidden="true"></i></li>
+		<li><a href="#">Process meats</a><i class="fa fa-cutlery" aria-hidden="true"></i></li>
+		<li><a href="#">Cans & edible</a><i class="fa fa-database" aria-hidden="true"></i></li>
+		<li><a href="#">Sweets</a><i class="fa fa-birthday-cake" aria-hidden="true"></i></li>
+		<li><a href="#">Super food</a><i class="fa fa-cutlery" aria-hidden="true"></i></li>
+		<li><a href="#">Bio/organic</a><i class="fa fa-envira" aria-hidden="true"></i></li>
 		<li><a href="#">Traditional</a></li>
-		<li><a href="#">Molecular gastronomy</a></li>
-		<li><a href="#">Accessoaries</a></li>
-		<li><a href="#">Others</a></li>
+		<li><a href="#">Molecular gastronomy</a><i class="fa fa-link" aria-hidden="true"></i></li>
+		<li><a href="#">Accessoaries</a><i class="fa fa-archive" aria-hidden="true"></i></li>
+		<li><a href="#">Others</a><i class="fa fa-ellipsis-h" aria-hidden="true"></i></li>
 	</ul>
 	<ul>
-		<li><a href="#">Countries</a></li>
+		<li><a class="continental" href="#">Countries</a><i class="fa fa-globe" style="display:inline-block;" aria-hidden="true"></i></li>
 		<li><a href="#">France</a></li>
 		<li><a href="#">Switzerland</a></li>
 		<li><a href="#">Belgium</a></li>
@@ -33,7 +33,7 @@ require 'brochure.php';
 		<li><a href="#">Bulgaria</a></li>
 	</ul>
 	<ul>
-		<li>Brands</li>
+		<li>Brands<i class="fa fa-diamond" aria-hidden="true"></i></li>
 	</ul>
 </div>
 <div class="generals">
@@ -186,5 +186,22 @@ $(document).ready(function() {
             // hide all other visible clickSave elements
             $(".choice:visible").not(ele).hide(); 
         });
+    }); 
+</script>
+<script>
+$(document).ready(function() {
+        $(".left_menu ul:first-of-type .fa").hide();
+
+        $(".left_menu ul:first-of-type li").mouseover(function() {  // attaches click handler to links       
+            // show clickSave element inside the clicked link
+            var ele = $(".fa", this).show().css("float","right").css("margin-right","40px").css("margin-top","10px");
+            // hide all other visible clickSave elements
+            $(".left_menu ul:first-of-type .fa:visible").not(ele).hide(); 
+        });
+    }); 
+</script>
+<script>
+$(document).ready(function() {
+        $(".left_menu ul .fa").css("float","right").css("margin-right","90px").css("margin-top","5px");
     }); 
 </script>
