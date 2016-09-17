@@ -10,27 +10,27 @@ require 'brochure.php';
 <div class="second-part">
 <div class="left_menu">
 	<ul>
-		<li>Categories</li>
-		<li>Drinks</li>
-		<li>Process meats</li>
-		<li>Cans & edible</li>
-		<li>Sweets</li>
-		<li>Super food</li>
-		<li>Bio/organic</li>
-		<li>Traditional</li>
-		<li>Molecular gastronomy</li>
-		<li>Accessoaries</li>
-		<li>Others</li>
+		<li><a href="#">Categories</a></li>
+		<li><a href="#">Drinks</a></li>
+		<li><a href="#">Process meats</a></li>
+		<li><a href="#">Cans & edible</a></li>
+		<li><a href="#">Sweets</a></li>
+		<li><a href="#">Super food</a></li>
+		<li><a href="#">Bio/organic</a></li>
+		<li><a href="#">Traditional</a></li>
+		<li><a href="#">Molecular gastronomy</a></li>
+		<li><a href="#">Accessoaries</a></li>
+		<li><a href="#">Others</a></li>
 	</ul>
 	<ul>
-		<li>Countries</li>
-		<li>France</li>
-		<li>Switzerland</li>
-		<li>Belgium</li>
-		<li>Italy</li>
-		<li>Spain</li>
-		<li>Hungary</li>
-		<li>Bulgaria</li>
+		<li><a href="#">Countries</a></li>
+		<li><a href="#">France</a></li>
+		<li><a href="#">Switzerland</a></li>
+		<li><a href="#">Belgium</a></li>
+		<li><a href="#">Italy</a></li>
+		<li><a href="#">Spain</a></li>
+		<li><a href="#">Hungary</a></li>
+		<li><a href="#">Bulgaria</a></li>
 	</ul>
 	<ul>
 		<li>Brands</li>
@@ -56,9 +56,30 @@ require 'brochure.php';
 				<span>#355</span>Herbal Tea Forte slimming
 			</div>
 			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
 		</div>
-		<div class="items"><img src="images/recommended3.png"><div><span>#355</span>Herbal Tea Forte slimming</div><div class="price">20$</div></div>
-		<div class="items"><img src="images/recommended4.png"><div><span>#355</span>Herbal Tea Forte slimming</div><div class="price">20$</div></div>
+		<div class="items">
+		
+			<img src="images/recommended3.png">
+			<div><span>#355</span>Herbal Tea Forte slimming</div>
+			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
+		</div>
+		<div class="items">
+			<img src="images/recommended4.png">
+			<div><span>#355</span>Herbal Tea Forte slimming</div>
+			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
+		</div>
 		<img id="right" src="images/left.png" class="next" onclick="plusSlides(1)">
 	</div>
 	</div>
@@ -83,9 +104,29 @@ require 'brochure.php';
 				<span>#355</span>Herbal Tea Forte slimming
 			</div>
 			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
 		</div>
-		<div class="items"><img src="images/recommended3.png"><div><span>#355</span>Herbal Tea Forte slimming</div><div class="price">20$</div></div>
-		<div class="items"><img src="images/recommended4.png"><div><span>#355</span>Herbal Tea Forte slimming</div><div class="price">20$</div></div>
+		<div class="items">
+			<img src="images/recommended3.png">
+			<div><span>#355</span>Herbal Tea Forte slimming</div>
+			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
+		</div>
+		<div class="items">
+			<img src="images/recommended4.png">
+			<div><span>#355</span>Herbal Tea Forte slimming</div>
+			<div class="price">20$</div>
+			<div class="choice">
+				<button id="first_butt">Add to wish list</button>
+				<button id="second_butt">Add to cart</button>
+			</div>
+		</div>
 		<img id="right" src="images/left.png" class="next" onclick="plusSlides(1)">
 	</div>
 	</div>
@@ -134,15 +175,16 @@ require 'brochure.php';
 </div>
 </div>
 <?php require 'footer.php';?>
+
 <script>
-/*
-$( "div.chapter" )
-  .mouseover(function() {
-    
-    $( this ).find( "span" ).css("display","block");
-  })
-  .mouseout(function() {
-    $( this ).find( "span" ).css("display","none");
-  });
- */
+$(document).ready(function() {
+        $(".choice").hide();
+
+        $(".items").click(function() {  // attaches click handler to links       
+            // show clickSave element inside the clicked link
+            var ele = $(".choice", this).fadeToggle(500);
+            // hide all other visible clickSave elements
+            $(".choice:visible").not(ele).hide(); 
+        });
+    }); 
 </script>
