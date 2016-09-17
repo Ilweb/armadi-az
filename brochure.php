@@ -48,3 +48,33 @@
 	</div>
 	<img id="active" src="images/active.png">
 </div>
+
+<script>
+var slideIndex = 0;
+
+function showSlides(slideIndex) {
+    var i;
+    var slides = document.getElementsByClassName("inner_content");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+	
+    if (slideIndex > slides.length) {slideIndex = 1} 
+	
+    slides[slideIndex-1].style.display = "inline-block"; 
+    setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+</script>

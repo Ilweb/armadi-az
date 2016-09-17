@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body class="<?php echo $bodyClass; ?>" onload="labelPosition()">
+<body class="<?php echo $bodyClass; ?>">
 <header>
 <div>
 	<div>
@@ -53,12 +53,6 @@ and your personal proposals</p></a></div></div>
 </ul>
 </div>
 </header>
-
-<script>
-    function labelPosition() {
-        document.getElementById("name").style.position="absolute"; 
-    }
-</script>
 <script type="text/javascript">	
 jQuery(".fa").click(function()
 
