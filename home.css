@@ -240,6 +240,16 @@ div.chapter:hover span
 {
 	height:200px;
 }	
+/* Filter inner products*/
+.producing
+{
+	height: 920px;
+}
+.producing .items
+{
+	height: 300px;
+}	
+/* Filter inner products*/
 .generals
 {
 	display:inline-block;
