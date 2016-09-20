@@ -7,6 +7,7 @@ require 'header.php';
 <?php 
 require 'left_menu.php';
 ?>
+
 <div class="generals chosen_prod">
 	<div class="product">
 		<div class="whole_contain">
@@ -28,7 +29,7 @@ require 'left_menu.php';
 			</div>
 			<div class="explanation">
 			<div>#256 Herbal Tea Forte slimming by Planthouse</div>
-			<div>20$</div>
+			<div id="price_inner">20$</div>
 			<div>
 			<fieldset class="rating">
 				<input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -46,9 +47,9 @@ require 'left_menu.php';
 			<div id="review_num">8 reviews</div>
 			<table class="num-of-purchase">
 			<tr>
-				<th>-</th>
-				<th>3</th>
-				<th>+</th>
+				<th><a href="javascript:add(-1)">-</a></th>
+				<th id="text"><span id="number">0</span></th>
+				<th><a href="javascript:add(1)">+</a></th>
 			</tr>
 			</table>
 			<div class="delivery">
@@ -70,6 +71,9 @@ require 'left_menu.php';
 		</div>
 	</div>
 </div>
+<ul class="best-of-the-best">
+	<li>Best sellers<i class="fa fa-usd" aria-hidden="true"></i></li>
+</ul>
 <?php 
 require 'recommended.php';
 ?>

@@ -110,3 +110,18 @@ $(document).ready(function() {
         });
     }); 
 </script>
+<script type="text/javascript">
+        var currentValue = 0;
+        var add = function(valueToAdd){
+            currentValue += valueToAdd;
+            document.getElementById('number').innerHTML = currentValue;
+        };
+</script>
+<script type="text/javascript">	
+jQuery("#recommendation").click(function()
+
+	{
+		jQuery(this).css("border-bottom","none").css("background","white");
+	});
+
+</script>

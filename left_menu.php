@@ -1,6 +1,6 @@
 <div class="left_menu">
 	<ul>
-		<li><a href="#">Categories</a></li>
+		<li><a href="#">Categories</a><i class="fa fa-list" style="display:inline-block !important;" aria-hidden="true"></i></li>
 		<li><a href="#">Drinks</a><i class="fa fa-glass"  aria-hidden="true"></i></li>
 		<li><a href="#">Process meats</a><i class="fa fa-cutlery" aria-hidden="true"></i></li>
 		<li><a href="#">Cans & edible</a><i class="fa fa-database" aria-hidden="true"></i></li>
