@@ -106,20 +106,3 @@ require 'recommended.php';
 </div>
 <?php require 'footer.php';?>
 
-<script>
-$(document).ready(function() {
-        $(".left_menu ul:first-of-type .fa").hide();
-
-        $(".left_menu ul:first-of-type li").mouseover(function() {  // attaches click handler to links       
-            // show clickSave element inside the clicked link
-            var ele = $(".fa", this).show().css("float","right").css("margin-right","40px").css("margin-top","10px");
-            // hide all other visible clickSave elements
-            $(".left_menu ul:first-of-type .fa:visible").not(ele).hide(); 
-        });
-    }); 
-</script>
-<script>
-$(document).ready(function() {
-        $(".left_menu ul .fa").css("float","right").css("margin-right","90px").css("margin-top","5px");
-    }); 
-</script>

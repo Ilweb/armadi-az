@@ -2,7 +2,6 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="home.css">
 	<script type="text/javascript" SRC="js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" SRC="js/main.js?ver=1"></script>
 	
@@ -10,8 +9,8 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<link href="css/theme/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="home.css">
 </head>
 <body class="<?php echo $bodyClass; ?>">
 <header>
@@ -98,4 +97,16 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
+</script>
+<script>
+$(document).ready(function() {
+        $(".left_menu ul:first-of-type .fa").hide();
+
+        $(".left_menu ul:first-of-type li").mouseover(function() {  // attaches click handler to links       
+            // show clickSave element inside the clicked link
+            var ele = $(".fa", this).show();
+            // hide all other visible clickSave elements
+            $(".left_menu ul:first-of-type .fa:visible").not(ele).hide(); 
+        });
+    }); 
 </script>

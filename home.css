@@ -272,6 +272,11 @@ div.chapter:hover span
 	float: left;
 	    margin-top: 20px;
 }
+.choosen .left_menu, .choosen .left_menu ul
+{
+	margin:0;
+}	
+
  .inner_content 
  {
     padding-top: 90px;
@@ -298,6 +303,62 @@ a
 {
 	text-decoration:none;
 	color:white;
+}
+.fa
+{
+	float:right;
+	margin-right:40px;
+	margin-top:10px;
+}
+.left_menu ul .fa
+{
+	float:right;
+	margin-right:60px;
+	margin-top:5px;
+}
+.filters div
+{
+	display:inline-block;
+	text-transform:none;
+	font-weight:normal;
+}	
+.filters > div:first-of-type
+{
+	font-size:20px;
+	margin-right:25px;
+	width:17%;
+}	
+.filter_boxes
+{
+	font-size:18px;
+	width: 80%;
+}	
+.filter_boxes > div
+{
+	border-bottom:2px solid white;
+	margin-right:2%;
+	display:inline-block;
+	width:145px;
+	padding-bottom: 10px;
+	padding-top:10px;
+	vertical-align: bottom;
+}	
+.filter_boxes div:nth-of-type(4)
+{
+	width:224px;
+}	
+.filter_boxes div img
+{
+	float:right;
+	margin-top: 7px;
+}	
+.filter_boxes div.search_products
+{
+	width:auto;
+	border:none;
+	padding:0;
+	float: right;
+	margin:0;
 }
 .loggo .fa
 {
@@ -767,7 +828,244 @@ footer #sec_input
 	width: 60px;
     height: 39px;
 }	
+/*Chosen product*/
+#particle
+{
+	min-height:1300px;
+}	
+.chosen_prod
+{
+	color:black;
+}	
+.product
+{
+	width:100%;
+	height:800px;
+	background:white;
+}
+.way div,.way span
+{
+	display:inline-block;
+	text-transform:none;
+	font-size:16px;
+	font-weight:bold;
+}	
+.whole_contain
+{
+	padding:10px 20px 10px 20px;
+}
+.product_images
+{
+	display:inline-block;
+	width:60%;
+}
 	
+.product_images div.pic_detail
+{
+	width: 58.9%;
+    float: left;
+	margin-right: 0.5%;
+	border:1px solid #d1c6bf;
+	border-radius:2px;
+}	
+.product_images div div
+{
+	display:inline-block;
+	width:auto;
+}	
+.product_images div.pic_detail img
+{
+	width:100%;
+}	
+.smaller_pics
+{
+	    display: inline-block;
+		width: 29%;
+}
+.smaller_pics div
+{
+	display: block !important;
+	border:1px solid #d1c6bf;
+	margin-bottom: 3px;
+	border-radius:2px;
+}	
+.smaller_pics  img
+{
+	width:100%;
+}
+.explanation
+{
+	display:inline-block;
+	width:39%;
+	vertical-align:top;
+	font-weight:bold;
+	text-transform:none;
+}
+.explanation > div:first-of-type
+{
+	width:250px;
+}	
+.explanation > div
+{
+	margin-bottom:50px;
+	vertical-align:top;
+}	
+.description
+{
+	padding:20px;
+	background-size: cover;
+	position: relative;
+	text-transform:none;
+	text-align:center;
+}
+#recommendation
+{
+	left:110px;
+	border-bottom:1px solid #d1c6bf;
+	background-color:#fff5e6;
+}	
+#rev
+{
+	left:265px;
+	border-bottom:1px solid #d1c6bf;
+	background-color:#fff5e6;
+}	
+fieldset
+{
+	border-color:white;
+}	
+fieldset div
+{
+	line-height:25px;
+	width:45%;
+	display:inline-block;
+	text-align:justify;
+}	
+fieldset div:first-of-type
+{
+	margin-right:5%;
+}	
+.description fieldset
+{
+	padding:10px;
+	position: relative;
+	border-radius:4px;
+}
+legend
+{
+	    position: absolute;
+    top: -24.6px;
+    background: white;
+    border-width: 1px;
+    border-color: #d1c6bf;
+	border-bottom-color:white;
+    border-style: solid;
+}	
+#descr
+{
+	border-bottom-color:white;
+}	
+.num-of-purchase,.delivery
+{
+	display:inline-block;
+}	
+.num-of-purchase th
+{
+		display:inline-block;
+		width:20px;
+		text-align:center;
+		height:43px;
+		font-size:30px;
+		font-weight:bold;
+		padding-left:20px;
+		padding-right:20px;
+}	
+.num-of-purchase th:first-of-type
+{
+	border:1px solid #d1c6bf;
+	border-radius:10px 0 0 10px;
+	background:#fff5e6;
+}	
+.num-of-purchase th:nth-of-type(2)
+{
+	border-width:1px 0 ;
+	border-color:#d1c6bf;
+	border-style: solid;
+}	
+.num-of-purchase th:last-of-type
+{
+	border:1px solid #d1c6bf;
+	border-radius:0 10px 10px 0;
+	background:#fff5e6;
+}
+.explanation .choice
+{
+	display:block !important;
+}	
+.explanation div:nth-of-type(3),.explanation div:nth-of-type(4)
+{
+	display:inline-block;
+}	
+/*RATING*/
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+/*Chosen product*/
+.delivery
+{
+	font-size:11px;
+	font-weight:normal;
+}
+.delivery div
+{
+	display:inline-block;
+	width:120px;
+	text-align:justify;
+}	
+.delivery div div
+{
+	text-align:center;
+	margin:0;
+}	
 @media only screen and (max-width:1110px)
 {
 	.margin-lr div:first-of-type

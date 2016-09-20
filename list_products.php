@@ -3,7 +3,16 @@
 require 'left_menu.php';
 ?>
 <div class="generals">
-	<div>Filters</div>
+	<div class="filters">
+		<div>Filters:</div>
+		<div class="filter_boxes">
+			<div>subcategory<img src="images/down_arrow.png"></div>
+			<div>country<img src="images/down_arrow.png"></div>
+			<div>brand<img src="images/down_arrow.png"></div>
+			<div>name product or number</div>
+			<div class="search_products"><img src="images/search2.png"></div>
+		</div>
+	</div>	
 	<div class="recommended producing">
 	<div>
 		<div class="items">
