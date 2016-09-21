@@ -1122,10 +1122,138 @@ fieldset, label { margin: 0; padding: 0; }
 {
 	display:inline-block;
 }
-.months div
+.year
+{
+	width:15%;
+	margin-bottom:40px;
+}	
+.year ul li
+{
+	font-size:20px;
+	font-weight:bold;
+	color:#fff5e6;
+}
+.year ul li:first-of-type
+{
+	font-size:24px;
+	line-height:40px;
+}	
+.year ul li:nth-of-type(2)
+{
+	color:#e8b465;
+}	
+.dates div
+{
+	vertical-align:top;
+}	
+.months
+{
+	width:85%;
+	float:right;
+	text-align: right;
+}	
+.months > div:nth-of-type(4),.months > div:nth-of-type(8),.months > div:nth-of-type(12)
+{
+	margin-right:0;
+}
+.months > div
 {
 	display:inline-block;
+	width:23.6%;
+	height:auto;
+	position:relative;
+	text-align:right;
+	margin-right:1%;
+	margin-bottom:11px;
 }	
+	
+.months div div
+{
+	position:absolute;
+	color:white;
+	font-weight:bold;
+	font-size:30px;
+	bottom: 0;
+    width: 100%;
+    height: 80px;
+	text-align:center;
+	text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+56,000000+99&0+9,0.38+27,0.53+49,0.38+69,0+92 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0, rgba(0,0,0,0.38) 27%, rgba(0,0,0,0.53) 49%, rgba(0,0,0,0.48) 56%, rgba(0,0,0,0.38) 69%, rgba(0,0,0,0) 92%, rgba(0,0,0,0) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0,rgba(0,0,0,0.38) 27%,rgba(0,0,0,0.53) 49%,rgba(0,0,0,0.48) 56%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0) 92%,rgba(0,0,0,0) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0,rgba(0,0,0,0.38) 27%,rgba(0,0,0,0.53) 49%,rgba(0,0,0,0.48) 56%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0) 92%,rgba(0,0,0,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+
+}	
+.months div img
+{ 
+	width:100%;
+	height:auto;
+}	
+.boreto
+{
+	display:none;
+	text-shadow:0;
+	background:transparent;
+	-webkit-box-shadow: inset 10px 10px 5px 200px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 10px 10px 5px 200px rgba(0,0,0,0.5);
+box-shadow: inset 10px 10px 5px 200px rgba(0,0,0,0.5);
+font-size:18px !important;
+bottom:5px !important;
+}
+.months div:hover .boreto
+{
+display:block;
+}	
+.generals.brochure_supp 
+{
+    float: left;
+    width: 15%;	
+}	
+.brochure_supp div div
+{
+	width:47%;
+}	
+.brochure_supp div.chapter span
+{
+	font-size:8px;
+	line-height:15px;
+}	
+.dates div:nth-of-type(2),.dates div:nth-of-type(3)
+{
+	vertical-align:bottom;
+}	
+#brochure 
+{
+    min-height: 1100px;
+}
+.generals div .fa
+{
+	margin-top:0;
+	display:none;
+}	
+.recom > div:first-of-type
+{
+	vertical-align: middle;
+    height: 50px;
+	display:inline-block;
+}	
+.heading
+{
+	display: inline-block;
+    margin-top: 15px;
+}	
+.sec_menu
+{
+	margin: 0;
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-bottom: -45px;
+	color:white;
+	
+}		
 @media only screen and (max-width:1110px)
 {
 	.margin-lr div:first-of-type
@@ -1139,6 +1267,23 @@ fieldset, label { margin: 0; padding: 0; }
 }
 @media only screen and (max-width:1024px)
 {
+	.left_menu .fa
+	{
+		display:none !important;
+	}	
+	.left_menu ul li
+	{
+		display:none;
+	}
+	.left_menu ul li:first-of-type
+	{
+		display:block;
+	}
+	.generals div .fa
+{
+	margin-top:0;
+	display:inline-block;
+}	
 	.supply div div
 	{
 		height: auto;
@@ -1151,6 +1296,7 @@ fieldset, label { margin: 0; padding: 0; }
 	.left_menu
 	{
 		display:none;
+		width:50%;
 	}
 		
 	.for_best
@@ -1249,6 +1395,7 @@ fieldset, label { margin: 0; padding: 0; }
 	#welcome
 	{
 		height:100px;
+		margin-bottom:15px;
 	}
 
 	.logo
@@ -1308,9 +1455,25 @@ fieldset, label { margin: 0; padding: 0; }
 	{
 		left:0;
 	}	
-	
+	.year,.months 
+	{
+		display:block;
+		width:100%;
+	}	
+	.year ul li 
+	{
+		display:inline-block;
+	}	
+	.one_month
+	{
+		font-size:16px !important;
+	}	
+	.brochure_supp
+	{
+		width:100% !important;
+	}	
 }	
-@media only screen and (max-width:768px)
+@media only screen and (max-width:785px)
 {
 	.explanation > div 
 	{
@@ -1329,6 +1492,14 @@ fieldset, label { margin: 0; padding: 0; }
 	#rev
 	{
 		left:62%;
+	}
+	.recommended div div.items 
+	{
+		width: 40%;	
+		vertical-align: top;
+	}
+	.supply div div {
+    width: 32.7%;
 	}
 }	
 @media only screen and (max-width:700px)
@@ -1365,7 +1536,7 @@ fieldset, label { margin: 0; padding: 0; }
     top: 50px;
     right: 0;
 	}	
-	.fa
+	.loggo .fa
 	{
 		display:block !important;
 		position:absolute;
@@ -1374,12 +1545,6 @@ fieldset, label { margin: 0; padding: 0; }
 		color:white;
 	}
 		
-	
-	.recommended div div.items 
-	{
-		width: 40%;	
-		vertical-align: top;
-	}
 	.explanation
 	{
 		display: block;
@@ -1429,6 +1594,11 @@ fieldset, label { margin: 0; padding: 0; }
 	.inner_content.fade
 	{
 		display:block;
+	}	
+	.months > div
+	{
+		width:49%;
+		margin:0;
 	}	
 }	
 @media only screen and (max-width:460px)	
@@ -1487,4 +1657,5 @@ fieldset, label { margin: 0; padding: 0; }
 	{
 		padding: 5px 10px 10px 10px;
 	}
+	.
 }	

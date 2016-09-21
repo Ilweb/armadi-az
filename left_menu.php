@@ -1,3 +1,4 @@
+<div class="sec_menu"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i></div>
 <div class="left_menu">
 	<ul>
 		<li><a href="#">Categories</a><i class="fa fa-list" style="display:inline-block !important;" aria-hidden="true"></i></li>
@@ -26,3 +27,11 @@
 		<li>Brands<i class="fa fa-diamond" aria-hidden="true"></i></li>
 	</ul>
 </div>
+<script type="text/javascript">	
+jQuery(".sec_menu").click(function()
+
+	{
+		jQuery(".left_menu").fadeToggle(1000)
+	});
+
+</script>

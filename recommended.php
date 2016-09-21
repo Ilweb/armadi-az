@@ -1,5 +1,5 @@
-<div class="generals">
-	<div>Recommended products</div>
+<div class="generals recom">
+	<div><div class="heading">Recommended products</div></div>
 	<div class="recommended">
 	<div>
 		<img src="images/left.png" class="prev" onclick="plusSlides(-1)">

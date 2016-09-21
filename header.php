@@ -53,13 +53,14 @@ and your personal proposals</p></a></div></div>
 </div>
 </header>
 <script type="text/javascript">	
-jQuery(".fa").click(function()
+jQuery(".loggo .fa").click(function()
 
 	{
 		jQuery(".firstt").fadeToggle(1000).css("position","absolute").css("top","85px")
 	});
 
 </script>
+
 <script type="text/javascript">	
 jQuery(".search").click(function()
 

@@ -62,7 +62,7 @@ require 'recommended.php';
 	</div>
 </div>
 <div class="generals supply">
-	<div>Recommended products</div>
+	<div>Suppliers</div>
 	<div>
 		<div class="chapter">
 			<div>
