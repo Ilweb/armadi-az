@@ -111,6 +111,7 @@ $(document).ready(function() {
         });
     }); 
 </script>
+
 <script type="text/javascript">
         var currentValue = 0;
         var add = function(valueToAdd){

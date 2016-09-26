@@ -4,9 +4,6 @@ require 'header.php';
 ?>
 <div class="whole_products" id="particle">
 <div class="second-part choosen">
-<?php 
-require 'left_menu.php';
-?>
 
 <div class="generals chosen_prod">
 	<div class="product">
@@ -71,9 +68,13 @@ require 'left_menu.php';
 		</div>
 	</div>
 </div>
+<?php 
+require 'left_menu.php';
+?>
 <ul class="best-of-the-best">
 	<li>Best sellers<i class="fa fa-usd" aria-hidden="true"></i></li>
 </ul>
+
 <?php 
 require 'recommended.php';
 ?>

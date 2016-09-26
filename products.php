@@ -76,7 +76,7 @@ require 'recommended.php';
 				<div><span>Monte universales</span></div>
 			</div>
 		</div>
-		<div class="chapter">
+		<div class="chapter productss">
 			<div>
 				<img src="images/planthouse.png">
 				<div><span>Planthouse</span></div>
@@ -94,7 +94,7 @@ require 'recommended.php';
 				<div><span>Zaabar</span></div>
 			</div>
 		</div>
-		<div class="chapter">
+		<div class="chapter productss">
 			<div>
 				<img src="images/monte2.png">
 				<div><span>Monte universales</span></div>

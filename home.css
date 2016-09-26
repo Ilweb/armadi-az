@@ -165,7 +165,10 @@ div.chapter span
 {
 	display: none;
 }
-
+.chapter div div
+{
+    margin-top: 30px !important;
+}	
 div.chapter:hover span
 {
 	display: block;
@@ -213,16 +216,10 @@ div.chapter:hover span
 	letter-spacing:3px;
 	display:none;
 }	
-.supply div div:nth-of-type(3),.supply div div:nth-of-type(6)
-{
-	margin-right:0;
-}	
+	
 @media only screen and (min-width: 1277px)
 {
-	.supply div div:nth-of-type(3),.supply div div:last-of-type
-	{
-		margin-right:0;
-	}	
+	
 	.supply div div:nth-of-type(4),.supply div div:nth-of-type(5),.supply div div:nth-of-type(6)
 	{
 		margin-bottom:0;
@@ -371,12 +368,29 @@ a
 }	
 .filter_boxes div:nth-of-type(4)
 {
-	width:224px;
+	width:310px;
+	margin-right:0;
+	border:none;
+	    height: 26px;
 }	
+.filter_boxes div:nth-of-type(4) div
+{
+	border-bottom:2px solid white;
+	padding-bottom:10px;
+}	
+.search_products
+{
+	border:none !important;
+}	
+
 .filter_boxes div img
 {
 	float:right;
 	margin-top: 7px;
+}	
+.search_products img
+{
+	margin-top:0 !important;
 }	
 .filter_boxes div.search_products
 {
@@ -1133,6 +1147,10 @@ fieldset, label { margin: 0; padding: 0; }
 	font-weight:bold;
 	color:#fff5e6;
 }
+.year ul li#choosen
+{
+	color:#e8b465;
+}	
 .year ul li:first-of-type
 {
 	font-size:24px;
@@ -1175,7 +1193,7 @@ fieldset, label { margin: 0; padding: 0; }
 	font-size:30px;
 	bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 60px;
 	text-align:center;
 	text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+56,000000+99&0+9,0.38+27,0.53+49,0.38+69,0+92 */
@@ -1193,6 +1211,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }	
 .boreto
 {
+	padding-top: 10px;
 	display:none;
 	text-shadow:0;
 	background:transparent;
@@ -1253,7 +1272,16 @@ display:block;
     margin-bottom: -45px;
 	color:white;
 	
-}		
+}	
+
+.sec_menu
+	{
+		display:none;
+	}
+	.chapter.productss
+	{
+		margin-right:0;
+	}	
 @media only screen and (max-width:1110px)
 {
 	.margin-lr div:first-of-type
@@ -1265,12 +1293,24 @@ display:block;
 		text-align: center;
 	}	
 }
+@media only screen and (max-width:1045px)
+{
+	.boreto
+	{
+		font-size:14px !important;
+	}	
+}	
 @media only screen and (max-width:1024px)
 {
 	.left_menu .fa
 	{
 		display:none !important;
 	}	
+	.left_menu
+	{
+		width: 100%;
+		display:none;
+	}
 	.left_menu ul li
 	{
 		display:none;
@@ -1278,6 +1318,10 @@ display:block;
 	.left_menu ul li:first-of-type
 	{
 		display:block;
+	}
+	.sec_menu
+	{
+		display:inline-block;
 	}
 	.generals div .fa
 {
@@ -1293,11 +1337,6 @@ display:block;
 	{
 		min-height:auto;
 	}	
-	.left_menu
-	{
-		display:none;
-		width:50%;
-	}
 		
 	.for_best
 	{
@@ -1334,7 +1373,10 @@ display:block;
 	{
 		display:none;
 	}		
-	
+	.best-of-the-best
+	{
+		display:none;
+	}	
 }	
 @media screen and (max-width: 1252px) and (min-width: 1024px)
 {
@@ -1600,6 +1642,10 @@ display:block;
 		width:49%;
 		margin:0;
 	}	
+	.generals.supply.brochure_supp
+	{
+		margin-top:15px;
+	}	
 }	
 @media only screen and (max-width:460px)	
 {
@@ -1642,9 +1688,6 @@ display:block;
     width: auto;
     left: 220px;
 	}
-}
-@media only screen and (max-width:460px)	
-{
 	#recommendation
 	{
 		left: 70px;
@@ -1657,5 +1700,11 @@ display:block;
 	{
 		padding: 5px 10px 10px 10px;
 	}
-	.
+}	
+@media only screen and (max-width:390px)
+{
+	.boreto
+	{
+		font-size:12px !important;
+	}	
 }	
