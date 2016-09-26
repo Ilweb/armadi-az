@@ -309,7 +309,7 @@ a
 .fa
 {
 	float:right;
-	margin-right:40px;
+	margin-right:20px;
 	margin-top:10px;
 }
 .fa-list
@@ -377,6 +377,7 @@ a
 {
 	border-bottom:2px solid white;
 	padding-bottom:10px;
+	width:auto;
 }	
 .search_products
 {
@@ -1302,6 +1303,20 @@ display:block;
 }	
 @media only screen and (max-width:1024px)
 {
+	.best-of-the-best
+	{
+		width:25%;
+		margin-top:10px;
+	}	
+	.filter_boxes 
+	{
+		width:100%;
+	}
+	.filter_boxes div
+	{
+		width:40%;
+	}
+	
 	.left_menu .fa
 	{
 		display:none !important;
@@ -1546,6 +1561,14 @@ display:block;
 }	
 @media only screen and (max-width:700px)
 {
+	.filter_boxes div:nth-of-type(4) 
+	{
+		width: 64%;
+	}	
+	.filter_boxes div
+	{
+		font-size:12px;
+	}	
 	.whole_contain
 	{
 		margin-top:10px;
@@ -1566,6 +1589,15 @@ display:block;
 		box-shadow: inset 10px 10px 113px 200px rgba(0,0,0,0.77);
 		z-index:10000;
 		
+	}	
+	.filter_boxes div
+	{
+		display:block;
+		width:60%;
+	}
+	.filter_boxes div
+	{
+		display:inline-block;
 	}	
 	.firstt
 	{

@@ -28,18 +28,18 @@
 	</ul>
 </div>
 <script type="text/javascript">	
-jQuery(".category_main").click(function()
 
-	{
-		jQuery(this).find("li.other").css("display","block")
-	});
+	$('li.category_main').click(function() {
+   $(this).find('.other').fadeToggle();
+});
 
 </script>
 <script type="text/javascript">	
 jQuery(".sec_menu").click(function()
 
 	{
-		jQuery(".left_menu").fadeToggle(1000)
+		jQuery(".left_menu").fadeToggle(1000);
+		jQuery(".best-of-the-best").fadeToggle(1000);
 	});
 
 </script>
