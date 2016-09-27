@@ -20,8 +20,10 @@ require 'header.php';
 			<div class="product_images">
 					<div class="pic_detail"><img src="images/recommended1.png"></div>
 					<div class="smaller_pics">
-						<div><img src="images/recommended1.png"></div>
-						<div><img src="images/recommended1.png"></div>
+					<section>
+						<a  class="example-image-link" href="images/recommended1.png" data-lightbox="example-set"><div><img class="example-image" src="images/recommended1.png" alt=""></div></a>
+						<a  class="example-image-link" href="images/recommended1.png" data-lightbox="example-set"><div><img class="example-image" src="images/recommended1.png" alt=""></div></a>
+					</section>
 					</div>
 			</div>
 			<div class="explanation">
@@ -81,3 +83,5 @@ require 'recommended.php';
 </div>
 </div>
 <?php require 'footer.php';?>
+<script src="lightbox.js"></script>
+<body>
