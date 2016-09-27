@@ -29,17 +29,18 @@
 </div>
 <script type="text/javascript">	
 
-	$('li.category_main').click(function() {
-   $(this).find('.other').fadeToggle();
+$('li.category_main').click(function() {
+	if ($(window).width() <= 1024)
+	{
+		$(this).parent().parent().find('.other:visible').fadeOut();
+		$(this).parent().find('.other').fadeIn();
+	}
 });
 
-</script>
-<script type="text/javascript">	
 jQuery(".sec_menu").click(function()
-
-	{
-		jQuery(".left_menu").fadeToggle(1000);
-		jQuery(".best-of-the-best").fadeToggle(1000);
-	});
+{
+	jQuery(".left_menu").fadeToggle(1000);
+	jQuery(".best-of-the-best").fadeToggle(1000);
+});
 
 </script>
