@@ -58,14 +58,19 @@ require 'header.php';
 				</div>
 			</div>
 			<div class="choice">
-				<button id="first_butt">Add to wish list</button>
-				<button id="second_butt">Add to cart</button>
+				<button class="hvr-shadow-radial" id="first_butt">Add to wish list</button>
+				<button class="hvr-shadow-radial" id="second_butt">Add to cart</button>
 			</div>
 			</div>
-			<div class="description"><fieldset><legend id="descr">Description</legend><legend id="recommendation">Recommendations</legend><legend id="rev">Reviews(8)</legend><div> Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.
-			</div>
-			<div> Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.
-			</div>
+			<div class="description">
+				<fieldset>
+					<legend id="descr">Description</legend>
+					<legend id="recommendation">Recommendations</legend>
+					<legend id="rev">Reviews(8)</legend>
+					<div class="new_member_box_display" id="question"> Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.
+					</div>
+					<div class="new_member_box_display" id="question"> Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.
+					</div>
 			</fieldset></div>
 		</div>
 	</div>
@@ -84,4 +89,5 @@ require 'recommended.php';
 </div>
 <?php require 'footer.php';?>
 <script src="lightbox.js"></script>
-<body>
+
+<script></script>

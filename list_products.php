@@ -6,10 +6,10 @@ require 'left_menu.php';
 	<div class="filters">
 		<div>Filters:</div>
 		<div class="filter_boxes">
-			<div>subcategory<img src="images/down_arrow.png"></div>
-			<div>country<img src="images/down_arrow.png"></div>
-			<div>brand<img src="images/down_arrow.png"></div>
-			<div><div>name product or number</div><div class="search_products"><img src="images/search2.png"></div></div>
+			<div>subcategory<img class="arrow" src="images/down_arrow.png"></div>
+			<div>country<img class="arrow" src="images/down_arrow.png"></div>
+			<div>brand<img class="arrow" src="images/down_arrow.png"></div>
+			<div><div class="search_item"><input placeholder="name product or number"></input></div><div class="search_products"><img src="images/search2.png"></div></div>
 		</div>
 	</div>	
 	<div class="recommended producing">

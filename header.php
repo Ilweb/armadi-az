@@ -5,6 +5,7 @@
 	<script type="text/javascript" SRC="js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" SRC="js/main.js?ver=1"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<link href="css/theme/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -36,7 +37,7 @@
 		</span>
 	</div>
 </div>
-<div><div><span><a href="#">login</a></span><span><a href="#">register</a></span><span class="cart"><a href="#"><p>5</p><img src="images/cart.png"></a></span></div></div>
+<div><div class="signin_buttons"><span><a href="#">login</a></span><span><a href="#">register</a></span><span class="cart"><a href="#"><p>5</p><img src="images/cart.png"></a></span></div></div>
 <div class="margin-lr loggo"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i><div><img class="logo" src="images/logo.png"></div><div id="welcome"><a href="#"><p>WELCOME</p>
 <p>Login to your Armadiaz.com<br/>
 and your personal proposals</p></a></div></div>
@@ -126,4 +127,34 @@ jQuery("#recommendation").click(function()
 		jQuery(this).css("border-bottom","none").css("background","white");
 	});
 
+</script>
+<script>
+$(function() {
+$('#recommendation').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");
+	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('The text you are adding');
+});
+});
+</script>
+<script>
+$(function() {
+$('#rev').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");	
+	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('Bore');
+});
+});
+</script>
+<script>
+$(function() {
+$('#descr').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");
+	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
+});
+});
 </script>

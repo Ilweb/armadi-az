@@ -8,8 +8,8 @@
 			<div><span>#355</span>Herbal Tea Forte slimming</div>
 			<div class="price">20$</div>
 			<div class="choice">
-				<button class="hvr-shadow-radial" id="first_butt">Add to wish list</button>
-				<button class="hvr-shadow-radial" id="second_butt">Add to cart</button>
+				<button aria-hidden="true" class="hvr-shadow-radial" id="first_butt">Add to wish list</button>
+				<button aria-hidden="true" class="hvr-shadow-radial" id="second_butt">Add to cart</button>
 			</div>
 		</div>
 		<div class="items">
