@@ -556,6 +556,23 @@ header div
   /* Quick on the way out */
 
 }
+.menu.fixed,.cart.fixed
+{
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+	background:#302824;
+	
+}
+.cart.fixed
+{
+	width: 5%;
+    z-index: 10000;
+    left: 92%;
+    top: 1.5%;
+}	
 .menu ul li:hover
 {
 -webkit-box-shadow: 0px 0px 114px -2px rgba(0,0,0,0.75);
@@ -1384,7 +1401,206 @@ display:block;
 .hvr-shadow-radial:hover:before, .hvr-shadow-radial:focus:before, .hvr-shadow-radial:active:before, .hvr-shadow-radial:hover:after, .hvr-shadow-radial:focus:after, .hvr-shadow-radial:active:after {
   opacity: 1;
 }
-	
+.firstt
+	{
+		width:100%;
+		z-index:1
+	}	
+	#sticky-anchor
+	{
+		width:100%;
+		height: 84px;
+		background: transparent;
+	}	
+	.cart {
+    vertical-align: middle;
+    position: absolute;
+    top: 50px;
+    right: 0;
+	}		
+/******ARTICLES******/
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  height:600px;
+}
+
+/* Next & previous buttons */
+.prev_article, .next_article {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 94.6%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next_article {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev_article:hover, .next_article:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  width: 98.2%;
+  vertical-align: middle;
+  line-height: 90px;
+  height: 100px;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  height: 600px;
+}
+.fade img
+{
+	width:100%;
+	height:100%;
+}	
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}	
+#article
+{
+	min-height:auto;
+}
+.recipes
+{
+	margin-top:8%;
+}	
+.recipes > div
+{
+	position:relative;
+	margin-bottom:20px;
+	width:90%;
+	opacity:0.6;
+	transition:all 1s ease;
+}	
+.recipes > div:hover
+{
+	opacity:1;
+}	
+.recipes img
+{
+	width:100%;
+	max-height:120px;
+}
+.arrow_img:hover
+{
+	background:transparent;
+}	 
+.arrow_img
+{
+	text-align:center;
+}	
+ .arrow_img img
+{
+	width:50px;
+	height:auto;
+}	
+.arrow_img:first-of-type img
+{
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}	
+.recipes div div
+{
+	position:absolute;
+	bottom:5px;
+	color:white;
+	width:100%;
+	height:50%;
+	background-color:rgba(0,0,0,0.5);
+}	
+.recipe_content
+{
+	text-align:justify;
+	background:white;
+	margin-top:20px;
+}	
+.recipe_content div
+{
+	padding:50px;
+}
+.recipe_content div div
+{
+	float:right;
+	width:20%;
+	background:#3c322d;
+	color:White;
+}	
+.recipe_content p
+{
+	width:60%;
+	display:inline-block;
+}	
+#events.whole_products 
+{
+	min-height:600px;
+}	
+.dates div.еvents
+{
+	display:inline-block !important;
+}	
 @media only screen and (max-width:1110px)
 {
 	.margin-lr div:first-of-type
@@ -1714,17 +1930,7 @@ display:block;
 		display:inline-block;
 		width: 80%;
 	}	
-	.firstt
-	{
-		width:100%;
-		z-index:1
-	}	
-	.cart {
-    vertical-align: middle;
-    position: absolute;
-    top: 50px;
-    right: 0;
-	}	
+	
 	.loggo .fa
 	{
 		display:block !important;

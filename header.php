@@ -3,9 +3,10 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" SRC="js/jquery-1.7.1.min.js"></script>
+	
 	<script type="text/javascript" SRC="js/main.js?ver=1"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<link href="css/theme/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -41,6 +42,8 @@
 <div class="margin-lr loggo"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i><div><img class="logo" src="images/logo.png"></div><div id="welcome"><a href="#"><p>WELCOME</p>
 <p>Login to your Armadiaz.com<br/>
 and your personal proposals</p></a></div></div>
+<div id="sticky-anchor">
+</div>
 <div class="margin-lr menu firstt">
 <ul>
 <li><a href="#">home</a></li>
@@ -70,21 +73,7 @@ jQuery(".search").click(function()
 	});
 
 </script>
-<script>
-$(document).ready(function() {
-    // This will fire when document is ready:
-    $(window).resize(function() {
-        // This will fire each time the window is resized:
-        if($(window).width() >= 700) {
-            // if larger or equal
-            $('.firstt').css("position","relative").css("top","0");
-        } else {
-            // if smaller
-            $('.firstt').css("position","absolute").css("top","85px");
-        }
-    }).resize(); // This will simulate a resize to trigger the initial run.
-});
-</script>
+
 <script>
 $(document).ready(function() {
     // This will fire when document is ready:
@@ -157,4 +146,39 @@ $('#descr').click(function() {
 	$('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
 });
 });
+</script>
+
+<script>
+function stickyHeader()
+{
+	if ($(window).scrollTop() > $("header").height()) {
+        $('.menu').addClass('fixed');
+		$('.cart').addClass('fixed');
+    } else {
+        $('.menu').removeClass('fixed');
+		$('.cart').removeClass('fixed');
+		$('#sticky-anchor').height(0);
+    }
+}
+
+$(window).on('scroll', function (e) {
+
+	stickyHeader();
+	slideWheel();
+});
+
+function goToByScroll( id, correction)
+{
+	if (enabledScroll)
+	{
+		enabledScroll = false;
+		$('html,body').animate({ 
+			scrollTop: $(id).offset().top + correction
+		}, 500, function() 
+		{
+			stickyHeader();
+			enabledScroll = true;
+		});
+	}
+}
 </script>
