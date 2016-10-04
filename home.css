@@ -87,7 +87,7 @@ font-size:24px;
 {
 	background:white;
 	width:100%;
-	height:320px;
+	height:auto;
 }	
 .recommended div 
 {
@@ -97,22 +97,46 @@ font-size:24px;
 {
 	padding-top: 20px;
 	padding-bottom:30px;
+	text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
 }	
 .recommended div div
 {
 	width: auto;
     display: inline-block;
 	color:black;
-	width:20%;
 	text-transform:none;
 	text-align:center;
+	width: 24%;
+    text-align: center;
 	font-size:14px;
-	vertical-align:middle
 }
-	
+
+.width_window .items
+{
+	width:21%;	
+	height: 280px;
+}
+.width_window > div
+{
+	margin-left:2%;
+	margin-right:2%;
+	text-align: center;
+}	
 .recommended div div div
 {
 	width:100%;
+}
+.items div:first-of-type
+{
+	height: 40px;
+    overflow: hidden;
+}	
+.items 
+{
+	height:250px;
+	vertical-align: top;
 }	
 .recommended span
 {
@@ -265,7 +289,7 @@ div.chapter:hover span
 /* Filter inner products*/
 .producing
 {
-	height: 920px;
+	height: auto;
 }
 .producing .items
 {
@@ -378,28 +402,41 @@ a
 .filters > div:first-of-type
 {
 	font-size:20px;
-	margin-right:25px;
-	width:17%;
+	width:15%;
 }	
 .filter_boxes
 {
 	font-size:18px;
-	width: 80%;
+	width: 83%;
 }	
 .filter_boxes > div
 {
 	border-bottom:2px solid white;
 	margin-right:2%;
 	display:inline-block;
-	width:145px;
-	padding-bottom: 10px;
+	width:18%;
+    padding-bottom: 14.55px;
 	padding-top:10px;
 	vertical-align: bottom;
 	position:relative;
+}
+.filter_boxes select
+{
+	background:transparent;
+	color:white;
+	border:none;
+	width:100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	background: url("images/arrow.png");
+    -webkit-appearance: none;
+        background-position-x: 95%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }	
 .filter_boxes div:nth-of-type(4)
 {
-	width:310px;
+	width:35%;
 	margin-right:0;
 	border:none;
 	    height: 26px;
@@ -408,7 +445,7 @@ a
 {
 	border-bottom:2px solid white;
 	padding-bottom:10px;
-	width:auto;
+	width: 80%;
 }	
 .search_products
 {
@@ -449,7 +486,7 @@ a
 }	
 .filter_boxes div.search_products
 {
-	width:auto;
+	width: 10% !important;
 	border:none;
 	padding:0;
 	float: right;
@@ -572,7 +609,7 @@ header div
 }
 .cart.fixed
 {
-	width: 5%;
+	width: 50px;
     z-index: 10000;
     left: 92%;
     top: 1.5%;
@@ -744,6 +781,7 @@ a
 .brochure div div div.big_brochure
 {
 	width:100% !important;
+	height: auto;
 }	
 .brochure div.inner_content.fade img
 {
@@ -785,6 +823,7 @@ a
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
+	margin-left:0;
 }	
 #active
 {
@@ -834,7 +873,7 @@ a
 .generals .prev,.generals .next
 {
 	position: relative;
-    margin-top:5%;;
+    margin-top: 9%;
 }	
 .next
 {
@@ -1628,6 +1667,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	{
 		text-align: center;
 	}	
+	.menu ul 
+	{
+		margin-left:4px;
+		text-align:left;	
+	}	
+	.menu ul li 
+	{
+		display: inline-block;
+		margin-right: 0%;
+		padding: 15px;
+	}
+	.filter_boxes 
+	{
+		width:100%;
+	}
+	.filter_boxes div
+	{
+		width:40%;
+	}
 }
 @media only screen and (max-width:1045px)
 {
@@ -1643,14 +1701,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 		width:25%;
 		margin-top:10px;
 	}	
-	.filter_boxes 
-	{
-		width:100%;
-	}
-	.filter_boxes div
-	{
-		width:40%;
-	}
 	
 	.left_menu .fa
 	{
@@ -1741,6 +1791,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	{
 		width:40%;
 		height:auto;
+	}
+	.recommended > div 
+	{
+		text-align: center;
+	}
+	.recommended > div:last-of-type
+	{
+		text-align:center;
 	}	
 }	
 @media screen and (max-width: 1252px) and (min-width: 1024px)
@@ -1945,7 +2003,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	.filter_boxes div
 	{
 		display:inline-block;
-		width: 80%;
+		width: 70%;
 	}	
 	
 	.loggo .fa
@@ -1990,6 +2048,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	{
 		float: none;
 		margin:0;
+	}
+	.cart.fixed 
+	{
+		position: relative;
 	}
 }
 @media only screen and (max-width:600px)	

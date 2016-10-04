@@ -43,17 +43,17 @@
 <p>Login to your Armadiaz.com<br/>
 and your personal proposals</p></a></div></div>
 <div id="sticky-anchor">
-</div>
-<div class="margin-lr menu firstt">
-<ul>
-<li><a href="#">home</a></li>
-<li><a href="#">products</a></li>
-<li><a href="#">brochure</a></li>
-<li><a href="#">events</a></li>
-<li><a href="#">articles</a></li>
-<li><a href="#">contacts</a></li>
-<li><a href="#">abouts us</a></li>
-</ul>
+	<div class="margin-lr menu firstt">
+		<ul>
+		<li><a href="#">home</a></li>
+		<li><a href="#">products</a></li>
+		<li><a href="#">brochure</a></li>
+		<li><a href="#">events</a></li>
+		<li><a href="#">articles</a></li>
+		<li><a href="#">contacts</a></li>
+		<li><a href="#">abouts us</a></li>
+		</ul>
+	</div>
 </div>
 </header>
 <script type="text/javascript">	
@@ -151,20 +151,18 @@ $('#descr').click(function() {
 <script>
 function stickyHeader()
 {
-	if ($(window).scrollTop() > $("header").height()) {
+	if ($(window).scrollTop() > ($("header").height() - 94)) {
         $('.menu').addClass('fixed');
 		$('.cart').addClass('fixed');
     } else {
         $('.menu').removeClass('fixed');
 		$('.cart').removeClass('fixed');
-		$('#sticky-anchor').height(0);
     }
 }
 
 $(window).on('scroll', function (e) {
 
 	stickyHeader();
-	slideWheel();
 });
 
 function goToByScroll( id, correction)
@@ -174,7 +172,7 @@ function goToByScroll( id, correction)
 		enabledScroll = false;
 		$('html,body').animate({ 
 			scrollTop: $(id).offset().top + correction
-		}, 500, function() 
+		}, 200, function() 
 		{
 			stickyHeader();
 			enabledScroll = true;

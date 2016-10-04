@@ -24,8 +24,8 @@ require 'recommended.php';
 			<div><span>#355</span>Herbal Tea Forte slimming</div>
 			<div class="price">20$</div>
 			<div class="choice">
-				<button id="first_butt">Add to wish list</button>
-				<button id="second_butt">Add to cart</button>
+				<button class="add_to_wish">Add to wish list</button>
+				<button class="add_to_cart">Add to cart</button>
 			</div>
 		</div>
 		<div class="items">
@@ -35,8 +35,8 @@ require 'recommended.php';
 			</div>
 			<div class="price">20$</div>
 			<div class="choice">
-				<button id="first_butt">Add to wish list</button>
-				<button id="second_butt">Add to cart</button>
+				<button class="add_to_wish">Add to wish list</button>
+				<button class="add_to_cart">Add to cart</button>
 			</div>
 		</div>
 		<div class="items">
@@ -44,8 +44,8 @@ require 'recommended.php';
 			<div><span>#355</span>Herbal Tea Forte slimming</div>
 			<div class="price">20$</div>
 			<div class="choice">
-				<button id="first_butt">Add to wish list</button>
-				<button id="second_butt">Add to cart</button>
+				<button class="add_to_wish">Add to wish list</button>
+				<button class="add_to_cart">Add to cart</button>
 			</div>
 		</div>
 		<div class="items">
@@ -53,8 +53,8 @@ require 'recommended.php';
 			<div><span>#355</span>Herbal Tea Forte slimming</div>
 			<div class="price">20$</div>
 			<div class="choice">
-				<button id="first_butt">Add to wish list</button>
-				<button id="second_butt">Add to cart</button>
+				<button class="add_to_wish">Add to wish list</button>
+				<button class="add_to_cart">Add to cart</button>
 			</div>
 		</div>
 		<img id="right" src="images/left.png" class="next" onclick="plusSlides(1)">
