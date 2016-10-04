@@ -60,15 +60,21 @@ require 'header.php';
 </div>
 <div class="recipe_content">
 	<div>
-	<h4>Lorem ipsum dolor sit amet, wisi a proin</h4>
-	<p>Lorem ipsum dolor sit amet, wisi a proin, libero vitae elit sit tincidunt, urna vitae porttitor, pulvinar mauris sed in ac ante. Nisl officia sed vestibulum diam amet, est maecenas vivamus orci, tempor nibh nullam dictum vitae, dui quam ligula eros massa, in viverra. Wisi venenatis. Venenatis ut vitae per sed lectus. Sapien morbi purus quis nec justo feugiat, in congue, vestibulum eros vestibulum, molestie egestas, suscipit quae bibendum scelerisque risus euismod vitae.
-	Sed ligula lectus lectus, at lacus erat occaecat nulla et posuere, ullamcorper wisi et morbi, arcu et ipsum fusce massa praesent dolor. Faucibus ut, bibendum morbi sed dui velit, at mattis et rhoncus, vestibulum vel nec neque magna volutpat ac, eget quam eget fames sed ante rutrum. Quis odio, sem nibh hymenaeos neque, eu nunc sapien auctor odio egestas. Venenatis quis rutrum pulvinar odio velit massa. Nulla in nisl nec massa mauris, vivamus orci ut morbi vero aliquam, nisl fusce wisi a vel, urna libero, diam integer rutrum. Aliquam habitasse nonummy duis, non mauris nulla tortor nibh integer, at wisi lacinia sit. 
-	<div>Lorem ipsum dolor sit amet, wisi a proin, libero vitae elit sit tincidunt, urna vitae porttitor, pulvinar mauris sed in ac ante. Nisl officia sed vestibulum diam amet, est maecenas vivamus orci, </div>
-	</p>
-	<img src="images/food-2.jpg">
-	<p>Turpis vitae, mi accumsan nunc felis, pellentesque nulla pharetra vehicula. Massa vitae, ligula adipiscing aliquam tellus, arcu gravida. Orci purus, dolor per suscipit quis, accumsan nunc neque rutrum neque. Ac orci nunc consequat cras nec, id faucibus ligula vitae volutpat ipsum lectus. Luctus mollis amet diam, suspendisse dolor nunc iaculis reiciendis mattis. Duis quis convallis etiam, natoque nec, vivamus a, arcu nisl adipiscing etiam, laoreet quisque ut eleifend malesuada.</p>
-	<p>Turpis vitae, mi accumsan nunc felis, pellentesque nulla pharetra vehicula. Massa vitae, ligula adipiscing aliquam tellus, arcu gravida. Orci purus, dolor per suscipit quis, accumsan nunc neque rutrum neque. Ac orci nunc consequat cras nec, id faucibus ligula vitae volutpat ipsum lectus. Luctus mollis amet diam, suspendisse dolor nunc iaculis reiciendis mattis. Duis quis convallis etiam, natoque nec, vivamus a, arcu nisl adipiscing etiam, laoreet quisque ut eleifend malesuada.</p>
-	
+		<h4>Lorem ipsum dolor sit amet, wisi a proin</h4>
+		<p>Lorem ipsum dolor sit amet, wisi a proin, libero vitae elit sit tincidunt, urna vitae porttitor, pulvinar mauris sed in ac ante. Nisl officia sed vestibulum diam amet, est maecenas vivamus orci, tempor nibh nullam dictum vitae, dui quam ligula eros massa, in viverra. Wisi venenatis. Venenatis ut vitae per sed lectus. Sapien morbi purus quis nec justo feugiat, in congue, vestibulum eros vestibulum, molestie egestas, suscipit quae bibendum scelerisque risus euismod vitae.
+		Sed ligula lectus lectus, at lacus erat occaecat nulla et posuere, ullamcorper wisi et morbi, arcu et ipsum fusce massa praesent dolor. Faucibus ut, bibendum morbi sed dui velit, at mattis et rhoncus, vestibulum vel nec neque magna volutpat ac, eget quam eget fames sed ante rutrum. Quis odio, sem nibh hymenaeos neque, eu nunc sapien auctor odio egestas. Venenatis quis rutrum pulvinar odio velit massa. Nulla in nisl nec massa mauris, vivamus orci ut morbi vero aliquam, nisl fusce wisi a vel, urna libero, diam integer rutrum. Aliquam habitasse nonummy duis, non mauris nulla tortor nibh integer, at wisi lacinia sit. 
+		<div class="left_box" >Lorem ipsum dolor sit amet, wisi a proin, libero vitae elit sit tincidunt, urna vitae porttitor, pulvinar mauris sed in ac ante. Nisl officia sed vestibulum diam amet, est maecenas vivamus orci, </div>
+		</p>
+		<img src="images/food-2.jpg">
+		<p>Turpis vitae, mi accumsan nunc felis, pellentesque nulla pharetra vehicula. Massa vitae, ligula adipiscing aliquam tellus, arcu gravida. Orci purus, dolor per suscipit quis, accumsan nunc neque rutrum neque. Ac orci nunc consequat cras nec, id faucibus ligula vitae volutpat ipsum lectus. Luctus mollis amet diam, suspendisse dolor nunc iaculis reiciendis mattis. Duis quis convallis etiam, natoque nec, vivamus a, arcu nisl adipiscing etiam, laoreet quisque ut eleifend malesuada.</p>
+		<div>
+			<p>Turpis vitae, mi accumsan nunc felis, pellentesque nulla pharetra vehicula. Massa vitae, ligula adipiscing aliquam tellus, arcu gravida. Orci purus, dolor per suscipit quis, accumsan nunc neque rutrum neque. Ac orci nunc consequat cras nec, id faucibus ligula vitae volutpat ipsum lectus. Luctus mollis amet diam, suspendisse dolor nunc iaculis reiciendis mattis. Duis quis convallis etiam, natoque nec, vivamus a, arcu nisl adipiscing etiam, laoreet quisque ut eleifend malesuada.</p>
+			<div class="right_img_article"><img src="images/bottle2.png"></div>
+		</div>
+		<div>
+			<div class="left_img_article"><img src="images/bottle2.png"></div>
+			<p>Turpis vitae, mi accumsan nunc felis, pellentesque nulla pharetra vehicula. Massa vitae, ligula adipiscing aliquam tellus, arcu gravida. Orci purus, dolor per suscipit quis, accumsan nunc neque rutrum neque. Ac orci nunc consequat cras nec, id faucibus ligula vitae volutpat ipsum lectus. Luctus mollis amet diam, suspendisse dolor nunc iaculis reiciendis mattis. Duis quis convallis etiam, natoque nec, vivamus a, arcu nisl adipiscing etiam, laoreet quisque ut eleifend malesuada.</p>
+		</div>
 	</div>
 </div>
 </div>

@@ -1647,25 +1647,69 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .recipe_content div
 {
-	padding:50px;
+	padding: 10px 50px;
+}
+.recipe_content  div
+{
+	display: inline-block;
 }
 .recipe_content div div
 {
-	float:right;
+	border-top: 3px solid #cccccc;
+	margin-top: 30px;
+}	
+.recipe_content:first-of-type
+{
+	padding-bottom:50px;
+}	
+.recipe_content div > div:first-of-type
+{
 	width:20%;
 	background:#3c322d;
 	color:White;
+}	
+.recipe_content div div div:first-of-type
+{
+	border: none;
 }	
 .recipe_content p
 {
 	width:60%;
 	display:inline-block;
+	margin-top: 30px;
 }
 .recipe_content p:nth-of-type(3)
 {
 	float:right;
 	width:30%;
 	border-top: 2px solid grey;
+	padding-top:30px;
+	margin: 0;
+}	
+
+.recipe_content div.right_img_article,.recipe_content div.left_img_article
+{
+	float:right;
+	padding:0;
+	background:transparent !important;
+	width:200px;
+	margin-top:30px;
+}
+.recipe_content div.left_img_article
+{
+	clear:both;
+	float:left;
+}	
+.recipe_content div.right_img_article img,.recipe_content div.left_img_article img
+{
+	height:100%;
+}	
+.left_box
+{
+	padding: 50px !important;
+	float:right;
+    vertical-align: top;
+	border:none !important;
 }	
 select
 {
@@ -1673,6 +1717,7 @@ select
 	-moz-appearance:none;
 	text-indent:1px;
 	text-overflot:'';
+}	
 #events.whole_products 
 {
 	min-height:600px;
@@ -1825,6 +1870,7 @@ select
 		text-align:center;
 	}	
 }	
+
 @media screen and (max-width: 1252px) and (min-width: 1024px)
 {
 	
