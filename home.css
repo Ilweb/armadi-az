@@ -415,7 +415,7 @@ a
 	margin-right:2%;
 	display:inline-block;
 	width:18%;
-    padding-bottom: 14.55px;
+    padding-bottom: 14.5px;
 	padding-top:10px;
 	vertical-align: bottom;
 	position:relative;
@@ -1664,8 +1664,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .recipe_content p:nth-of-type(3)
 {
 	float:right;
-	width:29%;
-	border-top
+	width:30%;
+	border-top: 2px solid grey;
 }	
 select
 {
