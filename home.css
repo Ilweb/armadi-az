@@ -845,6 +845,17 @@ a
   from {opacity: .4} 
   to {opacity: 1}
 }
+/*SLIDER ARTICLE*/
+.artic
+{
+	float:right;
+	width:85%;
+}	
+/*articles-page*/
+#article
+{
+	list-style:none;
+}	
 /*FOOTER*/
 ::-webkit-input-placeholder { color:black;font-size:16px;font-family:'Open Sans' }
 ::-moz-placeholder { color:black;font-size:16px;font-family:'Open Sans' } /* firefox 19+ */
@@ -1576,6 +1587,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	text-align:justify;
 	background:white;
 	margin-top:20px;
+	float: none;
+    clear: both;
 }	
 .recipe_content div
 {

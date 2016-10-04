@@ -3,7 +3,16 @@ $bodyClass = '';
 require 'header.php';
 ?>
 <div class="whole_products" id="article">
-<div class="slider">
+<div class="year">
+	<ul>
+	<a href="#"><li>Year</li></a>
+	<a href="#"><li id="choosen">2016</li></a>
+	<a href="#"><li>2015</li></a>
+	<a href="#"><li>2015</li></a>
+	<a href="#"><li>2015</li></a>
+	</ul>
+</div>
+<div class="slider artic">
 	<div class="slideshow-container">
 	  <div class="mySlides fade">
 		<div class="numbertext">1 / 3</div>
