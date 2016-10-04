@@ -244,11 +244,11 @@ div.chapter:hover span
 		margin-bottom:0;
 	}
 }
-#first_butt
+.add_to_wish
 {
 	background:#fff5e6;
 }	
-#second_butt
+.add_to_cart
 {
 	background:#3c322d;
 	color:white;
@@ -281,6 +281,10 @@ div.chapter:hover span
 	width:80%;
 	text-transform:uppercase;
 	margin-bottom:20px;
+}
+.generals a
+{
+	color: inherit;
 }
 .generals > div:first-child
 {
@@ -1146,7 +1150,7 @@ legend
 {
 	float:right;
 }
-#first_butt
+.add_to_wish
 {
 margin-left:10px;
 }	
@@ -1982,7 +1986,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	{
 		width:40%;
 	}
-	#first_butt,#second_butt
+	.add_to_wish,.add_to_cart
 	{
 		float: none;
 		margin:0;
