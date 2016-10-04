@@ -895,9 +895,14 @@ a
 	width:85%;
 }	
 /*articles-page*/
-#article
+#article .year ul li
 {
 	list-style:none;
+}	
+.articles_title
+{
+	font-size: 20px;
+    top: 35%;
 }	
 /*FOOTER*/
 ::-webkit-input-placeholder { color:black;font-size:16px;font-family:'Open Sans' }
@@ -1633,6 +1638,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	float: none;
     clear: both;
 }	
+.recipe_content img
+{
+	width:60%;
+	height:280px;
+	float:left;
+}	
+
 .recipe_content div
 {
 	padding:50px;
@@ -1648,7 +1660,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 {
 	width:60%;
 	display:inline-block;
+}
+.recipe_content p:nth-of-type(3)
+{
+	float:right;
+	width:29%;
+	border-top
 }	
+select
+{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	text-indent:1px;
+	text-overflot:'';
 #events.whole_products 
 {
 	min-height:600px;

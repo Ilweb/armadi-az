@@ -29,7 +29,7 @@ require 'brochure.php';
 	<div><a href="#"><img src="images/planthouse.png"><div class="one_month">September</div><div class="boreto">The world of chocolate, premium chocolates</div></a></div>
 	<div><a href="#"><img src="images/zaabar.png"><div class="one_month">October</div><div class="boreto">The world of chocolate, premium chocolates</div></a></div>
 	<div><a href="#"><img src="images/monte.png"><div class="one_month">November</div><div class="boreto">The world of chocolate, premium chocolates</div></a></div>
-	<div><a href="#"><img src="images/planthouse.png"><div class="one_month">zDecember</div><div class="boreto">The world of chocolate, premium chocolates</div></a></div>
+	<div><a href="#"><img src="images/planthouse.png"><div class="one_month">December</div><div class="boreto">The world of chocolate, premium chocolates</div></a></div>
 </div>
 <div class="generals supply brochure_supp">
 	<div>Suppliers</div>
