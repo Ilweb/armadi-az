@@ -1,80 +1,109 @@
-<div class="brochure">
-	<div class="contains">
-		<div><img src="<?php bloginfo('template_directory'); ?>/images/left.png" class="prev" onclick="plusSlides(-1)">
-			<div class="big_brochure">	
-			<div class="inner_content fade js-fade fade-in is-paused">
-				<div>
-				<a href="#">
-					<img src="<?php bloginfo('template_directory'); ?>/images/product1.png">
-					<div>
-						<h3>Pici Pasta</h3>
-						<p>About Pici Pasta Pici is a traditional flour-and-water Tuscan pasta of fat spaghetti strands which are rolled by hand to achieve a rustic look. </p>
-					</div>
-				</a>	
-				</div>
-				<div>
-				<a href="#">
-					<img src="<?php bloginfo('template_directory'); ?>/images/bottle2.png">
-					<div>
-						<h3>Bee Company</h3>
-						<p>Add it to a breakfast table for a golden touch, give it as a unique and delicious treat. From the Savannah Bee Company of Georgia.</p>
-					</div>
-				</a>	
-				</div>
-			</div>
-		<div class="inner_content fade">
-			<div>
-				<a href="#">
-					<img src="<?php bloginfo('template_directory'); ?>/images/product1.png">
-					<div>
-						<h3>Pici Pasta</h3>
-						<p>About Pici Pasta Pici is a traditional flour-and-water Tuscan pasta of fat spaghetti strands which are rolled by hand to achieve a rustic look. </p>
-					</div>
-				</a>	
-			</div>
-			<div>
-				<a href="#">
-					<img src="<?php bloginfo('template_directory'); ?>/images/bottle2.png">
-					<div>
-						<h3>Bee Company</h3>
-						<p>Add it to a breakfast table for a golden touch, give it as a unique and delicious treat. From the Savannah Bee Company of Georgia.</p>
-					</div>
-				</a>	
-			</div>
-		</div>
-		</div>
-		<img id="right" src="<?php bloginfo('template_directory'); ?>/images/left.png" class="next" onclick="plusSlides(1)">
-		</div>
-	</div>
-	<img id="active" src="<?php bloginfo('template_directory'); ?>/images/active.png">
+
+
+<div id="slider">
+  <a  class="control_next">></a>
+  <a  class="control_prev"><</a>
+  <ul>
+    <li>
+    <div class="img1">
+    <img src="../images/food-4.jpg">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+
+                        
+
+    
+
+   <div class="img1">
+    <img src="images/Untitled-1.png">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+    
+	<div class="img1">
+    <img src="images/Untitled-1.png">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+    
+	<div class="img1">
+    <img src="images/Untitled-1.png">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+	</li>
+     
+
+    <li >SLIDE 2</li>
+    <li>SLIDE 3</li>
+    <li>SLIDE 5</li>
+    <li>SLIDE 6</li>
+    <li>SLIDE 7</li>
+    <li>SLIDE 8</li>
+  </ul>  
 </div>
 
+
+
+             
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
+ 
 <script>
+    jQuery(document).ready(function ($) {
 
-var slideIndex = 1;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('right', '');
+        });
+    };
 
-function showSlides(n) {
-	var i;
-	var slides = document.getElementsByClassName("inner_content");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-	  slides[i].style.display = "none";
-	}
-	if (slideIndex > 0)
-	{
-		slides[slideIndex-1].style.display = "inline-block";
-	}
-}
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
 
-showSlides(slideIndex);
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});    
+
 
 </script>
+
+
+ 
+
