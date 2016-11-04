@@ -2248,7 +2248,7 @@ h1 {
 #slider {
   position: relative;
   overflow: hidden;
-  margin: 20px auto 0 auto;
+  margin: 20px 80px 0 auto;
   border-radius: 4px;
 }
 
@@ -2258,6 +2258,7 @@ h1 {
   padding: 0;
   width: auto;
   height: 200px;
+    background: #fff;
   list-style: none;
 }
 
@@ -2267,27 +2268,25 @@ h1 {
   float: left;
   margin: 0;
   padding: 0;
-  width: 800px;
+  width: 1000px;
   height: 400px;
   background: #fff;
   text-align: center;
   
 }
-#slider img{
+#slider .img1 img{
    margin-right: 4%;
-    width: calc(20% - 16px);
+    max-width: 137px;
+max-height: 200px;
 }
-#img1 p{
-	width: 20px;
-	color: #000;
-}
+
 
 a.control_prev, a.control_next {
   position: absolute;
   top: 40%;
   z-index: 999;
   display: block;
-  padding: 4% 3%;
+  padding: 6% 1%;
   width: auto;
   height: auto;
   background: #2a2a2a;
@@ -2314,11 +2313,36 @@ a.control_next {
 }
 
 .img1{
-	width: 20%;
+	width: calc(23% - 3px);
 	display: inline-block;
-	float: left;
-margin-right: 37px;
+		text-align: left
+	
 }
+.img1 img{
+	margin-left: 25px;
+}
+ .content {
+
+z-index: 3;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 2em;
+box-sizing: border-box;
+background-color: rgba(0, 0, 0, 0.5);
+color: #fff;
+line-height: 2em;
+padding: 0 1em;
+font-size: 1.5em;
+}
+ .content a {
+color: inherit;
+}
+.img1 h4{
+ border-bottom: 1px solid #000;
+}
+
 /*.container{
     width: 80%;
 }
@@ -2355,23 +2379,7 @@ margin-right: 37px;
     width: calc(25% - 50px);
     margin-right: 3%;
 }
- .content {
-z-index: 3;
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 3em;
-box-sizing: border-box;
-background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
-line-height: 3em;
-padding: 0 1em;
-font-size: 1.5em;
-}
- .content a {
-color: inherit;
-}
+
 
 .slide1 p{
     border-top: 1px solid grey;

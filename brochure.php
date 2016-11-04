@@ -6,7 +6,7 @@
   <ul>
     <li>
     <div class="img1">
-    <img src="../images/food-4.jpg">
+    <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
     <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
                         <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
                         порцеланова гарафа</p>
@@ -17,29 +17,65 @@
     
 
    <div class="img1">
-    <img src="images/Untitled-1.png">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
     <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
                         <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
                         порцеланова гарафа</p>
                         </div>
     
 	<div class="img1">
-    <img src="images/Untitled-1.png">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
     <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
                         <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
                         порцеланова гарафа</p>
                         </div>
     
 	<div class="img1">
-    <img src="images/Untitled-1.png">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
     <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
                         <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
                         порцеланова гарафа</p>
                         </div>
+                         <div class="content">ноември-декемри</div>
 	</li>
      
 
-    <li >SLIDE 2</li>
+    <li>
+    <div class="img1">
+    <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+
+                        
+
+    
+
+   <div class="img1">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+    
+	<div class="img1">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+    
+	<div class="img1">
+     <img src="http://itschool.bg/application/uploads/tutorials/gallery/maqpen4eva/6/1.jpg">
+    <h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.</span></h4>
+                        <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
+                        порцеланова гарафа</p>
+                        </div>
+                        <div class="content">ноември-декемри</div>
+
+
+	</li>
     <li>SLIDE 3</li>
     <li>SLIDE 5</li>
     <li>SLIDE 6</li>
