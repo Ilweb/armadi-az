@@ -1,0 +1,168 @@
+# Copyright (C) 2015 ilweb
+# This file is distributed under the same license as the Maria package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maria 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/maria\n"
+"POT-Creation-Date: 2015-12-04 08:30+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-12-21 13:42+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: bg_BG\n"
+
+#: footer.php:21
+msgid "Sensitive + Successful?"
+msgstr "Чувствителност + Успех? "
+
+#: footer.php:21
+msgid "YES"
+msgstr "ДА"
+
+#: footer.php:21
+msgid "You can have it all!"
+msgstr "Можете да имате всичко!"
+
+#: footer.php:22
+msgid "Get a weekly dose of wisdom about relationships"
+msgstr "Вашата седмична доза съвети за взаимоотношения "
+
+#: footer.php:22
+msgid "and success straight to your inbox"
+msgstr "и успех директно на имейла ви"
+
+#: footer.php:37
+msgid "Copyright"
+msgstr "Всички права запазени"
+
+#: footer.php:37
+msgid "Maria Toneva"
+msgstr "Мария Тонева"
+
+#: footer.php:38
+msgid "design and development"
+msgstr "Дизайн и разработка"
+
+#: functions.php:24
+msgid "Primary menu"
+msgstr "Основно меню"
+
+#: functions.php:25
+msgid "Footer menu"
+msgstr "Помощно меню"
+
+#: functions.php:26
+msgid "Right menu"
+msgstr "Дясно меню"
+
+#: header.php:37
+msgid "How to"
+msgstr "Как да"
+
+#: header.php:38
+msgid "Thrive as"
+msgstr "имате успех"
+
+#: header.php:39
+msgid "a Sensitive"
+msgstr "като чувствителен"
+
+#: header.php:40
+msgid "Person"
+msgstr "човек"
+
+#: header.php:48
+msgid "Get"
+msgstr " "
+
+#: header.php:48
+msgid "free tips"
+msgstr "Безплатни съвети "
+
+#: header.php:48
+msgid "how to embrace your"
+msgstr "как да приемете"
+
+#: header.php:48
+msgid "emotions"
+msgstr "емоционалността си "
+
+#: header.php:49
+msgid "and be"
+msgstr "и да имате"
+
+#: header.php:49
+msgid "successful"
+msgstr "успех"
+
+#: header.php:49
+msgid "in life"
+msgstr "в живота"
+
+#: header.php:54
+msgid "email"
+msgstr "имейл"
+
+#: header.php:55
+msgid "name"
+msgstr "име"
+
+#: header.php:56
+msgid "Sign up!"
+msgstr "Запиши ме!"
+
+#: index.php:16
+msgid "KEEP READING"
+msgstr "ПРОДЪЛЖИ"
+
+#: index.php:18 single.php:22
+msgid "What do you think? Please share!"
+msgstr "Какво мислите? Моля, споделете!"
+
+#: index.php:24 single.php:28
+msgid "Share on Facebook"
+msgstr "Споделете във Facebook"
+
+#: index.php:30 single.php:34
+msgid "Share on Google+"
+msgstr "Споделете в Google+"
+
+#: index.php:36 single.php:40
+msgid "Share on Pinterest"
+msgstr "Споделете в Pinterest"
+
+#: index.php:43 single.php:47
+msgid "Share on Twitter"
+msgstr "Споделете в Twitter"
+
+#. Theme Name of the plugin/theme
+msgid "Maria"
+msgstr "Мария"
+
+#. Author of the plugin/theme
+msgid "ilweb"
+msgstr "ИЛ Уеб"
+
+#. Author URI of the plugin/theme
+msgid "http://ilweb.eu/"
+msgstr ""
+
+#: index.php
+msgid "< Older"
+msgstr "< Назад"
+
+#: index.php
+msgid "Newer >"
+msgstr "Напред >"
+
+#: functions.php
+msgid "Signature"
+msgstr "Подпис"
+
+#: functions.php
+msgid "Show right menu"
+msgstr "Да се вижда дясно меню"

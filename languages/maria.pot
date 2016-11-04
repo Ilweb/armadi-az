@@ -1,0 +1,148 @@
+# Copyright (C) 2015 ilweb
+# This file is distributed under the same license as the Maria package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Maria 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/maria\n"
+"POT-Creation-Date: 2015-12-02 12:50:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: footer.php:21
+msgid "Sensitive + Successful?"
+msgstr ""
+
+#: footer.php:21
+msgid "YES"
+msgstr ""
+
+#: footer.php:21
+msgid "You can have it all!"
+msgstr ""
+
+#: footer.php:22
+msgid "Get a weekly dose of wisdom about relationships"
+msgstr ""
+
+#: footer.php:22
+msgid "and success straight to your inbox"
+msgstr ""
+
+#: footer.php:37
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:37
+msgid "Maria Toneva"
+msgstr ""
+
+#: footer.php:38
+msgid "design and development"
+msgstr ""
+
+#: functions.php:24
+msgid "Primary menu"
+msgstr ""
+
+#: functions.php:25
+msgid "Footer menu"
+msgstr ""
+
+#: functions.php:26
+msgid "Right menu"
+msgstr ""
+
+#: header.php:37
+msgid "How to"
+msgstr ""
+
+#: header.php:38
+msgid "Thrive as"
+msgstr ""
+
+#: header.php:39
+msgid "a Sensitive"
+msgstr ""
+
+#: header.php:40
+msgid "Person"
+msgstr ""
+
+#: header.php:48
+msgid "Get"
+msgstr ""
+
+#: header.php:48
+msgid "free tips"
+msgstr ""
+
+#: header.php:48
+msgid "how to embrace your"
+msgstr ""
+
+#: header.php:48
+msgid "emotions"
+msgstr ""
+
+#: header.php:49
+msgid "and be"
+msgstr ""
+
+#: header.php:49
+msgid "successful"
+msgstr ""
+
+#: header.php:49
+msgid "in life"
+msgstr ""
+
+#: header.php:54
+msgid "email"
+msgstr ""
+
+#: header.php:55
+msgid "name"
+msgstr ""
+
+#: header.php:56
+msgid "Sign up!"
+msgstr ""
+
+#: index.php:16
+msgid "KEEP READING"
+msgstr ""
+
+#: index.php:18 single.php:22
+msgid "What do you think? Please share!"
+msgstr ""
+
+#: index.php:24 single.php:28
+msgid "Share on Facebook"
+msgstr ""
+
+#: index.php:30 single.php:34
+msgid "Share on Google+"
+msgstr ""
+
+#: index.php:36 single.php:40
+msgid "Share on Pinterest"
+msgstr ""
+
+#: index.php:43 single.php:47
+msgid "Share on Twitter"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Maria"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ilweb"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://ilweb.eu/"
+msgstr ""
