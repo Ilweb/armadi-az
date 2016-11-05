@@ -2269,7 +2269,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 1000px;
-  height: 400px;
+  height: 500px;
   background: #fff;
   text-align: center;
   
@@ -2278,6 +2278,10 @@ h1 {
    margin-right: 4%;
     max-width: 137px;
 max-height: 200px;
+}
+
+.one{
+	background-image: url('images/i1.png');
 }
 
 
@@ -2315,8 +2319,13 @@ a.control_next {
 .img1{
 	width: calc(23% - 3px);
 	display: inline-block;
-		text-align: left
+		text-align: left;
+		position: relative;
+top: 46px;
 	
+}
+.img1 h4 span {
+	font-weight: 100;
 }
 .img1 img{
 	margin-left: 25px;
