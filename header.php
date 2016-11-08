@@ -38,23 +38,46 @@ global $woocommerce;
 		</span>
 	</div>
 </div>
-<div><div><span><a href="#">login</a></span><span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span><span class="cart"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
+<div>
+<div><span><a href="#">login</a></span>
+<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
+<span class="cart"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
 
-<div class="margin-lr loggo"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i><div><a href="<?php echo home_url(); ?>"><img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png"></div><div id="welcome"><a href="#"><p>WELCOME</p>
+<div class="margin-lr loggo">
+<i class="fa fa-bars  fa-3x" aria-hidden="true"></i>
+<div><a href="<?php echo home_url(); ?>">
+<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png">
+</div>
+<div id="welcome">
+<a href="#"><p>WELCOME</p>
 <p>Login to your Armadiaz.com<br/>
-and your personal proposals</p></a></div></div>
-
+and your personal proposals</p></a></div>
+</div>
+<div id="sticky-anchor">
+	<div class="margin-lr menu firstt">
+		<ul>
+		<li><a href="#">home</a></li>
+		<li><a href="#">products</a></li>
+		<li><a href="#">brochure</a></li>
+		<li><a href="#">events</a></li>
+		<li><a href="#">articles</a></li>
+		<li><a href="#">contacts</a></li>
+		<li><a href="#">abouts us</a></li>
+		</ul>
+	</div>
+</div>
+<div id="sticky-anchor">
 <?php 
 wp_nav_menu(array(
 	'theme_location'=>"primary",
 	'container_class'=>"margin-lr menu firstt",
 )); 
 ?>
-
+</div>
 </header>
 
 <script type="text/javascript">	
-jQuery(".fa").click(function()
+jQuery(".loggo .fa ").click(function()
 
 	{
 		jQuery(".firstt").fadeToggle(1000).css("position","absolute").css("top","85px")
@@ -98,4 +121,96 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
+</script>
+
+<script>
+$(document).ready(function() {
+        $(".left_menu ul:first-of-type .fa").hide();
+
+        $(".left_menu ul:first-of-type li").mouseover(function() {  // attaches click handler to links       
+            // show clickSave element inside the clicked link
+            var ele = $(".fa", this).show();
+            // hide all other visible clickSave elements
+            $(".left_menu ul:first-of-type .fa:visible").not(ele).hide(); 
+        });
+    }); 
+</script>
+
+<script type="text/javascript">
+        var currentValue = 0;
+        var add = function(valueToAdd){
+            currentValue += valueToAdd;
+            document.getElementById('number').innerHTML = currentValue;
+        };
+</script>
+<script type="text/javascript">	
+jQuery("#recommendation").click(function()
+
+	{
+		jQuery(this).css("border-bottom","none").css("background","white");
+	});
+
+</script>
+<script>
+$(function() {
+$('#recommendation').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");
+	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('The text you are adding');
+});
+});
+</script>
+<script>
+$(function() {
+$('#rev').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");	
+	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('Bore');
+});
+});
+</script>
+<script>
+$(function() {
+$('#descr').click(function() {
+	$(this).css("background","white").css("border-bottom-color","white");
+	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
+});
+});
+</script>
+
+<script>
+function stickyHeader()
+{
+	if ($(window).scrollTop() > ($("header").height() - 94)) {
+        $('.menu').addClass('fixed');
+		$('.cart').addClass('fixed');
+    } else {
+        $('.menu').removeClass('fixed');
+		$('.cart').removeClass('fixed');
+    }
+}
+
+$(window).on('scroll', function (e) {
+
+	stickyHeader();
+});
+
+function goToByScroll( id, correction)
+{
+	if (enabledScroll)
+	{
+		enabledScroll = false;
+		$('html,body').animate({ 
+			scrollTop: $(id).offset().top + correction
+		}, 200, function() 
+		{
+			stickyHeader();
+			enabledScroll = true;
+		});
+	}
+}
 </script>
