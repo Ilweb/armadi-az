@@ -185,15 +185,18 @@ font-size:24px;
 {
 	font-weight:bold;
 }
+#second_butt{
+	border:none;
+}
 .choice button,
 .choice a
 {
 	display:inline-block;
-	width:45%;
-	height:50px;
-	border:1px solid #d1c6bf;
-	border-radius:2px;
-    vertical-align: top;
+	top: 10px;
+	width:49%;
+	height:26px;
+	border:none;
+    /*vertical-align: top;*/
 	cursor:pointer;
 }	
 .items:hover .choice
@@ -201,6 +204,31 @@ font-size:24px;
 	display:block;
 	opacity:1;
 }	
+.wc-tabs{
+	float: left;
+	
+}
+.wc-tabs li{
+	display: inline-block;
+	width: 200px;
+	border: 1px solid #d1c6bf;
+    background-color: #fff5e6;
+	
+}
+.wc-tab p{
+	
+    column-gap: 86px;
+    column-count: 2;
+    margin-top: 50px;
+    border: 1px solid #d1c6bf;
+    text-align: justify;
+    position: relative;
+    padding: 34px;
+}
+
+.wc-tabs li a{
+	font-size: 20px;
+}
 .supply div
 {
 	width:100%;
@@ -291,12 +319,12 @@ div.chapter:hover span
 }
 .add_to_wish
 {
-	background:#fff5e6;
+	background:none;
 }	
 .generals a.add_to_cart
 {
-	background: #3c322d;
-	color: white;
+	
+	color: #000;
 	box-sizing: border-box;
 	padding: 6px;
 }	
@@ -627,6 +655,7 @@ header div
     top: -16px;
     width: 100%;
 	background:#302824;
+	transition: all 0.8s ease;
 	
 }
 .cart.fixed
@@ -714,11 +743,12 @@ header div:first-of-type span:first-of-type
 }
 button,
 .choice a
-{
+{	
+	font-size: 9px;
 	text-transform:uppercase;
 	background:transparent;
 	border:none;
-	border-right:1px solid grey;
+	border-right:none;
 }	
 header div:nth-of-type(2)
 {
@@ -1163,35 +1193,48 @@ legend
 	border-bottom-color:white;
 	left: -2px;
 }	
-#myform {
+#myForm {
     text-align: center;
    
     display: inline-block;
+
   
   margin-bottom: 50px;
 }
 .qty {
-    width: 40px;
-    height: 43px;
+	font-size: 17px;
+	font-weight: 700;
+    margin-left: -8px;
+    width: 42px;
+    height: 39px;
     text-align: center;
+    border:1px solid #d1c6bf;
+
 }
+
 input.plus 
-{ 
-	width:60px; 
-	height:43px; 
-	background-color: #fff5e6;
-	border-radius: 8px;
+{ 	font-size: 17px;
+	font-weight: 700;
+	width: 60px;
+    height: 43px;
+    background-color: #fff5e6;
+    border-radius: 0 10px 10px 0;
+    margin-left: -6px;
+    border:  1px solid #d1c6bf;
 }
 input.minus {
- width:60px; 
- height:43px;
- background-color: #fff5e6;
- border-radius: 8px;
+	font-size: 17px;
+	font-weight: 700;
+    width: 60px;
+    height: 43px;
+    background-color: #fff5e6;
+    border-radius: 10px 0 0 10px;
+     border:  1px solid #d1c6bf;
 }
 .delivery
 {
 	display:inline-block;
-	margin-bottom: 50px;
+	
 }	
 
 
@@ -1205,12 +1248,12 @@ input.minus {
 }
 .add_to_wish
 {
-margin-left:10px;
+/*margin-left:10px;*/
 }	
-.explanation div:nth-of-type(3),.explanation div:nth-of-type(4)
+/*.explanation div:nth-of-type(3),.explanation div:nth-of-type(4)
 {
 	display:inline-block;
-}	
+}*/	
 /*RATING*/
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
@@ -1260,6 +1303,7 @@ fieldset, label { margin: 0; padding: 0; }
 	font-size:11px;
 	font-weight:normal;
 	float:right;
+	margin-left: 50px
 }
 .delivery div
 {
@@ -2044,9 +2088,7 @@ select
 	}
 }	
 @media only screen and (max-width:700px)
-{  #sticky-anchor
-	{visibility: visible;
-	}
+{  
 	.filter_boxes div:nth-of-type(4) 
 	{
 		width: 60%;
@@ -2060,7 +2102,7 @@ select
 	{
 		margin-top:10px;
 	}	
-	.menu
+	div.menu
 	{
 		display:none;
 	}	

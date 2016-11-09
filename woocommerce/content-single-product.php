@@ -106,6 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class="description">
 				<fieldset>
+
 					<legend id="descr">Description</legend>
 					<legend id="recommendation">Recommendations</legend>
 					<legend id="rev">Reviews(8)</legend>
@@ -113,7 +114,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 					<div class="new_member_box_display" id="question"> Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.
 					</div>
-			</fieldset></div>
+			</fieldset>
+		
+		
+			<?php
+		 woocommerce_output_product_data_tabs();
+		?>
+	</div>
 
 				<?php
 					/**

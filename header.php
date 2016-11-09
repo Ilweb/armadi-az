@@ -52,28 +52,16 @@ global $woocommerce;
 <a href="#"><p>WELCOME</p>
 <p>Login to your Armadiaz.com<br/>
 and your personal proposals</p></a></div>
-</div>
-<div id="sticky-anchor">
-	<div class="margin-lr menu firstt">
-		<ul>
-		<li><a href="#">home</a></li>
-		<li><a href="#">products</a></li>
-		<li><a href="#">brochure</a></li>
-		<li><a href="#">events</a></li>
-		<li><a href="#">articles</a></li>
-		<li><a href="#">contacts</a></li>
-		<li><a href="#">abouts us</a></li>
-		</ul>
-	</div>
-</div>
-<div id="sticky-anchor">
+
+
+
 <?php 
 wp_nav_menu(array(
 	'theme_location'=>"primary",
-	'container_class'=>"margin-lr menu firstt",
+	'container_class'=>"margin-lr menu firstt"
 )); 
 ?>
-</div>
+
 </header>
 
 <script type="text/javascript">	
@@ -99,7 +87,7 @@ $(document).ready(function() {
         // This will fire each time the window is resized:
         if($(window).width() >= 700) {
             // if larger or equal
-            $('.firstt').css("position","relative").css("top","0");
+            $('.firstt').css("position","relative").css("top","-30px");
         } else {
             // if smaller
             $('.firstt').css("position","absolute").css("top","85px");
@@ -163,7 +151,7 @@ $('#recommendation').click(function() {
 </script>
 <script>
 $(function() {
-$('#rev').click(function() {
+$('.description_tab').click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");	
 	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
@@ -173,7 +161,7 @@ $('#rev').click(function() {
 </script>
 <script>
 $(function() {
-$('#descr').click(function() {
+$('.reviews_tab').click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");
 	$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");

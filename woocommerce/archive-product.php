@@ -21,12 +21,19 @@ get_header( 'shop' );
 		 
 		//do_action( 'woocommerce_before_main_content' );
 	?>
+	
+<?php
+
+
+get_template_part('brochure');
+?>
 
 <div class="whole_products">
 <div class="second-part">
 <?php
 get_template_part('left_menu');
 ?>
+
 <div class="generals">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -104,4 +111,5 @@ get_template_part('left_menu');
 	</div>
 	</div>
 	</div>	
+
 <?php get_footer( 'shop' ); ?>
