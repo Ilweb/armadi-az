@@ -38,13 +38,35 @@ if ( ! empty( $tabs ) ) : ?>
 				</li>
 			<?php endforeach; ?>
 		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
+		
+	</div>
+
+	<?php foreach ( $tabs as $key => $tab ) : ?>
 		
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
 				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
 			</div>
-			</fieldset>
+		
+		
 		<?php endforeach; ?>
-	</div>
+		
 
 <?php endif; ?>
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+    jQuery('.description_tab').live('click', function(event) {        
+         jQuery('.woocommerce-Tabs-panel--description > p').toggle('show');
+         jQuery('#reviews').hide();
+    });
+});
+</script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+    jQuery('.reviews_tab').live('click', function(event) {        
+         jQuery('#reviews').toggle('show');
+         jQuery('.woocommerce-Tabs-panel--description > p').hide();
+    });
+});
+</script>

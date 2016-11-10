@@ -75,6 +75,7 @@ if ( ! comments_open() ) {
 							'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
 										'<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-required="true" required /></p>',
 						),
+						
 						'label_submit'  => __( 'Submit', 'woocommerce' ),
 						'logged_in_as'  => '',
 						'comment_field' => ''
@@ -95,7 +96,7 @@ if ( ! comments_open() ) {
 						</select></p>';
 					}
 
-					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', 'woocommerce' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
+					$comment_form['comment_field'] .= '<p class="comment-form-comment "><label for="comment">' . __( 'Your Review', 'woocommerce' ) . ' <span class="required ">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
 
 					comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
