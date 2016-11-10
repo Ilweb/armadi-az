@@ -193,7 +193,7 @@ font-size:24px;
 {
 	display:inline-block;
 	top: 10px;
-	width:4%;
+	width:48%;
 	height:26px;
 	border:none;
 	outline: none;
@@ -1595,8 +1595,7 @@ p.meta{
 	}	
 	#sticky-anchor
 	{
-		
-		
+	
 		height: 84px;
 		background: transparent;
 	}	
@@ -1861,11 +1860,9 @@ select
 }	
 @media only screen and (max-width:1110px)
 {
-
-	.cart.fixed
-{
-	display: none;
-}
+	.cart.fixed{
+		display: none;
+	}
 	.margin-lr div:first-of-type
 	{
 		margin:0
