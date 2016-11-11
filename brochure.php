@@ -62,9 +62,9 @@
 	</li>
     <li>
     	<div class="slide3">
-    		<div class="products">
+    		<div class="productss">
 				<img class="first" src="images/greygus.png" alt=""/>
-				<img class="second" src="images/i1.png" alt="">
+				<img class="secondd" src="images/i1.png" alt="">
 				<img class="third" src="images/i2.png" alt="">
 				<img class="forth" src="images/i5.png" alt="">
 				<img class="fifth" src="images/i1.png" alt="">

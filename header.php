@@ -41,7 +41,7 @@ global $woocommerce;
 <div>
 <div><span><a href="#">login</a></span>
 <span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
-<span class="cart"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
+<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
 
 <div class="margin-lr loggo">
 <i class="fa fa-bars  fa-3x" aria-hidden="true"></i>
@@ -54,6 +54,7 @@ global $woocommerce;
 and your personal proposals</p></a></div>
 
 
+
 <div id="sticky-anchor">
 <?php 
 wp_nav_menu(array(
@@ -62,6 +63,8 @@ wp_nav_menu(array(
 )); 
 ?>
 </div>
+
+
 
 </header>
 
@@ -177,10 +180,10 @@ function stickyHeader()
 {
 	if ($(window).scrollTop() > ($("header").height() - 94)) {
         $('.menu').addClass('fixed');
-		$('.cart').addClass('fixed');
+		$('.cartt').addClass('fixed');
     } else {
         $('.menu').removeClass('fixed');
-		$('.cart').removeClass('fixed');
+		$('.cartt').removeClass('fixed');
     }
 }
 

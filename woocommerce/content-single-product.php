@@ -157,10 +157,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 </div>
+
 <?php
 get_template_part('left_menu');
 ?>
+<?php
+woocommerce_upsell_display();
+?>
+
 </div>
+
+
 </div><!-- #product-<?php the_ID(); ?> -->
+
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

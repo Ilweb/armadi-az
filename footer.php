@@ -1,4 +1,14 @@
+
+<div class="margin-lr second ">
+	<ul>
+		<li><a href="#">Why to choose us</a></li>
+		<li><a href="#">How to pay</a></li>
+		<li><a href="#">For registrered</a></li>
+		<li><a href="#">News</a></li>
+	</ul>
+</div>
 <footer class="footer_menu margin-lr">
+
 	<div>
 		<ul><li><a href="#"><h4>More info</h4></a></li>
 			<li><a href="#">About us</a></li>
