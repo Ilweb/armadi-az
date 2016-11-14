@@ -36,11 +36,10 @@ header div:nth-of-type(3),header div:nth-of-type(3) div
 }	
 .woocommerce-message
 {	
-	width: 76%;
+	width: 100%;
 box-sizing: border-box;
 position: relative;
-right: left;
-left: 21.5%;
+
 }
 .inner_content
 {
@@ -789,6 +788,7 @@ button,
 	background:transparent;
 	border:none;
 	border-right:none;
+	color: #000;
 }	
 header div:nth-of-type(2)
 {
@@ -1975,10 +1975,54 @@ label {
   
 }
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
-    background-color: none !important;
+    background-color: transparent;
     text-decoration: none;
     background-image: none;
     color: #515151;
+    outline: none;
+}
+.woocommerce-cart .text{
+	background: none;
+	color: #000;
+}
+ .woocommerce-edit-account legend{
+ 	position: absolute;
+top: -28px;
+background-color: transparent;
+border:none;
+
+width: 200px;
+padding-top: 7px;
+padding-bottom: 7px;
+font-size: 20px;
+
+
+ }
+.woocommerce-page #payment #place_order{
+	float: left;
+	outline: none;
+line-height: 3px;
+background-color:#efefef;
+color: #000;
+height: 50px;
+
+
+
+}
+.woocommerce-page #payment #place_order:hover{
+	
+	
+	font-size: 20px;
+	font-weight: 700;
+}
+.woocommerce-cart table.cart input{
+	line-height: 0;
+}
+.woocommerce-cart table.cart input:hover{
+	background-color: #efefef;	
+}
+button[name="update_cart"]{
+	bottom: 0;
 }
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
     box-sizing: border-box;
@@ -2029,6 +2073,7 @@ label {
 #add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box {
    display: none;
 }
+
 @media only screen and (max-width:1110px)
 {
 	.cartt.fixed{
@@ -2792,7 +2837,7 @@ position: absolute;
 
      .aboutText p{
      	
-     	margin-top: 20px;
+     	margin-top: 9px;
      	width: 90%;
      }
      .myImage {

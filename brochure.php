@@ -7,9 +7,15 @@
     <li>
 		<div class="img1">
 			<a href=""><img src="images/img1.png" alt="">
-			<h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.<i class=" fa-shopping-cart " aria-hidden="true"></i></span></h4>
+			<h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.<i class=" fa-shopping-cart " aria-hidden="true" ></i></span></h4>
 		    <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
 			порцеланова гарафа</p></a>
+
+       
+           
+
+     
+
 		</div>
 		<div class="img1">
 		<a href="">	<img src="images/img3.png" alt="">
