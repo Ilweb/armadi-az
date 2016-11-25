@@ -1,8 +1,11 @@
 <?php
 get_header();
 
-
-
+if (wc_get_page_id( 'cart' ) == get_the_ID()) {
+  wc_get_template_part('cart/cart');
+}
+else
+{
 ?>
 
 
@@ -65,5 +68,6 @@ get_header();
 
 
 <?php
+}
 get_footer();
 ?>
