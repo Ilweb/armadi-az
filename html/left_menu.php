@@ -40,7 +40,7 @@ $('li.category_main').click(function() {
 jQuery(".sec_menu").click(function()
 {
 	jQuery(".left_menu").fadeToggle(1000);
-	jQuery(".best-of-the-best").fadeToggle(1000);
+	//jQuery(".best-of-the-best").fadeToggle(1000);
 });
 
 </script>

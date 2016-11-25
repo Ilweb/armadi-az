@@ -1,5 +1,5 @@
-<div class="sec_menu"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i></div>
-<div class="left_menu">
+
+<!--<div class="left_menu">
 	<ul>
 		<li class="category_main">Categories<i class="fa fa-list" style="display:inline-block !important;" aria-hidden="true"></i></li>
 		<li class="other"><a href="#">Drinks</a></li>
@@ -26,14 +26,35 @@
 	<ul>
 		<li>Brands<i class="fa fa-diamond" aria-hidden="true"></i></li>
 	</ul>
+</div>-->
+<div class="sec_menu"><i class="fa fa-bars  fa-3x" aria-hidden="true"></i></div>
+<div class="left_menu">
+
+<i class="fa fa-list	" style="display:inline-block !important;" aria-hidden="true"></i>
+<i class="fa fa-globe" style="display:inline-block;" aria-hidden="true"></i>
+<i class="fa fa-diamond" aria-hidden="true"></i>
+<?php
+
+$menu_name = 'secondary';
+$locations = get_nav_menu_locations();
+$menu_id = $locations[ $menu_name ] ;
+wp_get_nav_menu_object($menu_id);
+wp_nav_menu( array(
+'theme_location'=>"secondary"
+	
+)); 
+?>
+
 </div>
+
+	
 <script type="text/javascript">	
 
-$('li.category_main').click(function() {
+$('li.left_menu').click(function() {
 	if ($(window).width() <= 1024)
 	{
-		$(this).parent().parent().find('.other:visible').fadeOut();
-		$(this).parent().find('.other').fadeIn();
+		$(this).parent().parent().find('.sub-menu:visible').fadeOut();
+		$(this).parent().find('.sub-menu').fadeIn();
 	}
 });
 

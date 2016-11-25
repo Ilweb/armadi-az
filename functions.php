@@ -21,8 +21,11 @@ function my_theme_setup()
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 405, 810 );
 	
+	
+	
 	register_nav_menus(array(
 		'primary' => __('Primary menu', 'armadiaz'),
+		'secondary'=>__('Secondary menu', 'armadiaz'),
 		'footer' => __('Footer menu', 'armadiaz')
 	));
 
