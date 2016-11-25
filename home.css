@@ -1959,8 +1959,12 @@ select
    width: 98%;
 float: left;
 }
-.cart_item a{
-	color: #000
+.woocommerce-cart.cart_item  {
+	color: #000;
+
+}
+.woocommerce-cart  tr td{
+	margin-left: 20px;
 }
 .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
     float: left;
@@ -1984,7 +1988,7 @@ float: left;
     background-color: transparent;
    color: #000; 
 }
-.woocommerce table.shop_table {
+.woocommerce table, .shop_table {
     border: 1px solid rgba(0,0,0,.1);
     margin: 0 -1px 24px 0;
     text-align: left;
@@ -1992,6 +1996,7 @@ float: left;
     border-collapse: none;
     border-radius: 5px;
 }
+
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: left;
     width: 100%;
@@ -2020,7 +2025,10 @@ label {
 }
 .woocommerce-cart .text{
 	background: none;
-	color: #000;
+color: #000;
+width: 31px;
+height: auto;
+position: relative;
 }
  .woocommerce-edit-account legend{
  	position: absolute;

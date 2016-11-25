@@ -35,10 +35,7 @@
 <i class="fa fa-diamond" aria-hidden="true"></i>
 <?php
 
-$menu_name = 'secondary';
-$locations = get_nav_menu_locations();
-$menu_id = $locations[ $menu_name ] ;
-wp_get_nav_menu_object($menu_id);
+
 wp_nav_menu( array(
 'theme_location'=>"secondary"
 	
