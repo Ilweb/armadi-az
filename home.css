@@ -12,6 +12,7 @@ header div:nth-of-type(2) div
 	margin-right:auto;
 	background:transparent;
 }	
+
 .margin-lr div:first-of-type
 {
 	margin-right:20%;
@@ -710,11 +711,13 @@ header div
 
 .menu.fixed,.cartt.fixed
 {
-   /*z-index: 9999;*/
+ z-index: 9999;
     position: fixed;
     left: 0;
     top: -16px;
     width: 100%;
+  
+  
 	background:#302824;
 	transition: all 0.8s ease;
 	
@@ -1658,12 +1661,13 @@ p.meta{
 	{
 	
 		height: 84px;
+
 		background: transparent;
 	}	
 	.cartt {
     vertical-align: middle;
     position: absolute;
-    top: 28px;
+    top: 50px;
     right: 0;
 	}		
 /******ARTICLES******/
@@ -1957,14 +1961,11 @@ select
 }
 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells {
    width: 98%;
+   color: #fff;
 float: left;
 }
-.woocommerce-cart.cart_item  {
-	color: #000;
-
-}
-.woocommerce-cart  tr td{
-	margin-left: 20px;
+.cart_item a{
+	color: #000
 }
 .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
     float: left;
@@ -1988,7 +1989,7 @@ float: left;
     background-color: transparent;
    color: #000; 
 }
-.woocommerce table, .shop_table {
+.woocommerce table.shop_table {
     border: 1px solid rgba(0,0,0,.1);
     margin: 0 -1px 24px 0;
     text-align: left;
@@ -1996,7 +1997,6 @@ float: left;
     border-collapse: none;
     border-radius: 5px;
 }
-
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: left;
     width: 100%;
@@ -2009,12 +2009,81 @@ label {
     z-index: 1;
     margin-top: 6px;
     right: 10px;
-    color: #fff;
+  
 }
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     background-color: none;
     color: #000;
   
+}
+
+.woocommerce-account .the_content{
+	background-color: transparent;
+	color: #fff;
+}
+.woocommerce-account .left_menu{
+	display: none;
+}
+.woocommerce-account p{
+	color: #fff;
+}
+.woocommerce-edit-account form{
+	width: 100%;
+}
+.woocommerce-edit-account .the_content{
+	width: 100%;
+}
+
+
+.woocommerce-edit-account .generals{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.woocommerce-edit-account .the_content p:first-of-type{
+	border-bottom: none;
+	width: 48%;
+}
+ .woocommerce-orders .woocommerce-MyAccount-content{
+ 	background-color: #fff;
+ 	color: #000;
+ 	 }
+
+ 	 .woocommerce-account .the_content p:nth-of-type(2){
+ 	 	width: 100%;
+ 	 }
+ 	.woocommerce-account .the_content  p:first-of-type {
+    width: 100%;
+    border-bottom: none;
+}
+.woocommerce-lost-password .woocommerce input.button{
+	color: #fff
+}
+
+ 	.woocommerce-orders .generals{
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+ .woocommerce-downloads .generals{
+ 	width: 80%;
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ }
+ .woocommerce-edit-address .generals{
+ 	width: 80%;
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ }
+
+ .woocommerce-edit-address form{
+ 	width: 100%;
+ }
+  .woocommerce-edit-address .the_content p:first-of-type {
+    width: 48%;
+    border-bottom:none;
+    margin-bottom: 20px;
 }
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
     background-color: transparent;
@@ -2023,12 +2092,10 @@ label {
     color: #515151;
     outline: none;
 }
+
 .woocommerce-cart .text{
 	background: none;
-color: #000;
-width: 31px;
-height: auto;
-position: relative;
+	color: #000;
 }
  .woocommerce-edit-account legend{
  	position: absolute;
@@ -2043,29 +2110,30 @@ font-size: 20px;
 
 
  }
+ .woocommerce-account ..woocommerce input.button{
+ 	color: #fff;
+ }
 .woocommerce-page #payment #place_order{
 	float: left;
 	outline: none;
 line-height: 3px;
-background-color:#efefef;
+background-color:transparent;
 color: #000;
 height: 50px;
 
 
 
 }
-.woocommerce-page #payment #place_order:hover{
+/*.woocommerce-page #payment #place_order:hover{
 	
 	
 	font-size: 20px;
 	font-weight: 700;
-}
+}*/
 .woocommerce-cart table.cart input{
 	line-height: 0;
 }
-.woocommerce-cart table.cart input:hover{
-	background-color: #efefef;	
-}
+
 button[name="update_cart"]{
 	bottom: 0;
 }
@@ -2080,6 +2148,21 @@ button[name="update_cart"]{
 .woocommerce form .form-row select, .woocommerce-page form .form-row select {
     width: 100%;
     height: 50px;
+}
+.woocommerce-account .woocommerce input.button{
+	color: #fff;
+	line-height: 2px
+} 
+
+.woocommerce-checkout .left_menu{
+	display: none
+}
+.woocommerce-checkout  .woocommerce-checkout-payment{
+	color: #000;
+}
+
+.woocommerce-cart .left_menu{
+	display: none;
 }
 .woocommerce-checkout 	.generals {
   	margin-right: 10%;
@@ -2103,6 +2186,7 @@ button[name="update_cart"]{
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+
 
 .woocommerce-cart form {
     width: 98%;
@@ -2131,6 +2215,10 @@ button[name="update_cart"]{
 	
 
 }
+.woocommerce-cart  .woocommerce a.button{
+
+}
+
 .the_content p:first-of-type{
 	width: 70%;
 	border-bottom: 2px solid #efefef;
@@ -2171,12 +2259,38 @@ width: 100%;
 }
 
 
+ .woocommerce-cart .the_content{
+ 	background-color: transparent;
+ }
+  .woocommerce-checkout .the_content{
+ 	background-color: transparent;
+ }
+ 
 
+ .woocommerce-checkout  #order_review{
+	background-color: #fff;
+}
+.woocommerce-billing-fields, .woocommerce-shipping-fields, #order_review_heading{
+	color: #fff;
+}
 
+ .woocommerce-checkout .the_content p:first-of-type {
+    width:48%;
+    border-bottom: none;
+    
+}
+.woocommerce-order-received .the_content{
+	color: #fff;
+}
 
+.cart-empty{
+	color: #fff;
+}
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
 
-
-
+background-color: transparent;
+color: #000;
+}
 
 
 @media only screen and (max-width:1110px)
