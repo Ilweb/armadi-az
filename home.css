@@ -664,10 +664,7 @@ header div
 	height:50px;
 	background:#fff5e6;
 }
-.home header div:first-of-type div
-{
-	width:74%;
-}
+
 .home header div:nth-of-type(3)
 {
 	margin-top:100px;
@@ -709,9 +706,9 @@ header div
 
 }
 
-.menu.fixed,.cartt.fixed
+.menu.fixed, .cartt.fixed
 {
- z-index: 9999;
+ /*z-index: 9999;*/
     position: fixed;
     left: 0;
     top: -16px;
@@ -807,13 +804,13 @@ header div:nth-of-type(2) span:first-of-type,header div:nth-of-type(2) span:nth-
 	margin-top:15px;
     font-weight: bold;
 }	
-.home header div:nth-of-type(2) div
+/*.home header div:nth-of-type(2) div
 {
 	width:74%;
 	margin-left:auto;
 	margin-right:auto;
 	background:transparent;
-}	
+}	*/
 header div:first-of-type span:first-of-type
 {
 	font-weight:bold;
@@ -1667,7 +1664,7 @@ p.meta{
 	.cartt {
     vertical-align: middle;
     position: absolute;
-    top: 50px;
+ 
     right: 0;
 	}		
 /******ARTICLES******/
@@ -2458,10 +2455,18 @@ color: #000;
 @media only screen and (max-width:860px)
 {	
 
-	.the_content p:first-of-type {
+.the_content p:first-of-type {
      width: 100%; 
     border-bottom: 2px solid #efefef;
     margin-bottom: 20px;
+}
+.woocommerce-checkout .the_content p:first-of-type {
+     width: 100%; 
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+.woocommerce-checkout .woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
+	width: 100%;
 }
 .the_content p:nth-of-type(2) {
      width: 100%; 
@@ -3284,6 +3289,32 @@ margin-left: 0;
 }
 }
 @media only screen and (max-width:480px){
+	.woocommerce-cart .generals {
+   margin-right: 0;
+   margin-left: 0;
+  right: 44px; 
+    display: inline-block;
+    float: left;
+width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.woocommerce-checkout .generals {
+    margin-right: 0;
+   margin-left: 0;
+    /* right: 44px; */ 
+    display: inline-block;
+    float: left;
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+	.recommended div div img {
+    width: 100%;
+    height: auto;
+    
+}
 	#slider{
 
 	width: 100%;

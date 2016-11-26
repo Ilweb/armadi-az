@@ -54,7 +54,7 @@ global $woocommerce;
 and your personal proposals</p></a></div>
 
 
-
+</div>
 <div id="sticky-anchor">
 <?php 
 wp_nav_menu(array(
@@ -86,7 +86,7 @@ jQuery(".search").click(function()
 	});
 
 </script>
-<script>
+<!--<script>
 $(document).ready(function() {
     // This will fire when document is ready:
     $(window).resize(function() {
@@ -100,7 +100,7 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
-</script>
+</script>-->
 <script>
 $(document).ready(function() {
     // This will fire when document is ready:
