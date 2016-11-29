@@ -26,10 +26,17 @@ function my_theme_setup()
 	register_nav_menus(array(
 		'primary' => __('Primary menu', 'armadiaz'),
 		'secondary'=>__('Secondary menu', 'armadiaz'),
-		'footer' => __('Footer menu', 'armadiaz')
+		'footer' => __('Footer menu', 'armadiaz'),
+		'info'=>__('Info menu', 'armadiaz'),
+		'contact us'=>__('Contact us menu', 'armadiaz')
+
+
+
 	));
+	
 
 }
+
 
 
 

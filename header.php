@@ -32,10 +32,16 @@ global $woocommerce;
 			<button><a href="#">bg</a></button>
 			<button><a href="#">en</a></button>
 			<button><a href="#">ru</a></button>
-			<img class="search" src="<?php bloginfo('template_directory'); ?>/images/search.png">
-			<input id="first" type="search" placeholder="SEARCH">
-				
+			<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>" img class="search" src="<?php bloginfo('template_directory'); ?>/images/search.png">
+
+			<input id="first" type="search" placeholder="SEARCH"   value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
+
+	<input type="hidden" name="post_type" value="product" /> 
+
+	
+				</form>	
 		</span>
+
 	</div>
 </div>
 <div>
@@ -59,7 +65,8 @@ and your personal proposals</p></a></div>
 <?php 
 wp_nav_menu(array(
 	'theme_location'=>"primary",
-	'container_class'=>"margin-lr menu firstt"
+	'container_class'=>"margin-lr menu firstt",
+
 
 )); 
 ?>
