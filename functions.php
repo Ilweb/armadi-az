@@ -33,6 +33,7 @@ function my_theme_setup()
 
 
 	));
+
 	
 
 }
@@ -40,4 +41,7 @@ function my_theme_setup()
 
 
 
+
+
 ?>
+<?php

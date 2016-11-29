@@ -850,13 +850,12 @@ header div span:last-of-type
 {
 	display:none;
 }	
-.search
+div > .search
 {
 	display:none;
 	vertical-align:middle;
 }
 	@import "compass/css3";
-
 .square {
   background: #eee;
   display: block !important;
@@ -975,6 +974,8 @@ a
 }	
 .second ul
 {	height: 20px;
+
+	margin-left: 20%;
 
 	text-transform:none !important;
 	
@@ -2022,6 +2023,11 @@ label {
 	background-color: transparent;
 	color: #fff;
 }
+.woocommerce-account .generals{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
 .woocommerce-account .left_menu{
 	display: none;
 }
@@ -2294,8 +2300,18 @@ width: 100%;
 background-color: transparent;
 color: #000;
 }
+.search-results #slider
 
+{
+display: none;
+}
 
+.search-no-results #slider{
+	display: none;
+}
+.woocommerce-ordering {
+	display: none;
+}
 @media only screen and (max-width:1110px)
 {
 	.cartt.fixed{

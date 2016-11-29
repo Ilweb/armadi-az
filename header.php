@@ -7,9 +7,11 @@ global $woocommerce;
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo("charset") ?>">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/lightbox.css?v=1">
+	<script src=" <?php bloginfo('template_directory'); ?>/lightbox.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<?php wp_head(); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/home.css?v=2">
@@ -38,7 +40,6 @@ global $woocommerce;
 
 	<input type="hidden" name="post_type" value="product" /> 
 
-	
 				</form>	
 		</span>
 
@@ -77,6 +78,7 @@ wp_nav_menu(array(
 
 </header>
 
+
 <script type="text/javascript">	
 jQuery(".loggo .fa ").click(function()
 
@@ -85,14 +87,14 @@ jQuery(".loggo .fa ").click(function()
 	});
 
 </script>
-<script type="text/javascript">	
+<!--<script type="text/javascript">	
 jQuery(".search").click(function()
 
 	{
 		jQuery("#first").fadeToggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
 	});
 
-</script>
+</script>-->
 <!--<script>
 $(document).ready(function() {
     // This will fire when document is ready:

@@ -6,17 +6,20 @@
   <ul>
     <li>
 		<div class="img1">
-			<a href="">
         <?php
         $args = array(
             'post_type' => 'product',
 
-            'posts_per_page' => 1
+
+            'posts_per_page' => 1,
+        
             );
+
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {
             while ( $loop->have_posts() ) : $loop->the_post();
                 wc_get_template_part(  'content', 'product' );
+
             endwhile;
         } else {
             echo __( 'No products found' );
@@ -24,6 +27,8 @@
         wp_reset_postdata();
 
         ?>
+        <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab"></div>
+        
 			<!--<h4>Уиски 21год. Чивас Роял Салют | 0.70л- <span>243лв.<i class=" fa-shopping-cart " aria-hidden="true" ></i></span></h4>
 		    <p>Една от “перлите в короната” на Чивас Ригал, бутилирано в ръчно изработена 
 			порцеланова гарафа</p></a>-->

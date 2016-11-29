@@ -53,7 +53,7 @@ if ( $attachment_ids ) {
 			echo apply_filters(
 				'woocommerce_single_product_image_thumbnail_html',
 				sprintf(
-					'<a href="%s" class="%s example-image-link" title="%s" data-rel="prettyPhoto[product-gallery]"><div>%s</div></a>',
+					'<a href="%s" class="%s example-image-link" title="%s" data-rel="prettyPhoto[product-gallery]"data-lightbox=product-gellery><div>%s</div></a>',
 					esc_url( $props['url'] ),
 					esc_attr( $image_class ),
 					esc_attr( $props['caption'] ),
@@ -67,6 +67,19 @@ if ( $attachment_ids ) {
 			$loop++;
 		}
 
+add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
+ 
+function frontend_scripts_include_lightbox() {
+  global $woocommerce;
+ 
+  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
+ 
+  if ( $lightbox_en ) {
+    wp_enqueue_script( 'fancybox', $woocommerce->plugin_url() . '/assets/js/fancybox/fancybox' . $suffix . '.js', array( 'jquery' ), '1.6', true );
+    wp_enqueue_style( 'woocommerce_fancybox_styles', $woocommerce->plugin_url() . '/assets/css/fancybox.css' );
+  }
+}
 	?></section>
 	</div>
 	<?php
