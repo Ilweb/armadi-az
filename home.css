@@ -1984,6 +1984,10 @@ float: left;
     width: 100%;
     height: 37px;
 }
+#menu-contact-us{
+	position: relative;
+	right: 20%;
+}
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
 
 	background-color: transparent;
@@ -1994,13 +1998,24 @@ float: left;
    color: #000; 
 }
 .woocommerce table.shop_table {
-    border: 1px solid rgba(0,0,0,.1);
+border: none;
     margin: 0 -1px 24px 0;
     text-align: left;
     width: 100%;
     border-collapse: none;
     border-radius: 5px;
 }
+.woocommerce table.shop_table th {
+    font-weight: 700;
+    font-size: 23px;
+    padding: 9px 12px;
+    }
+    #add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+    width: 44%;
+    height: auto;
+    box-shadow: none;
+}
+
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: left;
     width: 100%;
@@ -2008,7 +2023,7 @@ float: left;
 .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
     float: left;
     width: 100%;
-  
+
 }
 label {
     z-index: 1;
@@ -2110,7 +2125,7 @@ label {
  	position: absolute;
 top: -28px;
 background-color: transparent;
-border:none;
+border:none;	
 
 width: 200px;
 padding-top: 7px;
@@ -2185,13 +2200,13 @@ button[name="update_cart"]{
     margin-bottom: 20px;
 }
 .woocommerce-cart .generals {
-   margin-right: 10%;
-  	margin-left:10%;
+ 
     /* right: 44px; */
+    background-color: #fff;
     display: inline-block;
     float: left;
     color: white;
-    width: 80%;
+    width: 100%;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -2309,7 +2324,24 @@ color: #000;
 {
 display: none;
 }
+.woocommerce nav.woocommerce-pagination {
+    text-align: right;
+}
+.woocommerce nav.woocommerce-pagination ul{
+	border: none;
+}
+.woocommerce nav.woocommerce-pagination ul li{
+	border:none;
+}
+.woocommerce nav.woocommerce-pagination ul li a:hover{
 
+	background: transparent;
+
+} 
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background:transparent;
+
+	}
 .search-no-results #slider{
 	display: none;
 }

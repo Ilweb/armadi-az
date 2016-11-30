@@ -8,6 +8,8 @@
 	</ul>
 </div>-->
 <div class="margin-lr second">
+
+
 	<?php
 		wp_nav_menu(array(
 		'theme_location'=>"footer"
@@ -15,30 +17,41 @@
 	?>
 </div>
 <footer class="footer_menu margin-lr">
+
+
 	<div>
+<ul><li><h4>More info</h4></li>
+
+
+
 		<?php
+
 			wp_nav_menu(array(
 			'theme_location'=>"info"
 		));
+
 		?>
 	</div>
 	<div>
 		<ul class="social">
-			<li><a href="#"><h4>Follow us</h4></li>
+			<li><h4>Follow us</h4></li>
 			<li><a class="first_of" href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/fb.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/skype.png');"></div></a><a href="#" class="first_of"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/twitter.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/l_in.png')"></div></a><a href="#" class="first_of"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/pin.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/insta.png')"></div></a></li>
 		</ul>
 	</div>
 	<div>
+<ul><li><h4>Contact us</h4></li>
 	<?php
 		wp_nav_menu(array(
 		'theme_location'=>"contact us"
 	));
+
 	?>
+	<li class="pay_for"><a href="#"><div style="background:url('../images/american.png')"></div></a><a href="#"><div style="background:url('../images/maestro.png')"></div></a><a href="#"><div style="background:url('../images/visa.png')"></div></a><a href="#"><div style="background:url('../images/pay.png')"></div></a><a href="#"><div style="background:url('../images/master.png')"></div></a><a href="#"><div style="background:url('../images/electron.png')"></div></a></li>
 		
 	</div>
 	<div>
 		<ul>
-			<li><a href="#"><h4>Newsletter</h4></a></li>
+			<li><h4>Newsletter</h4></li>
 			<li>
 					<input type="text" placeholder="email"></input>
 			</li>

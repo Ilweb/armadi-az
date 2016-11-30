@@ -46,8 +46,10 @@ global $woocommerce;
 	</div>
 </div>
 <div>
-<div><span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">login</a></span>
-<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
+
+<div><span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
+
+<span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
 <span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
 
 <div class="margin-lr loggo">
@@ -146,20 +148,20 @@ $(document).ready(function() {
             document.getElementById('number').innerHTML = currentValue;
         };
 </script>
-<script type="text/javascript">	
+<!--<script type="text/javascript">	
 jQuery("#recommendation").click(function()
 
 	{
 		jQuery(this).css("border-bottom","none").css("background","white");
 	});
 
-</script>
+</script>-->
 <script>
 $(function() {
-$('#recommendation').click(function() {
+$('.additional_information_tab').click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");
 	$('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.new_member_box_display').html('The text you are adding');
 });
 });
@@ -169,7 +171,7 @@ $(function() {
 $('.reviews_tab').click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");	
 	$('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-//$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.new_member_box_display').html('Bore');
 });
 });
@@ -178,7 +180,7 @@ $('.reviews_tab').click(function() {
 $(function() {
 $('.description_tab').css("background", "#fff").css("border-bottom","#fff").click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");
-	//$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
 });
@@ -218,3 +220,5 @@ function goToByScroll( id, correction)
 	}
 }
 </script>
+
+	
