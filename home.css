@@ -216,8 +216,7 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 
 .wc-tabs li{
 	display: inline-block;
-	width: 100%;
-	height: 35px;
+	width: 200px;
 	border: 1px solid #d1c6bf;
     background-color: #fff5e6;
 	
@@ -258,7 +257,6 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 
 .wc-tabs li a{
 	font-size: 20px;
-	padding: 5px;
 }
 .supply div
 {
@@ -1419,7 +1417,6 @@ fieldset, label { margin: 0; padding: 0; }
 /*Chosen product*/
 .delivery
 {
-	visibility: hidden;
 	font-size:11px;
 	font-weight:normal;
 	float:right;
@@ -1984,10 +1981,6 @@ float: left;
     width: 100%;
     height: 37px;
 }
-#menu-contact-us{
-	position: relative;
-	right: 20%;
-}
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
 
 	background-color: transparent;
@@ -1998,24 +1991,13 @@ float: left;
    color: #000; 
 }
 .woocommerce table.shop_table {
-border: none;
+    border: 1px solid rgba(0,0,0,.1);
     margin: 0 -1px 24px 0;
     text-align: left;
     width: 100%;
     border-collapse: none;
     border-radius: 5px;
 }
-.woocommerce table.shop_table th {
-    font-weight: 700;
-    font-size: 23px;
-    padding: 9px 12px;
-    }
-    #add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
-    width: 44%;
-    height: auto;
-    box-shadow: none;
-}
-
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: left;
     width: 100%;
@@ -2023,7 +2005,6 @@ border: none;
 .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
     float: left;
     width: 100%;
-
 }
 label {
     z-index: 1;
@@ -2125,7 +2106,7 @@ label {
  	position: absolute;
 top: -28px;
 background-color: transparent;
-border:none;	
+border:none;
 
 width: 200px;
 padding-top: 7px;
@@ -2200,13 +2181,13 @@ button[name="update_cart"]{
     margin-bottom: 20px;
 }
 .woocommerce-cart .generals {
- 
+   margin-right: 10%;
+  	margin-left:10%;
     /* right: 44px; */
-    background-color: #fff;
     display: inline-block;
     float: left;
     color: white;
-    width: 100%;
+    width: 80%;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -2324,24 +2305,7 @@ color: #000;
 {
 display: none;
 }
-.woocommerce nav.woocommerce-pagination {
-    text-align: right;
-}
-.woocommerce nav.woocommerce-pagination ul{
-	border: none;
-}
-.woocommerce nav.woocommerce-pagination ul li{
-	border:none;
-}
-.woocommerce nav.woocommerce-pagination ul li a:hover{
 
-	background: transparent;
-
-} 
-.woocommerce nav.woocommerce-pagination ul li span.current {
-	background:transparent;
-
-	}
 .search-no-results #slider{
 	display: none;
 }
@@ -2748,12 +2712,10 @@ display: none;
 	{
 		display: block;
 		margin-left: auto;
-		width: 100%;
+		width: 60%;
 		margin-right: auto;
 	}
-.smaller-pics{
-	display: none;
-}
+
 
 	.fa-list{
 
@@ -2937,11 +2899,8 @@ h1 {
   
 }
 #slider .img1 img{
-  
-   width: auto;
-max-height: 242px;
-margin-right: 50px;
-margin-left: 50px
+	width: auto;
+	max-height: 242px;
 }
 
 .one{
@@ -2951,18 +2910,13 @@ margin-left: 50px
 
 a.control_prev, a.control_next {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 70px);
   z-index: 999;
   display: block;
-  padding: 6% 1%;
   width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
+  height: 100px;
+  color: #B9BABC;
+  font-size: 100px;
   cursor: pointer;
 }
 
@@ -2987,7 +2941,6 @@ a.control_next {
 	color: #ff8c00;
 }
 .img1 a{
-	display: block;
 	color: #000;
 }
 .slide3 a,
@@ -3019,15 +2972,15 @@ a.control_next {
 z-index: 3;
 position: absolute;
 bottom: 0;
-left: 0;
 right: 0;
 height: 2em;
 box-sizing: border-box;
-background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
+background-color: #E0DACC;
+color: #000;
 line-height: 2em;
-padding: 0 1em;
-font-size: 1.5em;
+padding: 0;
+width: 300px;
+text-align: center;
 }
  .content a {
 color: inherit;
@@ -3349,20 +3302,6 @@ margin-left: 0;
 }
 }
 @media only screen and (max-width:480px){
-
-	.product_images div.pic_detail {
-    width: 100%;
-    float: left;
-}
-.smaller_pics {
-	display: none;	
-}
-	.up-sells.upsells.products{
-		width: 100%;
-	}
-	.tabs.wc-tabs {
-    display: block;
-}
 	.woocommerce-cart .generals {
    margin-right: 0;
    margin-left: 0;
