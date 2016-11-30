@@ -2952,10 +2952,9 @@ h1 {
 }
 #slider .img1 img{
   
-   width: auto;
+width: auto;
 max-height: 242px;
-margin-right: 50px;
-margin-left: 50px
+
 }
 
 .one{
@@ -2965,18 +2964,15 @@ margin-left: 50px
 
 a.control_prev, a.control_next {
   position: absolute;
-  top: 40%;
+  top: calc(50% - 70px);
   z-index: 999;
   display: block;
-  padding: 6% 1%;
   width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
+  height: 100px;
+  color: #b9babc;
   text-decoration: none;
   font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
+  font-size: 100px;
   cursor: pointer;
 }
 
@@ -3033,15 +3029,16 @@ a.control_next {
 z-index: 3;
 position: absolute;
 bottom: 0;
-left: 0;
+text-align: center;
 right: 0;
 height: 2em;
 box-sizing: border-box;
-background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
+background-color: #e0dacc;
+color: #000;
 line-height: 2em;
-padding: 0 1em;
+padding: 0 ;
 font-size: 1.5em;
+width: 300px;
 }
  .content a {
 color: inherit;
