@@ -7,7 +7,7 @@ global $woocommerce;
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo("charset") ?>">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/lightbox.css?v=1">
-	<script src=" <?php bloginfo('template_directory'); ?>/lightbox.js"></script>
+	
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -46,7 +46,7 @@ global $woocommerce;
 	</div>
 </div>
 <div>
-<div><span><a href="">login</a></span>
+<div><span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">login</a></span>
 <span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
 <span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
 
@@ -77,7 +77,7 @@ wp_nav_menu(array(
 
 
 </header>
-
+<script src=" <?php bloginfo('template_directory'); ?>/lightbox.js"></script>
 
 <script type="text/javascript">	
 jQuery(".loggo .fa ").click(function()
@@ -158,7 +158,7 @@ jQuery("#recommendation").click(function()
 $(function() {
 $('#recommendation').click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");
-	$('#descr').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
+	$('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('#rev').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.new_member_box_display').html('The text you are adding');
 });
@@ -176,7 +176,7 @@ $('.reviews_tab').click(function() {
 </script>
 <script>
 $(function() {
-$('.description_tab').click(function() {
+$('.description_tab').css("background", "#fff").css("border-bottom","#fff").click(function() {
 	$(this).css("background","white").css("border-bottom-color","white");
 	//$('#recommendation').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	$('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");

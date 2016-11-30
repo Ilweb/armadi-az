@@ -216,7 +216,8 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 
 .wc-tabs li{
 	display: inline-block;
-	width: 200px;
+	width: 100%;
+	height: 35px;
 	border: 1px solid #d1c6bf;
     background-color: #fff5e6;
 	
@@ -257,6 +258,7 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 
 .wc-tabs li a{
 	font-size: 20px;
+	padding: 5px;
 }
 .supply div
 {
@@ -1417,6 +1419,7 @@ fieldset, label { margin: 0; padding: 0; }
 /*Chosen product*/
 .delivery
 {
+	visibility: hidden;
 	font-size:11px;
 	font-weight:normal;
 	float:right;
@@ -2005,6 +2008,7 @@ float: left;
 .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
     float: left;
     width: 100%;
+  
 }
 label {
     z-index: 1;
@@ -2712,10 +2716,12 @@ display: none;
 	{
 		display: block;
 		margin-left: auto;
-		width: 60%;
+		width: 100%;
 		margin-right: auto;
 	}
-
+.smaller-pics{
+	display: none;
+}
 
 	.fa-list{
 
@@ -3311,6 +3317,20 @@ margin-left: 0;
 }
 }
 @media only screen and (max-width:480px){
+
+	.product_images div.pic_detail {
+    width: 100%;
+    float: left;
+}
+.smaller_pics {
+	display: none;	
+}
+	.up-sells.upsells.products{
+		width: 100%;
+	}
+	.tabs.wc-tabs {
+    display: block;
+}
 	.woocommerce-cart .generals {
    margin-right: 0;
    margin-left: 0;

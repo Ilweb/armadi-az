@@ -33,6 +33,12 @@ function my_theme_setup()
 
 
 	));
+	add_action('woocommerce_before_customer_login_form','load_registration_form', 2);
+function load_registration_form(){
+if(isset($_GET['action'])=='register'){
+woocommerce_get_template( 'myaccount/form-registration.php' );
+}
+}
 
 	
 
