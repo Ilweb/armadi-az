@@ -27,7 +27,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
-
+<div class="bl">
+<div class="yourOrder"><p>Your order</p></div>
+<div class="yourOrder"><p>Delivery</p></div>
+<div class="yourOrder"><p>Payment</p></div>
+<div class="yourOrder"><p>Confirmation</p></div>
+<img class ="line" src="../images/linee.png" alt=""/>
+</div>
 <table class="shop_table shop_table_responsive cart" cellspacing="0">
 	<thead>
 		<tr>
@@ -37,7 +43,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			
+
 			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -103,7 +109,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</td>
 
-					<td class="product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
+					<td class="product-quantity" data-title="
+
+			
+   <?php _e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
 							if ( $_product->is_sold_individually() ) {
 								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -116,7 +125,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 								), $_product, false );
 							}
 
+
 							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
+
 						?>
 					</td>
 

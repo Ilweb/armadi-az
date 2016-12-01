@@ -31,9 +31,9 @@ global $woocommerce;
 			<p>e-mail:info@armadiaz.com</p>
 		</span>
 		<span class="lang">
-			<button><a href="#">bg</a></button>
-			<button><a href="#">en</a></button>
-			<button><a href="#">ru</a></button>
+			<button><a href="<?php echo esc_url( home_url( '/'  ) ); ?>bg">bg</a></button>
+			<button><a href="<?php echo esc_url( home_url( '/'  ) ); ?>en">en</a></button>
+			
 			<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>" img class="search" src="<?php bloginfo('template_directory'); ?>/images/search.png">
 
 			<input id="first" type="search" placeholder="SEARCH"   value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
