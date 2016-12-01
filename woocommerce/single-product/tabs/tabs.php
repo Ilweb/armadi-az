@@ -70,3 +70,11 @@ if ( ! empty( $tabs ) ) : ?>
     });
 });
 </script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+    jQuery('.additional_information_tab').live('click', function(event) {        
+         jQuery('.#tab-additional_information > p').toggle('show');
+         jQuery('#reviews').hide();
+    });
+});
+</script>

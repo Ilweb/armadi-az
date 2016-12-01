@@ -20,11 +20,18 @@
 
 
 	<div>
-<ul><li><h4>More info</h4></li>
+
+
 
 
 
 		<?php
+$menu_name = 'info';
+
+$locations = get_nav_menu_locations();
+$menu_id = $locations[ $menu_name ] ;
+wp_get_nav_menu_object($menu_id);
+
 
 			wp_nav_menu(array(
 			'theme_location'=>"info"
