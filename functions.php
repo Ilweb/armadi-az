@@ -34,6 +34,8 @@ function my_theme_setup()
 
 
 	));
+	}
+
 	
 function wooc_extra_register_fields() {?>
 
@@ -65,7 +67,6 @@ function wooc_extra_register_fields() {?>
 
       <?php
 
-}
 
 add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
 
@@ -115,24 +116,9 @@ function wooc_save_extra_register_fields( $customer_id ) {
               // WooCommerce billing phone
               update_user_meta( $customer_id, 'billing_phone', sanitize_text_field( $_POST['billing_phone'] ) );
        }
-       add_action( 'woocommerce_after_shop_loop_item_title', array( WC_Wishlists_Plugin, 'add_to_wishlist_button' ), 10 );
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
 
 
