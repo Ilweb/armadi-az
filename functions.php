@@ -34,8 +34,6 @@ function my_theme_setup()
 
 
 	));
-	}
-
 	
 function wooc_extra_register_fields() {?>
 
@@ -67,6 +65,7 @@ function wooc_extra_register_fields() {?>
 
       <?php
 
+}
 
 add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
 
@@ -120,5 +119,19 @@ function wooc_save_extra_register_fields( $customer_id ) {
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
 
 
