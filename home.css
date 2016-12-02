@@ -229,6 +229,8 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 #tab-description p{
 	
 	border:1px solid #efefef;
+	font-size: 18px;
+	line-height: 1.5;
 	
 
 	    padding: 20px 0px 20px 0px;
@@ -1178,7 +1180,7 @@ footer #sec_input
 }	
 .product_images div.pic_detail
 {
-	width: 100%;
+	width: 95%;
 	height: auto;
     float: left;
 	margin-right: 0.5%;
@@ -1192,8 +1194,9 @@ footer #sec_input
 }	
 .product_images div.pic_detail img
 {
-	width:95%;
+
     max-height: 485px;
+    text-align: center;
 }	
 .smaller_pics
 {
@@ -1223,6 +1226,7 @@ footer #sec_input
 .explanation > div:first-of-type
 {
 	width:250px;
+	font-size: 30px;
 }	
 .explanation > div
 {
@@ -1993,10 +1997,15 @@ select
  .yith-wcwl-add-button.show a:first-of-type
 {
 
- 		margin-top: 2px !important;
+ 		margin-top: -6px !important;
 }
 .recommended  .yith-wcwl-add-button a{
 	font-size: 10px
+}
+.button.wc-backward{
+	font-size: 20px;
+	float: left;
+
 }
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
 	background-color: none;
