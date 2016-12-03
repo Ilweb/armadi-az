@@ -33,8 +33,8 @@ if ( ! empty( $tabs ) ) : ?>
 	<div class="description">
 		<ul class="tabs wc-tabs">
 			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+				<li data-key="<?php echo esc_attr( $key ); ?>" class="<?php echo esc_attr( $key ); ?>_tab">
+					<?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?>
 				</li>
 			<?php endforeach; ?>
 		</ul>
@@ -55,29 +55,10 @@ if ( ! empty( $tabs ) ) : ?>
 
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('.description_tab').live('click', function(event) {  
-		   	jQuery('#tab-additional_information').hide();
-			jQuery('#reviews').hide();
-			jQuery('#tab-description').show();
-    });
-});
-</script>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-   	 	jQuery('.reviews_tab').live('click', function(event) {
-	         jQuery('#tab-description').hide();
-	         jQuery('#tab-additional_information').hide();
-	         jQuery('#reviews').show();
-    });
-});
-</script>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-   		jQuery('.additional_information_tab').live('click', function(event) {        
-			jQuery('#tab-additional_information').show();
-			jQuery('#reviews').hide();
-			jQuery('#tab-description').hide();
-    });
+jQuery(document).ready(function(){
+	jQuery('.wc-tabs li').click(function(event) {  
+		jQuery('.woocommerce-Tabs-panel').hide();
+		jQuery("#tab-" + jQuery(this).data("key")).show();
+	});
 });
 </script>

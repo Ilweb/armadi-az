@@ -230,7 +230,9 @@ span.price,
     background-color: #fff5e6;
 	
 }
-#tab-additional_information{
+#tab-additional_information,
+#tab-reviews
+{
 	display: none;
 }
 
@@ -250,13 +252,8 @@ span.price,
 	text-align: justify;
 	
 }
-#tab-description p:nth-of-type(2){
-	display: none;
-	visibility: hidden;
-}
 
 #reviews{
-	display: none;
 	border: 1px solid #efefef;
 
 
