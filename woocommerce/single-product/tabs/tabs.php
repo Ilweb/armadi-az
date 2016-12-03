@@ -56,25 +56,28 @@ if ( ! empty( $tabs ) ) : ?>
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-    jQuery('.description_tab').live('click', function(event) {        
-         jQuery('.woocommerce-Tabs-panel--description > p').toggle('show');
-         jQuery('#reviews').hide();
+		jQuery('.description_tab').live('click', function(event) {  
+		   	jQuery('#tab-additional_information').hide();
+			jQuery('#reviews').hide();
+			jQuery('#tab-description').show();
     });
 });
 </script>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-    jQuery('.reviews_tab').live('click', function(event) {        
-         jQuery('#reviews').toggle('show');
-         jQuery('.woocommerce-Tabs-panel--description > p').hide();
+   	 	jQuery('.reviews_tab').live('click', function(event) {
+	         jQuery('#tab-description').hide();
+	         jQuery('#tab-additional_information').hide();
+	         jQuery('#reviews').show();
     });
 });
 </script>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-    jQuery('.additional_information_tab').live('click', function(event) {        
-         jQuery('.#tab-additional_information > p').toggle('show');
-         jQuery('#reviews').hide();
+   		jQuery('.additional_information_tab').live('click', function(event) {        
+			jQuery('#tab-additional_information').show();
+			jQuery('#reviews').hide();
+			jQuery('#tab-description').hide();
     });
 });
 </script>

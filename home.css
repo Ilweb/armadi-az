@@ -223,13 +223,14 @@ span.price,
 
 .wc-tabs li{
 	display: inline-block;
-	width: 50%;
+	width: auto;
+	padding: 5px ;
 	height: 35px;
 	border: 1px solid #d1c6bf;
     background-color: #fff5e6;
 	
 }
-.woocommerce-Tabs-panel--additional_information h2{
+#tab-additional_information{
 	display: none;
 }
 
@@ -238,7 +239,7 @@ span.price,
 	border:1px solid #efefef;
 	font-size: 18px;
 	line-height: 1.5;
-	padding: 20px 0px 20px 0px;
+	padding: 20px 10px 20px 10px;
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
 	-moz-column-count: 2; /* Firefox */
 	column-count: 2;
@@ -1245,7 +1246,7 @@ footer #sec_input
 	text-transform:none;
 	
 	cursor:pointer;
-	top: 18px;
+	top: 23px;
 }
 .woocommerce #review_form #respond {
     text-align: center;
@@ -2970,6 +2971,7 @@ display: none;
 	{
 		display:none;
 	}	
+	
 	.firstt li
 	{
 		display:block !important;
