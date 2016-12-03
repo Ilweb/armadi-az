@@ -61,8 +61,8 @@ if ( ! $product->is_purchasable() ) {
 		</div>
 		
 		<div class="choice">
-			<button class="hvr-shadow-radial" id="first_butt"><?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' ); ?></button>
 			<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			<div class="hvr-shadow-radial wishlist"><?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' ); ?></div>
 		</div>
 		
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />

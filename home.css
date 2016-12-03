@@ -1381,19 +1381,7 @@ input.minus {
 .explanation .choice
 {
 	display:block !important;
-}	
-.explanation .choice button
-{
-	float:right;
 }
-.add_to_wish
-{
-/*margin-left:10px;*/
-}	
-/*.explanation div:nth-of-type(3),.explanation div:nth-of-type(4)
-{
-	display:inline-block;
-}*/	
 /*RATING*/
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
@@ -1678,6 +1666,29 @@ display:block;
 .yith-wcwl-wishlistexistsbrowse a {
 	padding: 6px;
 }
+
+.explanation .choice
+{
+	height: 50px;
+}
+
+.explanation .choice #second_butt,
+.explanation .choice .wishlist
+{
+	vertical-align: top;
+}
+
+.explanation .add_to_wishlist,
+.explanation .yith-wcwl-wishlistexistsbrowse a,
+#second_butt {
+	padding: 10px;
+	font-size: 14px;
+	height: 16px;
+	width: 150px;
+	font-weight:normal;
+	box-sizing:  content-box;
+}
+
 p.meta:nth-of-type(0){
 	text-align: none;	
     }
