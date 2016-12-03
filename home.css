@@ -1180,6 +1180,7 @@ footer #sec_input
 }	
 .product_images div.pic_detail
 {
+	text-align: center;
 	width: 95%;
 	height: auto;
     float: left;
@@ -1940,12 +1941,19 @@ select
 	float: right;
 
 }
+.yith-wcwl-wishlistexistsbrowse show{
+
+}
 .up-sells.upsells.products h2{
 	color: #fff5e6;
 	text-transform: uppercase;
 
 }
+.yith-wcwl-wishlistexistsbrowsex.show{
+	
+	margin-top: -3px !important;
 
+}
 
 .woocommerce .star-rating span {
 	color: 	#ffff50;
@@ -2010,7 +2018,6 @@ select
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
 	background-color: none;
 }
-
 
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
   float: right;
