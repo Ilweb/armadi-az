@@ -156,6 +156,7 @@ box-shadow: inset 0px 0px 10px 60px rgba(255,255,255,0.1);
 }
 .items div.title
 {
+	padding: 0 5px 0 5px;
 	height: 48px;
 	overflow: hidden;
 	line-height: 16px;
@@ -222,11 +223,14 @@ span.price,
 
 .wc-tabs li{
 	display: inline-block;
-	width: 100%;
+	width: 50%;
 	height: 35px;
 	border: 1px solid #d1c6bf;
     background-color: #fff5e6;
 	
+}
+.woocommerce-Tabs-panel--additional_information h2{
+	display: none;
 }
 
 #tab-description p{
@@ -234,17 +238,14 @@ span.price,
 	border:1px solid #efefef;
 	font-size: 18px;
 	line-height: 1.5;
-	
-
-	    padding: 20px 0px 20px 0px;
-    	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-		-moz-column-count: 2; /* Firefox */
-		column-count: 2;
-		-webkit-column-gap: 66px; /* Chrome, Safari, Opera */
-		-moz-column-gap: 66px; /* Firefox */
-		column-gap: 66px;
-		overflow: auto;
-
+	padding: 20px 0px 20px 0px;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	column-count: 2;
+	-webkit-column-gap: 66px; /* Chrome, Safari, Opera */
+	-moz-column-gap: 66px; /* Firefox */
+	column-gap: 66px;
+	overflow: auto;
 	text-align: justify;
 	
 }
@@ -259,6 +260,7 @@ span.price,
 
 
 }
+
 
 .comment-text{
 	width: 80%;
@@ -729,13 +731,11 @@ header div
 
 .menu.fixed, .cartt.fixed
 {
- /*z-index: 9999;*/
-    position: fixed;
-    left: 0;
-    top: -16px;
-    width: 100%;
-  
-  
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: -16px;
+	width: 100%;
 	background:#302824;
 	transition: all 0.8s ease;
 	
@@ -2194,7 +2194,7 @@ label {
     color: #000;
     float: left;
 }
- single-product postid-256 logged-in admin-bar no-customize-support en_GB woocommerce woocommerce-page 
+ 
 
 .woocommerce-account .the_content{
 	background-color: transparent;
@@ -2207,10 +2207,11 @@ label {
     font-weight: 700;
     font-size: 12px;
     padding: 9px 12px;
+    text-align: center;
 }
  .feedback{
 	font-size: 15px;
-    /* display: none; */
+  display: none; 
     position: absolute;
     right: 0;
     width: 100%;
@@ -2315,7 +2316,8 @@ font-size: 20px;
 	float: left;
 	outline: none;
 line-height: 3px;
-
+width: 200px;
+font-size: 20px;
 background-color:transparent;
 color: #000;
 height: 50px;
@@ -2395,10 +2397,13 @@ button[name="update_cart"]{
 }
 
 .woocommerce .woocommerce-cart .button:first-of-type, .woocommerce .cart input.button:first-of-type{
-	font-size: 30px;
-	width: 27%;
+	font-size: 25px;
+	width: 38%;
 }
 
+.woocommerce-checkout .the_content strong {
+    color: #fff;
+}
 
 
 .woocommerce-cart form {
@@ -2416,6 +2421,7 @@ button[name="update_cart"]{
    display: none;
 }
 
+
 .the_content{
 	background-color: #fff;
 	color: #222;
@@ -2432,11 +2438,13 @@ button[name="update_cart"]{
 	color: #000;
 
 }
+
 .woocommerce-cart  .woocommerce a.button{
-width: 112px;
+width: 200px;
     float: right;
-    font-size: 30px;
+    font-size: 25px;
 }
+
 .cart-subtotal{
 	width: 100%;
 }
@@ -2468,13 +2476,22 @@ width: 112px;
  	margin-left: 2.5%;
  	margin-right: 2.5%;
  }
+ .center{
+ 	text-align: center;
+ }
 .containerImg img{
 height: 463px;
 width: 100%;
 
 }
+.wishlist_table tr:hover{
+	background-color: #fff5e6;
 
 
+}
+#yith-wcwl-form{
+	display: block
+}
 .sub-menu li{
 	text-transform: capitalize;
 	line-height: 2px;
@@ -2520,11 +2537,11 @@ width: 100%;
 	color: #fff;
 }
 
- .woocommerce-checkout .the_content p:first-of-type {
+ /*.woocommerce-checkout .the_content p:first-of-type {
     width:48%;
     border-bottom: none;
     
-}
+}*/
 .woocommerce-order-received .the_content{
 	color: #fff;
 }
@@ -2591,6 +2608,10 @@ display: none;
 }
 .woocommerce-ordering {
 	display: none;
+}
+.woocommerce-account .the_content{
+	background-color: transparent;
+	color: #fff;
 }
 @media only screen and (max-width:1110px)
 {
@@ -3150,7 +3171,8 @@ h1 {
 }
 .conta{
 	width: calc(95% - 20px);
-	vertical-align: middle;line-height: 100px;
+	vertical-align: middle;
+	line-height: 250px;
 	text-align: center;
 	height: 250px;
 }
@@ -3159,9 +3181,15 @@ h1 {
 	width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 20px 5% 0 auto;
+  margin: 0 auto;
 
   border-radius: 4px;
+}
+td.product-name{
+	text-align: center !important;
+}
+.cart_item td.product-name{
+	text-align: left !important;
 }
 
 #slider ul {
@@ -3190,6 +3218,7 @@ h1 {
 }
 
 #slider .img1 img{
+	vertical-align: middle;
 	cursor: pointer;
 	text-align: center;
 	max-width: 100%;

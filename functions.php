@@ -36,6 +36,7 @@ function my_theme_setup()
 	pll_register_string('Contact us menu', 'Contact Us');
 	pll_register_string('Follow Us', 'Follow Us');
 	pll_register_string('Newsletter', 'Newsletter');
+	pll_register_string('Next', 'Next');
 }
 
 function wooc_extra_register_fields() {?>
