@@ -367,10 +367,7 @@ div.chapter:hover span
 	padding: 6px;
 	position: static;
 }	
-.recommended div div.choice
-{
-	/*display:none;*/
-}
+
 
 .add_to_wishlist .single_add_to_wishlist button{
 	margin-top: 10%;
@@ -382,6 +379,10 @@ div.chapter:hover span
 .items
 {
 	height:200px;
+}
+.recommended div div.choice
+{
+display:none;
 }
 
 /* Filter inner products*/
