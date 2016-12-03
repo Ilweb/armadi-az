@@ -30,11 +30,14 @@ function my_theme_setup()
 		'footer' => __('Footer menu', 'armadiaz'),
 		'info'=>__('Info menu', 'armadiaz'),
 		'contact us'=>__('Contact us menu', 'armadiaz')
-
-
-
 	));
 	
+	pll_register_string('Info menu', 'Info');
+	pll_register_string('Contact us menu', 'Contact Us');
+	pll_register_string('Follow Us', 'Follow Us');
+	pll_register_string('Newsletter', 'Newsletter');
+}
+
 function wooc_extra_register_fields() {?>
 
       <p class="form-row form-row-first">
@@ -69,10 +72,6 @@ function wooc_extra_register_fields() {?>
 
 add_action( 'woocommerce_register_form_start', 'wooc_extra_register_fields' );
 
-
-
-
-}
 function wooc_validate_extra_register_fields( $username, $email, $validation_errors ) {
  
       if ( isset( $_POST['billing_first_name'] ) && empty( $_POST['billing_first_name'] ) ) {

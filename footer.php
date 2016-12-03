@@ -17,48 +17,57 @@
 	?>
 </div>
 <footer class="footer_menu margin-lr">
-
-
 	<div>
-
-
-
-
-
-		<?php
-$menu_name = 'info';
-
-$locations = get_nav_menu_locations();
-$menu_id = $locations[ $menu_name ] ;
-wp_get_nav_menu_object($menu_id);
-
-
-			wp_nav_menu(array(
-			'theme_location'=>"info"
+		<ul>
+		<?php		
+		echo '<li><h4>';
+		pll_e('Info');
+		echo '</h4></li>';
+		
+		wp_nav_menu(array(
+			'theme_location'=>"info",
+			'items_wrap'=>'%3$s',
+			'container'=>""
 		));
 
 		?>
+		</ul>
 	</div>
 	<div>
 		<ul class="social">
-			<li><h4>Follow us</h4></li>
+			<?php
+			echo '<li><h4>';
+			pll_e('Follow Us');
+			echo '</h4></li>';
+			?>
 			<li><a class="first_of" href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/fb.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/skype.png');"></div></a><a href="#" class="first_of"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/twitter.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/l_in.png')"></div></a><a href="#" class="first_of"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/pin.png')"></div></a><a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/insta.png')"></div></a></li>
 		</ul>
 	</div>
 	<div>
-<ul><li><h4>Contact us</h4></li>
-	<?php
-		wp_nav_menu(array(
-		'theme_location'=>"contact us"
-	));
+		<ul>
+			<?php
+			
+			echo '<li><h4>';
+			pll_e('Contact Us');
+			echo '</h4></li>';
+			
+			wp_nav_menu(array(
+				'theme_location'=>"contact us",
+				'items_wrap'=>'%3$s',
+				'container'=>""
+			));
 
-	?>
-	<li class="pay_for"><a href="#"><div style="background:url('../images/american.png')"></div></a><a href="#"><div style="background:url('../images/maestro.png')"></div></a><a href="#"><div style="background:url('../images/visa.png')"></div></a><a href="#"><div style="background:url('../images/pay.png')"></div></a><a href="#"><div style="background:url('../images/master.png')"></div></a><a href="#"><div style="background:url('../images/electron.png')"></div></a></li>
-		
+			?>
+			<li class="pay_for"><a href="#"><div style="background:url('../images/american.png')"></div></a><a href="#"><div style="background:url('../images/maestro.png')"></div></a><a href="#"><div style="background:url('../images/visa.png')"></div></a><a href="#"><div style="background:url('../images/pay.png')"></div></a><a href="#"><div style="background:url('../images/master.png')"></div></a><a href="#"><div style="background:url('../images/electron.png')"></div></a></li>
+		</ul>
 	</div>
 	<div>
 		<ul>
-			<li><h4>Newsletter</h4></li>
+			<?php
+			echo '<li><h4>';
+			pll_e('Newsletter');
+			echo '</h4></li>';
+			?>
 			<li>
 					<input type="text" placeholder="email"></input>
 			</li>
