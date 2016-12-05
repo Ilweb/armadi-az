@@ -37,6 +37,7 @@ function my_theme_setup()
 	pll_register_string('Follow Us', 'Follow Us');
 	pll_register_string('Newsletter', 'Newsletter');
 	pll_register_string('Next', 'Next');
+	pll_register_string('Promo line', 'Promo line 1');
 }
 
 function wooc_extra_register_fields() {?>

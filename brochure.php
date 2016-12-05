@@ -6,7 +6,7 @@
   <a  class="control_prev"><i class="fa fa-angle-left"></i></a>
    <div class="diagonal">
  
-<p>FREE SHIPPING IN DECEMBER </p>
+<p><?php pll_e('Promo line 1'); ?> </p>
 </div>
   <ul>
  
