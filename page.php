@@ -6,9 +6,7 @@ get_header();
 
 
 <div class="second-part">
-	<?php
-	get_template_part('left_menu');
-	?>
+	
 		
 		<div class="generals">
 		<?php 

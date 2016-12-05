@@ -14,7 +14,7 @@
 	
 <script type="text/javascript">	
 
-$('li.left_menu').click(function() {
+$('a li.left_menu').click(function() {
 	if ($(window).width() <= 1024)
 	{
 		$(this).parent().parent().find('.sub-menu:visible').fadeOut();

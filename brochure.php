@@ -1,9 +1,16 @@
 
 
 <div id="slider">
+
   <a  class="control_next"><i class="fa fa-angle-right"></i></a>
   <a  class="control_prev"><i class="fa fa-angle-left"></i></a>
+   <div class="diagonal">
+ 
+<p>FREE SHIPPING IN DECEMBER </p>
+</div>
   <ul>
+ 
+
     
         <?php
         $args = array(
