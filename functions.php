@@ -118,20 +118,3 @@ function wooc_save_extra_register_fields( $customer_id ) {
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
-
-
