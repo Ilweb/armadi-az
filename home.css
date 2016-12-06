@@ -1585,7 +1585,7 @@ display:block;
 .generals div .fa
 {
 	margin-top:0;
-	
+	display:none;
 }	
 .recom > div:first-of-type
 {
@@ -2157,12 +2157,14 @@ border: none;
 
 }
 
-.woocommerce-cart .line{
+ div.line{
 	margin-left: 14%;
 }
-.woocommerce-cart .line img{
+ div.line {
+
 	height: 50px;
 }
+
 .yourOrder{
 	    left: 11%;
     display: inline-block;
