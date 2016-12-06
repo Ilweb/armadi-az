@@ -58,7 +58,15 @@
 			));
 
 			?>
-			<li class="pay_for"><a href="#"><div style="background:url('../images/american.png')"></div></a><a href="#"><div style="background:url('../images/maestro.png')"></div></a><a href="#"><div style="background:url('../images/visa.png')"></div></a><a href="#"><div style="background:url('../images/pay.png')"></div></a><a href="#"><div style="background:url('../images/master.png')"></div></a><a href="#"><div style="background:url('../images/electron.png')"></div></a></li>
+			<li class="pay_for">
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/american.png')"></div></a>
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/maestro.png')"></div></a>
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/visa.png')"></div></a>
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/pay.png')"></div></a>
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/master.png')"></div></a>
+			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/electron.png')"></div></a>
+				
+				</li>
 		</ul>
 	</div>
 	<div>
