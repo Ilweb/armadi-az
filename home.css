@@ -2159,10 +2159,8 @@ border: none;
 
  div.line{
 	margin-left: 14%;
-}
- div.line {
-
 	height: 50px;
+	background-repeat: no-repeat;
 }
 
 .yourOrder{

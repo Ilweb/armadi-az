@@ -32,7 +32,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="yourOrder"><p>Delivery</p></div>
 <div class="yourOrder"><p>Payment</p></div>
 <div class="yourOrder"><p>Confirmation</p></div>
-<div class="line" ><div style="background:url('<?php bloginfo('template_directory'); ?>/images/linee.png')"></div></div>
+<div class="line" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/linee.png')"></div>
 </div>
 
 
