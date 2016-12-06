@@ -705,7 +705,7 @@ form
 {
 	position:relative;
 }	
-input[type="text"]
+input
 {
 	width:247px;	
 	height:25px;
@@ -1773,7 +1773,8 @@ display:block;
 	width: 100px;
 	text-align: center;
 	padding: 10px;	
-	font-weight: 700
+	font-weight: 700;
+	font-size: 20px;
 }
 
 .hvr-shadow-radial,
@@ -2478,7 +2479,7 @@ font-size: 20px;
  	color: #fff;
  }
 .woocommerce-page #payment #place_order{
-	float: left;
+	float: right;
 	outline: none;
 line-height: 3px;
 width: 200px;
@@ -2486,8 +2487,11 @@ font-size: 20px;
 background-color:transparent;
 color: #000;
 height: 50px;
-top: 86px;
-    left: 70%;
+position: absolute;
+bottom: -55px;
+right: 0;
+ 
+
 
 
 
@@ -3971,6 +3975,7 @@ width: 100%;
    width: 74px;
     height: 105px;
 }
+
 .slide3 .first {
    
     top: 35px;

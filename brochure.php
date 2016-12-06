@@ -46,6 +46,8 @@
 				<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
 				<p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
 			</div>
+
+            
 			<?php
 			if ($i % 4 == 0)
 			{
@@ -62,6 +64,15 @@
         wp_reset_postdata();
 
         ?>
+<li>
+    <div class="img2">
+        <img class="image" src="<?php bloginfo('template_directory'); ?>/images/i.png" alt=""/>
+        <div id="descr"></div>
+    </div>
+</li>
+
+            
+
   </ul>  
 </div>
 
