@@ -396,10 +396,16 @@ display:none;
 {
 	height: 300px;
 }	
+
+.centerPage .generals{
+	width: 100%;
+	
+}
 /* Filter inner products*/
 .generals
 {
 	display:inline-block;
+
 	float:right;
 	color:white;
 	width:80%;
@@ -461,7 +467,7 @@ body
 	background-repeat:no-repeat;
 	margin:0;
 	font-family: 'Arial', sans-serif;
-	/*background-image: url('../images/a.png');*/
+	background-image: url('../images/a.png');
 
 }	
 h2
@@ -2339,6 +2345,7 @@ height: 50px;
 
 
 }
+
 /*.woocommerce-page #payment #place_order:hover{
 	
 	
@@ -2588,6 +2595,7 @@ width: 100%;
 .cart-empty{
 	color: #fff;
 }
+
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
 
 background-color: transparent;
@@ -2668,9 +2676,7 @@ display: none;
 	background-color: transparent;
 	color: #fff;
 }
- .page-template-default .generals{
- 	width: 100%;
- }
+
 @media only screen and (max-width:1110px)
 {
 	.cartt.fixed{

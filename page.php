@@ -3,8 +3,7 @@ get_header();
 
 ?>
 
-
-
+<div class="centerPage">
 <div class="second-part">
 	
 		
@@ -30,6 +29,7 @@ get_header();
 				}
 				?>
 			</div>
+
 		<div class="the_content">
 			<?php
 			the_content();
@@ -42,20 +42,17 @@ get_header();
 	?>
 		
 </div>
-<div class="generals">
 
-</div>
 		</div>
 
 
 
 
-		
 
 	</div>
 	
 
-
+</div>
 <?php
 
 get_footer();
