@@ -220,7 +220,10 @@ span.price,
 	opacity:1;
 }	
 .tabs.wc-tabs  {
-	display: -webkit-inline-box;
+	position: relative;
+    /* margin-top: 14px; */
+    display: -webkit-inline-box;
+    top: 9px;
 }
 
 .wc-tabs li{
@@ -237,19 +240,27 @@ span.price,
 {
 	display: none;
 }
+#tab-description{
+	padding: 10px;
 
-#tab-description p{
-	
 	border:1px solid #efefef;
-	font-size: 18px;
-	line-height: 1.5;
-	padding: 20px 10px 20px 10px;
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
 	-moz-column-count: 2; /* Firefox */
 	column-count: 2;
 	-webkit-column-gap: 66px; /* Chrome, Safari, Opera */
 	-moz-column-gap: 66px; /* Firefox */
 	column-gap: 66px;
+}
+
+#tab-description p{
+	
+	padding-bottom: 10px;
+	font-size: 18px;
+	line-height: 1.5;
+
+	margin:0;
+
+	
 	overflow: auto;
 	text-align: justify;
 	
@@ -818,7 +829,12 @@ transition: 1s;
 .second ul li{
 	display:inline-block;
 	margin-right:3%;
-	padding:5px;
+	
+
+}
+.second ul li a{
+	padding: 10px
+	
 
 }
 
@@ -1294,7 +1310,7 @@ footer #sec_input
 	text-transform:none;
 	
 	cursor:pointer;
-	top: 23px;
+	top: 10px;
 }
 .woocommerce #review_form #respond {
     text-align: center;
