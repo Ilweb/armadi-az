@@ -531,16 +531,16 @@ left: 96px;
 	width: 100%;
 
 }
-.white div.line{
+/*.white div.line{
 	margin-left: 0
 }
 .white .yourOrder{
 	left: 0;
 
-}
-.white .yourOrder:nth-of-type(2) {
-    margin-right: 22%;
-}
+}*/
+ /*.white .yourOrder:nth-of-type(2) {
+   margin-right: 22%;
+}*/
 
 .left_menu > div > ul li ul li a
 {
@@ -2127,6 +2127,7 @@ float: left;
 .woocommerce-order-received .yourOrder{
 	color: #000;
 }
+
 .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
        float: right;
        left: 5%;
@@ -2387,6 +2388,7 @@ height: 50px;
 }*/
 .woocommerce-cart table.cart input{
 	line-height: 0;
+	    width: 272px;
 }
 
 button[name="update_cart"]{
@@ -2420,13 +2422,13 @@ button[name="update_cart"]{
 	display: none;
 }
 .woocommerce-checkout 	.generals {
-  	margin-right: 10%;
-  	margin-left:10%;
+  	/*margin-right: 10%;
+  	margin-left:10%;*/
     /* right: 44px; */
     display: inline-block;
     float: left;
     color: white;
-    width: 80%;
+    width: 100%;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -2465,7 +2467,9 @@ button[name="update_cart"]{
     display: inline-block;
 }
 .woocommerce-checkout form{
-	width: 98%;
+	width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
     background: none;
@@ -2576,7 +2580,7 @@ width: 100%;
     margin-top: -86px;
 }
   .woocommerce-checkout .the_content{
- 	background-color: transparent;
+ 	background-color: #fff;
  }
  .woocommerce-page div > .way{
  	display: none;	
@@ -2600,7 +2604,7 @@ width: 100%;
 	background-color: #fff;
 }
 .woocommerce-billing-fields, .woocommerce-shipping-fields, #order_review_heading{
-	color: #fff;
+	color: #000;
 }
 
  /*.woocommerce-checkout .the_content p:first-of-type {
@@ -2608,9 +2612,7 @@ width: 100%;
     border-bottom: none;
     
 }*/
-.woocommerce-order-received .the_content{
-	color: #fff;
-}
+
 .woocommerce table.shop_table tbody:first-child tr:first-child td, .woocommerce table.shop_table tbody:first-child tr:first-child th {
     border-top: 0;
     font-size: 19px;
@@ -3291,6 +3293,9 @@ td.product-name{
 .cart_item td.product-name{
 	text-align: left !important;
 }
+ .order_details td.product-name{
+ 	text-align: left !important;
+ }
 
 #slider ul {
   position: relative;
