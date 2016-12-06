@@ -23,10 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
-
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
-
-<?php do_action( 'woocommerce_before_cart_table' ); ?>
 <div class="bl">
 <div class="yourOrder"><p>Your order</p></div>
 <div class="yourOrder"><p>Delivery</p></div>
@@ -34,6 +30,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="yourOrder"><p>Confirmation</p></div>
 <div class="line" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/linee.png')"></div>
 </div>
+<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+
+<?php do_action( 'woocommerce_before_cart_table' ); ?>
+
 
 
 <table class="shop_table shop_table_responsive cart" cellspacing="0">
