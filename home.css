@@ -543,9 +543,6 @@ left: 96px;
 	font-size:20px;
 	width:15%;
 }	
-#menu-categories .menu-item-type-taxonomy{
-	font-size: 23px;
-}
 
 
 .left_menu, .menu-item-object-product_cat ul li a:first-of-type{
@@ -2173,7 +2170,7 @@ border: none;
 	margin-right: 17%;
 }
 .yourOrder:nth-of-type(2){
-	margin-right: 19%;
+	margin-right: 17%;
 }
 .yourOrder:nth-of-type(3){
 	margin-right: 17%;
