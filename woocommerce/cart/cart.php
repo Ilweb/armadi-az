@@ -32,8 +32,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="yourOrder"><p>Delivery</p></div>
 <div class="yourOrder"><p>Payment</p></div>
 <div class="yourOrder"><p>Confirmation</p></div>
-<img class ="line" src="./images/line.png" alt=""/>
+<img class ="line"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/linee.png')"></div>
 </div>
+
+
 <table class="shop_table shop_table_responsive cart" cellspacing="0">
 	<thead>
 		<tr>
