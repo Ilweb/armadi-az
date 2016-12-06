@@ -6,7 +6,7 @@ global $woocommerce;
 <html <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo("charset") ?>">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/lightbox.css?v=1">
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/lightbox.css?v=1">
 	
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,9 +58,8 @@ global $woocommerce;
 <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png">
 </div>
 <div id="welcome">
-<a href="#"><p>WELCOME</p>
-<p>Login to your Armadiaz.com<br/>
-and your personal proposals</p></a></div>
+<a href="#"><p style="color: yellow; font-size: 24px;">UNDER CONSTRUCTION</p>
+<p></p></a></div>
 
 
 </div>
@@ -79,7 +78,7 @@ wp_nav_menu(array(
 
 
 </header>
-<script src=" <?php bloginfo('template_directory'); ?>/lightbox.js"></script>
+<script src=" <?php bloginfo('template_directory'); ?>/js/lightbox.js"></script>
 
 <script type="text/javascript">	
 jQuery(".loggo .fa ").click(function()
