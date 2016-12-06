@@ -534,7 +534,8 @@ left: 96px;
 	font-weight:normal;
 }	
 #menu-main-menu a{
-	display: block
+	display: block;
+	padding: 15px;
 
 }
 .filters > div:first-of-type
@@ -542,10 +543,11 @@ left: 96px;
 	font-size:20px;
 	width:15%;
 }	
-.left_menu ul li {
+#menu-categories .menu-item-type-taxonomy{
 	font-size: 23px;
-
 }
+
+
 .left_menu, .menu-item-object-product_cat ul li a:first-of-type{
 	font-size: 16px;
 }
@@ -797,7 +799,7 @@ transition: 1s;
 {
 	display:inline-block;
 	margin-right:3%;
-	padding:15px;
+	
 }	
 #menu-categories li{
 	padding: 7px;
