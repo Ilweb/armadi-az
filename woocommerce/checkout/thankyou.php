@@ -21,6 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $order ) : ?>
+<div class="white">
+<div class="bl">
+<div class="yourOrder"><p>Your order</p></div>
+<div class="yourOrder"><p>Delivery</p></div>
+<div class="yourOrder"><p>Payment</p></div>
+<div class="yourOrder"><p>Confirmation</p></div>
+<div class="line" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/linee3.png')"></div>
+</div>
+</div>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 

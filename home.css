@@ -525,6 +525,22 @@ left: 96px;
 	width:100%;*/
 	font-size: 20px;
 }	
+.white{
+	background-color: #fff;
+	height: 100px;
+	width: 100%;
+
+}
+.white div.line{
+	margin-left: 0
+}
+.white .yourOrder{
+	left: 0;
+
+}
+.white .yourOrder:nth-of-type(2) {
+    margin-right: 22%;
+}
 
 .left_menu > div > ul li ul li a
 {
@@ -2108,8 +2124,12 @@ float: left;
 .cart_item a{
 	color: #000
 }
+.woocommerce-order-received .yourOrder{
+	color: #000;
+}
 .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
        float: right;
+       left: 5%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
