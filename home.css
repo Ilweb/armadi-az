@@ -518,13 +518,18 @@ left: 96px;
 	width:100%;*/
 	text-align: left
 }	
-.left_menu ul:first-of-type
+.left_menu > div > ul > li > a
 {
 	/*height:70px;*/
 	/*border-bottom:2px solid #60534d;
 	width:100%;*/
 	font-size: 20px;
 }	
+
+.left_menu > div > ul li ul li a
+{
+	font-size: 16px;
+}
 
 .best-of-the-best
 {
