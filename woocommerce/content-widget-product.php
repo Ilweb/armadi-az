@@ -28,6 +28,11 @@ global $product; ?>
 		<?php echo $product->get_image(); ?>
 		<span class="product-title"><?php echo $product->get_title(); ?></span>
 	</a>
+	<div><?php 
+			global $product;
+			echo '<i style="color: #777;">'.$product->get_sku().'</i> '; 
+			the_title(); 
+			?></div>
 	<?php if ( ! empty( $show_rating ) ) : ?>
 		<?php echo $product->get_rating_html(); ?>
 	<?php endif; ?>

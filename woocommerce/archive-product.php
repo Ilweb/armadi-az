@@ -48,7 +48,7 @@ get_template_part('left_menu');
 			 * @hooked woocommerce_taxonomy_archive_description - 10
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
-			do_action( 'woocommerce_archive_description' );
+			/*do_action( 'woocommerce_archive_description' );*/
 		?>
 
 		<?php if ( have_posts() ) : ?>
@@ -70,6 +70,7 @@ get_template_part('left_menu');
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php wc_get_template_part( 'content', 'product' ); ?>
+			
 
 				<?php endwhile; // end of the loop. ?>
 
@@ -89,6 +90,11 @@ get_template_part('left_menu');
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
+		<?php 
+			global $product;
+			echo '<i style="color: #777;">'.$product->get_sku().'</i> '; 
+			
+			?>
 
 	<?php
 		/**

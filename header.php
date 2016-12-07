@@ -57,9 +57,36 @@ global $woocommerce;
 <div><a href="<?php echo home_url(); ?>">
 <img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png">
 </div>
-<div id="welcome">
+<!--<div id="welcome">
 <a href="#"><p style="color: yellow; font-size: 24px;">UNDER CONSTRUCTION</p>
-<p></p></a></div>
+<p></p></a></div>-->
+<?php global $current_user;
+      get_currentuserinfo();
+
+     // echo $current_user->user_login . "\n";
+      //echo 'User email: ' . $current_user->user_email . "\n";
+     // echo 'User level: ' . $current_user->user_level . "\n";
+     // echo 'User first name: ' . $current_user->user_firstname . "\n";
+      //echo 'User last name: ' . $current_user->user_lastname . "\n";
+      //echo 'User display name: ' . $current_user->display_name . "\n";
+      //echo 'User ID: ' . $current_user->ID . "\n";
+?>
+
+<?php if ( is_user_logged_in() ) { ?>
+
+<?php global $current_user; get_currentuserinfo(); ?>
+<div id="welcome">
+<h1>Hi <?php echo $current_user->user_login  ?></h1>
+<p>Enjoy shopping with us! :)</p>
+</div>
+<?php } else {   ?>
+	<div id= "welcome">
+<p style= "color:orange; font-size:24px">UNDER CONSTRUCTION</p><br/><p>WELCOME, <br/> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">Login	to your Armadiaz.com<br/>
+and your personal proposals</a></p>
+</div>
+<?php } ?>
+
+
 
 
 </div>

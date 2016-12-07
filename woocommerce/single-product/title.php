@@ -19,5 +19,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
+<?php 
+			global $product;
+			echo '<i style="color: #777;">'.$product->get_sku().'</i> '; 
+			
+	
 the_title( '<h1 itemprop="name" class="product_title entry-title">', '</h1>' );
+
+		?>

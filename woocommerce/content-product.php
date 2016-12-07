@@ -16,6 +16,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div class="items<?php/* post_class();*/ ?>">
+
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
@@ -32,15 +33,27 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 
+
 	/**
 	 * woocommerce_shop_loop_item_title hook.
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	//do_action( 'woocommerce_shop_loop_item_title' );
-	echo '<div class="title">';
-	the_title();
-	echo '</div>';
+	//do_action( 'woocommerce_shop_loop_item_title' );?>
+
+	<div class="title"><?php 
+			
+			the_title(); 
+
+			global $product;
+			echo '<i style="color: #777;font-weight:700; margin-left:4px; ">'.$product->get_sku().'</i> '; 
+			?></div>
+<?php
+	
+	echo '<div class="quantity">200g</div>';
+	echo'<div class="country">England</div>';
+
+		
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
 	 *
@@ -48,6 +61,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
+
 
 	/**
 	 * woocommerce_after_shop_loop_item hook.
@@ -57,4 +71,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
+
 </div>

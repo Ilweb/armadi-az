@@ -157,9 +157,10 @@ font-size:21px;
 	width:100%;
 }
 .items div.title
-{
-	padding: 0 5px 0 5px;
+{	
+	padding: 5px 5px 0 5px;
 	height: 48px;
+	width: 80%;
 	overflow: hidden;
 	line-height: 16px;
 }	
@@ -405,13 +406,15 @@ display:none;
 }
 .producing .items
 {
-	height: 300px;
+	height: 330px;
+	
 }	
 
 .centerPage .generals{
 	width: 100%;
 	
 }
+
 /* Filter inner products*/
 .generals
 {
@@ -574,11 +577,7 @@ left: 96px;
 	text-transform:none;
 	font-weight:normal;
 }	
-#menu-main-menu a{
-	display: block;
-	padding: 15px;
 
-}
 .filters > div:first-of-type
 {
 	font-size:20px;
@@ -755,9 +754,14 @@ header div
 	display:inline-block;
 	text-align:center !important;
 	font-weight:normal;
+	
 	height: 255px;
     vertical-align: middle;
 	border:none;
+}
+#welcome p{
+	text-transform: none;
+
 }
 
 .margin-lr
@@ -1683,6 +1687,7 @@ display:block;
 	border:none;
 	background:none;
 }
+
 .hvr-shadow-radial,
 .add_to_wishlist {
   display: inline-block;
@@ -1769,11 +1774,14 @@ p.meta{
 	}	
 	#sticky-anchor
 	{
-	
 		height: 84px;
-
 		background: transparent;
-	}	
+	} 
+	#sticky-anchor ul li a{
+		padding:15px;
+		display: inline-block;
+
+	}
 	.cartt {
     vertical-align: middle;
     position: absolute;
@@ -2014,6 +2022,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
     vertical-align: top;
 	border:none !important;
 }	
+#welcome a{
+	color: #fff
+}
+
 select
 {	outline: none;
 	-webkit-appearance:none;
@@ -2473,9 +2485,7 @@ button[name="update_cart"]{
 	width: 38%;
 }
 
-.woocommerce-checkout .the_content strong {
-    color: #fff;
-}
+
 
 
 .woocommerce-cart .the_content form {
@@ -3100,6 +3110,7 @@ display: none;
 		z-index:10000;
 		
 	}	
+	
 	.filter_boxes div
 	{
 		display:block;
