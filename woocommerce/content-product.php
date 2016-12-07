@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * The template for displaying product content within loops
@@ -15,6 +17,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
+
 <div class="items<?php/* post_class();*/ ?>">
 
 	<?php

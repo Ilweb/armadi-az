@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<tr>
 			
 			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-remove">&nbsp;</th>
+			
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
@@ -74,17 +74,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							}
 						?>
 					</td>
-					<td class="product-remove">
-						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
-								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-								__( 'Remove this item', 'woocommerce' ),
-								esc_attr( $product_id ),
-								esc_attr( $_product->get_sku() )
-							), $cart_item_key );
-						?>
-					</td>
+					
 
 
 					<td class="product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
@@ -98,12 +88,26 @@ do_action( 'woocommerce_before_cart' ); ?>
 							// Meta data
 							echo WC()->cart->get_item_data( $cart_item );
 
+
 							// Backorder notification
 							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
 								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+
 							}
+
 						?>
-					</td>
+						<div class="product-remove">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s"> &times;Remove product</a>',
+								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+								__( 'Remove this item', 'woocommerce' ),
+								esc_attr( $product_id ),
+								esc_attr( $_product->get_sku() )
+							), $cart_item_key );
+						?>
+					</div>
+			
 
 					<td class="product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
 						<?php
