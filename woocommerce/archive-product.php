@@ -49,7 +49,78 @@ get_template_part('left_menu');
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
 			/*do_action( 'woocommerce_archive_description' );*/
+			
+			global $wp_query;
+			
+			$category_name = $wp_query->query_vars['product_cat'];
+			$category_object = get_term_by('slug', $category_name, 'product_cat');
+			$category_id = $category_object->term_id;
+			
+			$subs = get_term_children($category_id, 'product_cat');
+			$parents = get_terms( array(
+				'taxonomy' => 'product_cat',
+				'parent' => 0,
+				'hide_empty' => false
+			) );
+			$categories = $wp_query->query_vars['tax_query'][0]['terms'];
 		?>
+		<div class="filters">
+			<div>Filters:</div>
+			<div class="filter_boxes">
+				<form method="get">
+				<div>
+					<?php
+					if (count($subs))
+					{
+						?>
+						<select name="c[]">
+							<option value="">subcategory</option>
+							<?php
+							foreach ($subs as $cat)
+							{
+								$term = get_term( $cat, 'product_cat' ); 
+								echo '<option value="'.$cat.'"'.(in_array($cat, $categories) ? ' selected="selected"' : '').'>'.$term->name.'</option>';
+							}
+							?>
+							<img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/down_arrow.png">
+						</select>
+						<?php
+					}
+					foreach ($parents as $parent)
+					{
+						if (($parent->term_id != $category_id) && ($parent->term_id != $category_object->parent))
+						{
+							$subs = get_term_children($parent->term_id, 'product_cat');
+							if (count($subs) > 1)
+							{
+								?>
+								<select name="c[]">
+									<option value=""><?php echo $parent->name ?></option>
+									<?php
+									foreach ($subs as $cat)
+									{
+										$term = get_term( $cat, 'product_cat' ); 
+										if ($term->parent == $parent->term_id)
+										echo '<option value="'.$cat.'"'.(in_array($cat, $categories) ? ' selected="selected"' : '').'>'.$term->name.'</option>';
+									}
+									?>
+									<img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/down_arrow.png">
+								</select>
+								<?php
+							}
+						}
+					}
+					?>
+				</div>
+				</form>
+			</div>
+			<script type="text/javascript">
+			jQuery(".filter_boxes form select").change(function()
+			{
+				jQuery(".filter_boxes form").submit();
+			});
+			</script>
+		</div>	
 
 		<?php if ( have_posts() ) : ?>
 
@@ -90,11 +161,6 @@ get_template_part('left_menu');
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
-		<?php 
-			global $product;
-			echo '<i style="color: #777;">'.$product->get_sku().'</i> '; 
-			
-			?>
 
 	<?php
 		/**

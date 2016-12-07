@@ -119,3 +119,34 @@ function wooc_save_extra_register_fields( $customer_id ) {
 }
 add_action( 'woocommerce_created_customer', 'wooc_save_extra_register_fields' );
 
+
+add_action('pre_get_posts','armadi_filters');
+function armadi_filters($query){
+
+	if( $query->is_main_query() ){
+        //Do something to main query
+		
+		if(isset($_GET['c']))
+		{
+			$categories = array();
+			foreach ($_GET['c'] as $c)
+			{
+				if (is_numeric($c) && (int)$c)
+				{
+					$categories[] = (int)$c;
+				}
+			}
+			if (count($categories))
+			{
+				
+				$query->query_vars['tax_query'] = array(
+					array(
+						'taxonomy' => 'product_cat',
+						'terms'    => $categories,
+						'operator' => 'AND'
+					)
+				);
+			}
+		}
+	}
+}
