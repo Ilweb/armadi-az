@@ -55,20 +55,24 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	<?php
 			global $product;
 			echo $product->get_sku().','. '&nbsp;'. '&nbsp;'. '&nbsp;'; 
-	
-	echo'<a class=" ">England</a>';
+			$terms = get_the_terms( $post->ID, 'product_cat' );
+			if ($terms = get_the_terms( $post->ID, 'product_cat' ))
+			{
+				foreach ($terms as $term)
+				{
+					if (in_array($term->parent, array(405, 586)))
+					{
+						echo $term->name;
+					}
+				}
+			}
+			$q = $product->get_attribute("quantity-in-1-package");
+			$dimension = $product->get_attribute("package-size");
 	?>
 	</div>
-
-	<div class="stock">
-		<?php
-			echo "Pre-order ";
-		?>
-	</div>
-
+	<div class="stock"><?php echo $product->get_shipping_class(); ?></div>
+	<div class="quantity"><?php echo $q.$dimension; ?></div>
 <?php
-
-echo '<div class="quantity">200g</div>';
 		
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
