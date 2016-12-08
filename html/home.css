@@ -395,7 +395,9 @@ a
 }	
 .filters div
 {
-	display:inline-block;
+	width: 83%;
+	float: left;
+	display: inline-block;
 	text-transform:none;
 	font-weight:normal;
 }	
@@ -409,17 +411,7 @@ a
 	font-size:18px;
 	width: 83%;
 }	
-.filter_boxes > div
-{
-	border-bottom:2px solid white;
-	margin-right:2%;
-	display:inline-block;
-	width:18%;
-    padding-bottom: 14.5px;
-	padding-top:10px;
-	vertical-align: bottom;
-	position:relative;
-}
+
 .filter_boxes select
 {
 	background:transparent;
