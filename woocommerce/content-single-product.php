@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="explanation">
 			<div><?php 
 			global $product;
-			echo '<i style="color: #777;">'.$product->get_sku().'</i> '; 
+			echo '<i>'.$product->get_sku().'</i> '; 
 			the_title(); 
 			?></div>
 			<div itemprop="description">

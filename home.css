@@ -12,10 +12,9 @@ header div:nth-of-type(2) div
 	margin-right:auto;
 	background:transparent;
 }	
-
-.margin-lr div:first-of-type
+header .margin-lr div:first-of-type
 {
-	margin-right:20%;
+	margin-right:41%;
 }
 header div:nth-of-type(3)
 {
@@ -559,15 +558,7 @@ left: 96px;
  /*.white .yourOrder:nth-of-type(2) {
    margin-right: 22%;
 }*/
-.filters div
-{
-	width: 83%;
-	float: left;
-	display:inline-block;
-	text-transform:none;
-	font-weight:normal;
-	margin-bottom: 10px;
-}	
+
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
   float: none !important;
 }
@@ -577,23 +568,27 @@ left: 96px;
 	font-size:20px;
 	width:15%;
 }	
-.filter_boxes
+.filters div
 {
-	font-size:18px;
 	width: 83%;
+	float: left;
+	display:inline-block;
+	text-transform:none;
+	font-weight:normal;
+	margin-bottom: 10px;
 }	
 
-.filters form{
+.filter_boxes form{
 	width: 100%;
 
 }
-.filter_boxes select
+.filter_boxes  select
 {
 	background:transparent;
 	color:white;
 	border:none;
-	width: 25%;
-	margin-right: 7%;
+	width: 29%;
+	
 	border-bottom: 2px solid #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-size:18px;
@@ -786,11 +781,15 @@ header div
 
 }
 
-.margin-lr
+.home .margin-lr
 {
 	text-align:center;
 	width:auto;
 	height:auto;
+}
+.margin-lr{
+	width: auto;
+	height: auto;
 }	
 .margin-lr.loggo
 {
@@ -852,7 +851,7 @@ transition: 1s;
 	padding:0;
 	text-align: center;
 }	
-.second ul li{
+.home .second ul li{
 	display:inline-block;
 	margin-right:3%;
 	
@@ -913,13 +912,23 @@ header div:nth-of-type(2) span:first-of-type,header div:nth-of-type(2) span:nth-
 	margin-top:15px;
     font-weight: bold;
 }	
-/*.home header div:nth-of-type(2) div
+.home header div:nth-of-type(2) div
 {
 	width:74%;
 	margin-left:auto;
 	margin-right:auto;
 	background:transparent;
-}	*/
+}	
+.home header div:first-of-type div
+{
+	width:74%;
+	margin-left:auto;
+	margin-right:auto;
+	background:transparent;
+}	
+.home header div.cartt{
+	right: 178px;
+}
 header div:first-of-type span:first-of-type
 {
 	font-weight:bold;
@@ -1081,14 +1090,27 @@ a
 {
 	vertical-align:middle;
 }	
-.second ul
+.home .second ul
 {	height: 20px;
+	border-bottom: none;
 
 	margin-left: 20%;
-
+	text-align: center;
 	text-transform:none !important;
 	
-}		
+}	
+.second {
+
+		width: 100%;
+
+
+}
+.second ul{
+	height: 20px;
+	border-bottom: 2px solid;
+	text-align: left;
+}	
+
 .second.menu ul li
 {
 	margin-right:13%;
@@ -1098,6 +1120,12 @@ a
 {
 	margin-right:0;
 }	
+.second ul li {
+	display: inline-block;
+	margin-right: 18%;
+}
+
+
 /*Slider*/
 .fade {
   -webkit-animation-name: fade;
@@ -1158,17 +1186,29 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 	color:white;
 	list-style:none;
 }	
-footer.margin-lr div
+.home footer.margin-lr div
 {
 	top: 20px;
+	margin-left: 0;
 	display:inline-block;
 	vertical-align:top;
 	margin-right:7% !important;	
 }	
-footer.margin-lr div:nth-of-type(2),footer.margin-lr div:nth-of-type(3)
+footer.margin-lr div{
+	top: 20px;
+    margin-left: 3%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+}
+.home footer.margin-lr div:nth-of-type(2), .home footer.margin-lr div:nth-of-type(3)
 {
 	margin-right:5% !important;
-}	
+}
+footer.margin-lr div:nth-of-type(2),footer.margin-lr div:nth-of-type(3)
+{
+	margin-right:12% !important;
+}
 footer.margin-lr div:last-of-type
 {
 	margin-right:0% !important;
@@ -1707,6 +1747,12 @@ display:block;
 	border:none;
 	background:none;
 }
+.back{
+	width: 100px;
+	text-align: center;
+	padding: 10px;	
+	font-weight: 700
+}
 
 .hvr-shadow-radial,
 .add_to_wishlist {
@@ -1804,7 +1850,7 @@ p.meta{
 	}
 	.cartt {
     vertical-align: middle;
-    position: absolute;
+    
  
     right: 0;
 	}		
@@ -2530,12 +2576,13 @@ button[name="update_cart"]{
    display: none;
 }
 .woocommerce a.remove {
-	    bottom: 35%;
+	    top: 50px;
     display: block;
     font-size: 17px;
     width: 100%;
     text-align: left!important;
     color: #000 !important;
+    position: relative;
     
 
   
@@ -2703,7 +2750,7 @@ color: #000;
 display: none;
 }
 .woocommerce nav.woocommerce-pagination {
-    text-align: right;
+    text-align: left;
 }
 .woocommerce nav.woocommerce-pagination ul{
 	border: none;
@@ -3376,7 +3423,7 @@ td.product-name{
   float: left;
   margin: 0;
   padding: 0;
-  width: 1200px;
+  width: 1300px;
   height: 500px;
   background: #fff;
   text-align: center;

@@ -45,12 +45,13 @@ global $woocommerce;
 
 	</div>
 </div>
-<div>
+<div >
 
-<div><span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
-
+<div ><span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
 <span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
-<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div></div>
+<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div>
+</div>
+
 
 <div class="margin-lr loggo">
 <i class="fa fa-bars  fa-3x" aria-hidden="true"></i>

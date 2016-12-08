@@ -150,3 +150,5 @@ function armadi_filters($query){
 		}
 	}
 }
+
+
