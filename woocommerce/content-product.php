@@ -44,18 +44,31 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	//do_action( 'woocommerce_shop_loop_item_title' );?>
 
-	<div class="title"><?php 
-			
-			the_title(); 
+	<div class="title">
+	<?php 
+		the_title(); 
+		?>
+		
+	</div>
 
+	<div class="sku">
+	<?php
 			global $product;
-			echo '<i style="color: #777;font-weight:700; margin-left:4px; ">'.$product->get_sku().'</i> '; 
-			?></div>
-<?php
+			echo $product->get_sku().','. '&nbsp;'. '&nbsp;'. '&nbsp;'; 
 	
-	echo '<div class="quantity">200g</div>';
-	echo'<div class="country">England</div>';
+	echo'<a class=" ">England</a>';
+	?>
+	</div>
 
+	<div class="stock">
+		<?php
+			echo "Pre-order ";
+		?>
+	</div>
+
+<?php
+
+echo '<div class="quantity">200g</div>';
 		
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.

@@ -160,10 +160,10 @@ font-size:21px;
 {	
 	    font-size: 18px;
     padding: 21px 5px 0 5px;
-    height: 48px;
+    height: 88px;
     width: 80%;
     overflow: hidden;
-    line-height: 16px;
+    line-height: 20px;
 }
 }	
 .items 
@@ -404,7 +404,7 @@ display:none;
 }
 .producing .items
 {
-	height: 360px;
+	height: 400px;
 	
 }	
 
@@ -2276,6 +2276,13 @@ label {
  
     color: #000;
   
+}
+.country{
+	font-weight: 700;
+}
+.sku{
+	font-weight: 700;
+	font-size: 15px;
 }
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
 	background-color: transparent;
