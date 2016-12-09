@@ -12,10 +12,10 @@ header div:nth-of-type(2) div
 	margin-right:auto;
 	background:transparent;
 }	
-header .margin-lr div:first-of-type
+/*header .margin-lr div:first-of-type
 {
 	margin-right:41%;
-}
+}*/
 header div:nth-of-type(3)
 {
 	margin-top:50px;
@@ -766,8 +766,19 @@ header div
 {
 	height:auto;
 }	
+.home #welcome
+{
+	display:inline-block;
+	text-align:center !important;
+	font-weight:normal;
+	margin-left: 0;
+	height: 255px;
+    vertical-align: middle;
+	border:none;
+}
 #welcome
 {
+	margin-left: 42%;
 	display:inline-block;
 	text-align:center !important;
 	font-weight:normal;
