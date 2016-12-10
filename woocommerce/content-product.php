@@ -54,7 +54,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	<div class="sku">
 	<?php
 			global $product;
-			echo $product->get_sku().','. '&nbsp;'. '&nbsp;'. '&nbsp;'; 
+			echo $product->get_sku(). '&nbsp;'. '&nbsp;'. '&nbsp;'; 
 			$terms = get_the_terms( $post->ID, 'product_cat' );
 			if ($terms = get_the_terms( $post->ID, 'product_cat' ))
 			{
@@ -71,7 +71,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	?>
 	</div>
 	<div class="stock"><?php echo $product->get_shipping_class(); ?></div>
-	<div class="quantity"><?php echo $q.$dimension; ?></div>
+	<div class="quantity">
+	<?php woocommerce_template_loop_price(); ?>&nbsp;&nbsp;&nbsp;
+	<?php echo $q.$dimension; ?>
+	</div>
 <?php
 		
 	/**
@@ -80,7 +83,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_rating - 5
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
+	//do_action( 'woocommerce_after_shop_loop_item_title' );
 
 
 	/**

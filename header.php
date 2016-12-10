@@ -31,7 +31,7 @@ global $woocommerce;
 			<p>e-mail:info@armadiaz.com</p>
 		</span>
 		<span class="lang">
-		<a href="<?php echo  pll_home_url('bg') ?>">bg</a>
+		<a href="<?php echo pll_home_url('bg') ?>">bg</a>
 		<a href="<?php echo pll_home_url('en') ?>">en</a>
 			
 			<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>" img class="search" src="<?php bloginfo('template_directory'); ?>/images/search.png">
@@ -46,21 +46,6 @@ global $woocommerce;
 	</div>
 </div>
 <div >
-
-<div ><span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
-<span ><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
-<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div>
-</div>
-
-
-<div class="margin-lr loggo">
-<i class="fa fa-bars  fa-3x" aria-hidden="true"></i>
-<div><a href="<?php echo home_url(); ?>">
-<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png">
-</div>
-<!--<div id="welcome">
-<a href="#"><p style="color: yellow; font-size: 24px;">UNDER CONSTRUCTION</p>
-<p></p></a></div>-->
 <?php global $current_user;
       get_currentuserinfo();
 
@@ -72,6 +57,27 @@ global $woocommerce;
       //echo 'User display name: ' . $current_user->display_name . "\n";
       //echo 'User ID: ' . $current_user->ID . "\n";
 ?>
+<div>
+	<?php if ( is_user_logged_in() ) { ?>
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php echo $current_user->user_login  ?></a></span>	
+	<span><a href="<?php echo wp_logout_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?> ">logout</a></span>
+	<?php } else { ?>
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
+	<?php } ?>
+	<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div>
+</div>
+
+
+<div class="margin-lr loggo">
+<i class="fa fa-bars  fa-3x" aria-hidden="true"></i>
+<div><a href="<?php echo home_url(); ?>">
+<img class="logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png">
+</div>
+<!--<div id="welcome">
+<a href="#"><p style="color: yellow; font-size: 24px;">UNDER CONSTRUCTION</p>
+<p></p></a></div>-->
+
 
 <?php if ( is_user_logged_in() ) { ?>
 

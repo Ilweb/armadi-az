@@ -14,9 +14,17 @@
     
         <?php
         $args = array(
-            'post_type' => 'product'
-        
-            );
+            'post_type' => 'product',
+			'posts_per_page' => -1,
+			'tax_query' => array(
+                'relation' => 'AND',
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'name',
+                    'terms' => pll__("Active brochure category")
+                )
+            ),
+		);
 
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {
@@ -41,20 +49,19 @@
 			<?php
 			if ($i % 4 == 0)
 			{
-				echo '<div class="content">December 2016</div>';
+				echo '<div class="content">'.pll__("Active brochure category").'</div>';
 				echo '</li>';
 			}
             endwhile;
 			if ($i % 4 != 0)
 			{
-				echo '<div class="content">December 2016</div>';
+				echo '<div class="content">'.pll__("Active brochure category").'</div>';
 				echo '</li>';
 			}
         } 
         wp_reset_postdata();
 
         ?>
-    <li>SLIDE 1</li>
   </ul>  
 </div>
 

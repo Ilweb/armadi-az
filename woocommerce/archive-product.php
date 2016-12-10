@@ -78,14 +78,13 @@ get_template_part('left_menu');
 		<div class="filters">
 			<div>Filters:</div>
 			<div class="filter_boxes">
-				<form method="get">
+				<form method="get" action="<?php echo get_permalink(); ?>">
 				<div>
 					<?php
 					if (count($subs))
 					{
-						?>
-						<select name="c[]">
-							<option value="">subcategory</option>
+						?><select name="c[]">
+							<option value=""><?php pll_e('Subcategory'); ?></option>
 							<?php
 							foreach ($subs as $cat)
 							{
@@ -93,9 +92,7 @@ get_template_part('left_menu');
 								echo '<option value="'.$cat.'"'.(in_array($cat, $categories) ? ' selected="selected"' : '').'>'.$term->name.'</option>';
 							}
 							?>
-							<img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/down_arrow.png">
-						</select>
-						<?php
+						</select><?php
 					}
 					foreach ($parents as $parent)
 					{
@@ -104,8 +101,7 @@ get_template_part('left_menu');
 							$subs = get_term_children($parent->term_id, 'product_cat');
 							if (count($subs) > 1)
 							{
-								?>
-								<select name="c[]">
+								?><select name="c[]">
 									<option value=""><?php echo $parent->name ?></option>
 									<?php
 									foreach ($subs as $cat)
@@ -115,9 +111,7 @@ get_template_part('left_menu');
 										echo '<option value="'.$cat.'"'.(in_array($cat, $categories) ? ' selected="selected"' : '').'>'.$term->name.'</option>';
 									}
 									?>
-									<img class="arrow" src="<?php bloginfo('template_directory'); ?>/images/down_arrow.png">
-								</select>
-								<?php
+								</select><?php
 							}
 						}
 					}

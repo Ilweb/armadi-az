@@ -137,7 +137,6 @@ font-size:21px;
 	text-align:center;
 	width: 24%;
     text-align: center;
-	font-size:14px;
 }
 
 .width_window .items
@@ -157,17 +156,17 @@ font-size:21px;
 }
 .items div.title
 {	
-	    font-size: 18px;
-    padding: 21px 5px 0 5px;
-    height: 88px;
+    padding: 20px 0 0 0;
+    height: 80px;
     width: 80%;
     overflow: hidden;
-    line-height: 20px;
+    line-height: 22px;
 }
-}	
+	
 .items 
 {
-	height:250px;
+	height:300px;
+	font-size: 16px;
 	vertical-align: top;
 }	
 .recommended span
@@ -479,7 +478,6 @@ body
 	background-repeat:no-repeat;
 	margin:0;
 	font-family: 'Arial', sans-serif;
-	background-image: url('../images/a.png');
 
 }	
 h2
@@ -566,11 +564,11 @@ left: 96px;
 .filters > div:first-of-type
 {
 	font-size:20px;
-	width:15%;
+	width:8%;
 }	
-.filters div
+.filters > div
 {
-	width: 83%;
+	width: 92%;
 	float: left;
 	display:inline-block;
 	text-transform:none;
@@ -587,23 +585,20 @@ left: 96px;
 	background:transparent;
 	color:white;
 	border:none;
-	width: 29%;
+	width: calc(100% / 3 - 15px);
+	margin-left: 15px;
 	
 	border-bottom: 2px solid #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-size:18px;
 	background: url("./images/arrow.png");
     -webkit-appearance: none;
-    background-position-x: 95%;
+    background-position-x: right;
     background-size: contain;
     background-repeat: no-repeat;
   
-}	
-.filter_boxes select:last-of-type
-{
-	margin-right: 0;
-	}
-	.generals > div:first-child {
+}
+.generals > div:first-child {
     margin-bottom: 20px;
 }
  	
@@ -710,7 +705,7 @@ form
 {
 	position:relative;
 }	
-input
+input[type="text"]
 {
 	width:247px;	
 	height:25px;
@@ -752,6 +747,19 @@ form
 {
 	display:inline-block;
 }	
+#customer_login form
+{
+	display: block;
+}
+
+#customer_login form .woocommerce-Button
+{
+	border: 2px solid white;
+	margin-right: 20px;
+	padding: 10px 20px;
+	height: 40px;
+}
+
 header div
 {
 	height:50px;
@@ -772,8 +780,6 @@ header div
 	text-align:center !important;
 	font-weight:normal;
 	margin-left: 0;
-	height: 255px;
-    vertical-align: middle;
 	border:none;
 }
 #welcome
@@ -782,9 +788,8 @@ header div
 	display:inline-block;
 	text-align:center !important;
 	font-weight:normal;
-	
-	height: 255px;
-    vertical-align: middle;
+	margin-top: 50px;
+    vertical-align: top;
 	border:none;
 }
 #welcome p{
@@ -1118,8 +1123,10 @@ a
 }
 .second ul{
 	height: 20px;
+	padding-bottom: 30px;
 	border-bottom: 2px solid;
 	text-align: left;
+	margin-bottom: 0;
 }	
 
 .second.menu ul li
@@ -1133,7 +1140,11 @@ a
 }	
 .second ul li {
 	display: inline-block;
-	margin-right: 18%;
+	width: 24%; 
+	text-align: center;
+}
+.home .second ul li {
+	width: auto; 
 }
 
 
@@ -1218,7 +1229,7 @@ footer.margin-lr div{
 }
 footer.margin-lr div:nth-of-type(2),footer.margin-lr div:nth-of-type(3)
 {
-	margin-right:12% !important;
+	margin-right:8% !important;
 }
 footer.margin-lr div:last-of-type
 {
@@ -2177,7 +2188,7 @@ select
 	position: relative;
 	top: 0;
 	left: 11px;
-	margin-top: 5px;
+	margin-top: 15px;
 }
 
 .yith-wcwl-add-to-wishlist
@@ -2336,10 +2347,6 @@ label {
 }
 .country{
 	font-weight: 700;
-}
-.sku{
-	font-weight: 700;
-	font-size: 15px;
 }
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
 	background-color: transparent;
@@ -3434,7 +3441,7 @@ td.product-name{
   float: left;
   margin: 0;
   padding: 0;
-  width: 1300px;
+  width: 1200px;
   height: 500px;
   background: #fff;
   text-align: center;
