@@ -1,5 +1,8 @@
 <?php
 
+if (!session_id()) {
+    session_start();
+}
 
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup()
@@ -125,4 +128,205 @@ function armadi_filters($query){
 	}
 }
 
+class WC_Gateway_MyPayment extends WC_Payment_Gateway {
+	public function __construct()
+	{
+		$this->id = "UBB";
+		$this->method_title = "UBB";
+		$this->init_form_fields();
+		$this->init_settings();
+		$this->title = $this->get_option( 'title' );
+		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
+	}
 
+	public function init_form_fields()
+	{
+		$this->form_fields = array(
+			'enabled' => array(
+				'title' => __( 'Enable/Disable', 'woocommerce' ),
+				'type' => 'checkbox',
+				'label' => __( 'Enable UBB payment', 'woocommerce' ),
+				'default' => 'yes'
+			),
+			'title' => array(
+				'title' => __( 'Title', 'woocommerce' ),
+				'type' => 'text',
+				'description' => __( 'This controls the title which the user sees during checkout.', 'woocommerce' ),
+				'default' => __( 'Pay with card', 'woocommerce' ),
+				'desc_tip'      => true,
+			),
+			'description' => array(
+				'title' => __( 'Customer Message', 'woocommerce' ),
+				'type' => 'textarea',
+				'default' => ''
+			)
+		);
+	}
+
+	public function process_payment( $order_id ) {
+		global $woocommerce;
+		$order = new WC_Order( $order_id );
+
+		// Reduce stock levels
+		$order->reduce_order_stock();
+
+		// Remove cart
+		$woocommerce->cart->empty_cart();
+		
+		$price = $order->get_total();
+		
+		require_once "./Universal/UniversalPlugin.php";
+		require_once "./Universal/UniversalPluginXMLFileParser.php";
+		require_once "./Universal/Framework.php";
+		
+		$currentContext = pll_home_url(pll_current_language('slug'));
+		//$currentContext = 'http://armadiaz.bg/UniversalTester/';
+		
+		$CGPipe = new UniversalPlugin(false);
+		//$CGPipe->setProtocol("");
+		$CGPipe->set("action", "1");	// 1 - Purchase, 4 - Authorization
+		$CGPipe->set("amt", $price);
+		$CGPipe->set("currencycode", "975");
+		$CGPipe->set("trackid", $order_id);
+		$CGPipe->set("langid", pll_current_language('locale'));
+		$CGPipe->set("responseurl", $currentContext.'wc-api/notify/'  );
+		$CGPipe->set("errorurl", $currentContext.'wc-api/failed/' );
+		
+		$CGPipe->setResourcePath('/home/armadiaz/resource.cgn');
+		$CGPipe->setTerminalAlias('ARMADIAZ OOD');
+
+		$CGPipe->setTransactionType("PaymentInit");
+		$CGPipe->setVersion("1");
+		
+		$CGPipe->performTransaction();
+		
+		$respArray = $CGPipe->getResponseFields();
+		
+		if (isset($respArray["ERROR_CODE_TAG"])) {	
+			$error = $respArray["ERROR_CODE_TAG"];
+		}
+		else {
+			$error = '';
+		}
+		if (isset($respArray["ERROR_TEXT"])) {	
+			$errortext = $respArray["ERROR_TEXT"]; 
+		}
+		else {
+			$errortext = '';
+		}
+				
+		if (!empty($error)) {
+			echo "<h2>Error code: $error</h2>\r\n";
+			echo "<h2>Error message: $errortext</h2>\r\n"; 
+			if (!strcmp($error, "CM90100")) {
+				echo "Unable to invoke requested Command.<br/>\r\n";
+			}
+		} else {
+			if(isset($respArray['PAYMENTPAGE']) && isset($respArray['PAYMENTID'])) {	
+				$_SESSION['payments'][$respArray['PAYMENTID']] = $order_id;
+			
+				performGatewayRedirect($respArray['PAYMENTPAGE'], $respArray['PAYMENTID']);
+			}
+			exit;
+		}
+	}
+}
+
+add_action( 'woocommerce_api_notify', 'check_obb_response' );
+	
+function check_obb_response()
+{
+	$paymentID  = $_REQUEST['paymentid'];
+	$error      = $_REQUEST['Error'];			
+	$errortext  = $_REQUEST['ErrorText']; 
+	$order_id   = $_REQUEST['trackid'];
+	$tran_id = $_REQUEST['tranid'];
+	
+	if (!strcmp($error, "")) {
+		$order = new WC_Order( $order_id );
+		
+		$order->payment_complete( $tran_id );
+		
+		$url = $order->get_checkout_order_received_url( );
+	}
+	else
+	{
+		$url = pll_home_url(pll_current_language('slug')).'wc-api/failed/';
+		
+		$url = add_query_arg( $_REQUEST, $url );
+	}
+	
+	echo "REDIRECT=" . $url;
+	
+	exit;
+}
+
+add_action( 'woocommerce_api_failed', 'obb_failed' );
+
+function obb_failed()
+{	
+	$paymentID  = $_REQUEST['paymentid'];
+	$error      = $_REQUEST['Error'];			
+	$errortext  = $_REQUEST['ErrorText']; 
+	
+	$order_id = $_SESSION['payments'][$paymentID];
+	
+	$order = new WC_Order( $order_id );
+	
+	$order->update_status( 'failed', $errortext );
+	
+	$url = $order->get_view_order_url( );
+	
+	wc_add_notice( __('Payment error:', 'woothemes') . $errortext, 'error' );
+	
+	wp_redirect( $url );
+	exit;
+}
+
+function add_your_gateway_class( $methods ) {
+	$methods[] = 'WC_Gateway_MyPayment';
+	return $methods;
+}
+
+add_filter( 'woocommerce_payment_gateways', 'add_your_gateway_class' );
+
+function performGatewayRedirect($url, $paymentId) {
+
+    // Begin HTML CODE
+	?>
+	<html>
+	<head>
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	</head>
+	<body OnLoad="OnLoadEvent();">
+		<form action="<?php echo $url ?>" method="post" name="form1" autocomplete="off">
+			<input type="hidden" name="PaymentID" value="<?php echo $paymentId ?>"  /> 
+		</form>
+		<script language="JavaScript">
+
+		function OnLoadEvent() {
+		   document.form1.submit();
+		   timVar = setTimeout("procTimeout()",300000);
+		}
+
+		function procTimeout() {
+			location = 'http://armadiaz.bg/';
+		}
+
+		//
+		// disable page duplication -> CTRL-N key
+		//
+		if (document.all) {
+			document.onkeydown = function () {
+				if (event.ctrlKey && event.keyCode == 78) {
+					return false;
+				}
+			}
+		}
+		</script>
+	</body>
+	</html>
+	<?php
+	// End of HTML CODE
+
+}
