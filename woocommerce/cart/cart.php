@@ -99,7 +99,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<div class="product-remove">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s"> &times;Remove product</a>',
+								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s"> 
+							<span class="times">&times;</span>&nbsp;&nbspRemove product</a>',
 								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 								__( 'Remove this item', 'woocommerce' ),
 								esc_attr( $product_id ),
@@ -137,6 +138,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 ?>
 					</td>
+					
 
 					<td class="product-subtotal" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
 						<?php

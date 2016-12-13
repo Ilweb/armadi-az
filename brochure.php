@@ -11,7 +11,6 @@
   <ul>
  
 
-    
         <?php
         $args = array(
             'post_type' => 'product',
@@ -29,12 +28,16 @@
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {
 			$i = 0;
+
             while ( $loop->have_posts() ) : $loop->the_post(); $i++;
 			global $product;
+            echo $product->get_attribute("pageslider");
+
 			if ($i % 4 == 1)
 			{
 				echo '<li>';
 			}
+                
             ?>
 			<div class="img1">
                
@@ -63,11 +66,26 @@
         } 
         wp_reset_postdata();
 
+
         ?>
+
 <li>
     <div class="img2">
-        <img class="image" src="<?php bloginfo('template_directory'); ?>/images/i.png" alt=""/>
-        <div id="descr"></div>
+        <a href="<?php echo get_permalink(); ?>">
+        <div class="bigImg">
+            <img  src="<?php bloginfo('template_directory'); ?>/images/i.png" alt=""/>
+        </div>
+        <div class="bigInfo">
+            <h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
+            <a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
+            <p class="listItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
+        </div>
     </div>
 </li>
 
@@ -79,7 +97,6 @@
 
 
 
-             
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
