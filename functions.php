@@ -43,6 +43,8 @@ function my_theme_setup()
 	pll_register_string('Promo line', 'Promo line 1');
 	pll_register_string('Filters', 'Subcategory');
 	pll_register_string('Promo line', 'Active brochure category');
+	pll_register_string('UBB', 'Payment status');
+	pll_register_string('UBB', 'Paid');
 }
 
 function wooc_extra_register_fields() {
@@ -247,6 +249,12 @@ function check_obb_response()
 		
 		$order->payment_complete( $tran_id );
 		
+		update_post_meta( $order_id, '_payment_ref', $_REQUEST['ref']);
+		update_post_meta( $order_id, '_payment_result', $_REQUEST['result']);
+		update_post_meta( $order_id, '_payment_postdate', $_REQUEST['postdate']);
+		update_post_meta( $order_id, '_payment_auth', $_REQUEST['auth']);
+		update_post_meta( $order_id, '_payment_id', $paymentID);
+		
 		$url = $order->get_checkout_order_received_url( );
 	}
 	else
@@ -275,9 +283,12 @@ function obb_failed()
 	
 	$order->update_status( 'failed', $errortext );
 	
-	$url = $order->get_view_order_url( );
+	update_post_meta( $order_id, '_payment_error', $error.': '.$errortext);
+	update_post_meta( $order_id, '_payment_id', $paymentID);
 	
-	wc_add_notice( __('Payment error:', 'woothemes') . $errortext, 'error' );
+	$url = $order->get_checkout_order_received_url( );
+	
+	//wc_add_notice( __('Payment error:', 'woothemes') . $errortext, 'error' );
 	
 	wp_redirect( $url );
 	exit;
