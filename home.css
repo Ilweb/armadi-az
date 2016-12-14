@@ -2017,13 +2017,13 @@ select {
     font-size: 23px;
     padding: 9px 12px;
 }
-#add_payment_method table.cart img,
+/*#add_payment_method table.cart img,
 .woocommerce-cart table.cart img,
 .woocommerce-checkout table.cart img {
     width: 100%;
     height: auto;
     box-shadow: none;
-}
+}*/
 .woocommerce table.shop_table td {
     border-top: 2px solid `#000;
     padding: 6px 12px;
@@ -3460,6 +3460,27 @@ p.txt1 {
         position: relative;
         right: 16%
     }
+    .home .second ul {
+    
+  margin-left:0;
+   
+}
+.second ul {
+    
+  margin-left:0;
+  text-align: center;
+  text-transform: none;
+
+}
+input{
+    width:209px;}
+.second ul  li{
+    width: auto;
+    text-align: center; 
+
+}
+
+
     #slider ul li {
         width: 350px;
         height: 250px;

@@ -15,7 +15,7 @@
         $args = array(
             'post_type' => 'product',
 			'posts_per_page' => -1,
-			'tax_query' => array(
+        	'tax_query' => array(
                 'relation' => 'AND',
                 array(
                     'taxonomy' => 'product_cat',
@@ -30,16 +30,20 @@
 			$i = 0;
 
             while ( $loop->have_posts() ) : $loop->the_post(); $i++;
-			global $product;
+			global $product ;
             echo $product->get_attribute("pageslider");
+            
 
 			if ($i % 4 == 1)
 			{
 				echo '<li>';
 			}
+            // echo '<li>'
                 
             ?>
-			<div class="img1">
+
+			<div class="img1"> 
+          
                
 				<a href="<?php echo get_permalink(); ?>">
                  <div class="conta">
@@ -52,22 +56,24 @@
 
             
 			<?php
+
 			if ($i % 4 == 0)
 			{
 				echo '<div class="content">'.pll__("Active brochure category").'</div>';
 				echo '</li>';
 			}
-            endwhile;
+     endwhile;
 			if ($i % 4 != 0)
 			{
 				echo '<div class="content">'.pll__("Active brochure category").'</div>';
 				echo '</li>';
 			}
+
         } 
+
         wp_reset_postdata();
-
-
         ?>
+      
 
 <li>
     <div class="img2">
@@ -84,7 +90,7 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
+    post_excerpt ); ?></p>
         </div>
     </div>
 </li>
@@ -94,7 +100,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </ul>  
 </div>
 
-
+<?php
+      //$myArr['usernema']='Yoanna';
+      //$myArr[]=10;
+      $myArr['username']=array(1,7,8,4);
+      print_r($myArr);
+        ?>
 
 
 

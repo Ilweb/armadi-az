@@ -68,7 +68,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			}
 			$q = $product->get_attribute("quantity-in-1-package");
 			$dimension = $product->get_attribute("package-size");
-
 	?>
 	</div>
 	<div class="stock"><?php echo $product->get_shipping_class(); ?></div>
