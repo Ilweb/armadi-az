@@ -43,6 +43,11 @@ function my_theme_setup()
 	pll_register_string('Promo line', 'Promo line 1');
 	pll_register_string('Filters', 'Subcategory');
 	pll_register_string('Promo line', 'Active brochure category');
+	pll_register_string('yourOrder', 'YOUR ORDER');
+	pll_register_string('yourOrder', 'Delivery');
+	pll_register_string('yourOrder', 'Payment');
+	pll_register_string('yourOrder', 'Confirmation');
+	pll_register_string('back', 'BACK');
 	pll_register_string('UBB', 'Payment status');
 	pll_register_string('UBB', 'Paid');
 }
