@@ -180,3 +180,11 @@ get_template_part('left_menu');
 	</div>	
 
 <?php get_footer( 'shop' ); ?>
+
+
+<script type="text/javascript">
+		$(document).ready(function(){
+			window.scroll(0,420);
+			
+		});
+</script>
