@@ -6,7 +6,7 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/proceed-to-checkout-button.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * HOWEVER, on occasion WooCommerce will need to update template files and uru
  * (the theme developer) will need to copy the new files to your theme to
  * maintain compatibility. We try to do this as little as possible, but it does
  * happen. When this occurs the version of the template file will be bumped and
@@ -24,5 +24,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() ) ;?>" class="checkout-button button hvr-shadow-radial alt wc-forward ">
-	<?php pll_e( 'NEXT', 'woocommerce' ); ?>
+	<?php  pll_e( 'NEXT', 'woocommerce' ); ?>
 </a>
