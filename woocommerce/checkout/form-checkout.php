@@ -36,10 +36,10 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 ?>
 
 <div class="bl">
-<div class="yourOrder"><p>Your order</p></div>
-<div class="yourOrder"><p>Delivery</p></div>
-<div class="yourOrder"><p>Payment</p></div>
-<div class="yourOrder"><p>Confirmation</p></div>
+<div class="yourOrder"><p><?php pll_e('Your Order'); ?> </p></div>
+<div class="yourOrder"><p><?php pll_e('Delivery'); ?> </p></div>
+<div class="yourOrder"><p><?php pll_e('Payment'); ?> </p></div>
+<div class="yourOrder"><p><?php pll_e('Confirmation'); ?> </p></div>
 <div class="line" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/linee2.png')"></div>
 </div>
 
