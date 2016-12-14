@@ -9,8 +9,6 @@
 <p><?php pll_e('Promo line 1'); ?> </p>
 </div>
   <ul>
- 
-
         <?php
         $args = array(
             'post_type' => 'product',
@@ -25,46 +23,79 @@
             ),
 		);
 
+		
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {
-			$i = 0;
-
-            while ( $loop->have_posts() ) : $loop->the_post(); $i++;
-			global $product ;
-        
-            
-
-			if ($i % 4 == 1)
+			$products = array();
+		
+            while ( $loop->have_posts() )
+			{
+				$loop->the_post(); 
+				global $product;
+				$page = $product->get_attribute("pageSlider");
+				if ($page)
+				{
+					if (!isset($products[$page]))
+					{
+						$products[$page] = array();
+					}
+					$product->post = clone($post);
+					$products[$page][] = clone($product);
+				}
+			}
+			
+			
+            foreach ($products as $page => $prods)
 			{
 				echo '<li>';
-			}
-            // echo '<li>'
-                
-            ?>
+				global $post;
+				global $product;
+				if (count($prods) == 1)
+				{
+					$product = $prods[0];
+					$post = $product->post;
+					setup_postdata( $product->post ); 
+					$props = wc_get_product_attachment_props( get_post_thumbnail_id(), $post );
+					?>
+					<div class="img2">
+						<a href="<?php echo get_permalink(); ?>">
+						<div class="bigImg">
+							<img  src="<?php echo esc_url( $props['url'] ); ?>" alt="<?php the_title(); ?>"/>
+						</div>
+						<div class="bigInfo">
+							<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
+							<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
+							<p class="listItem"><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
+						</div>
+					</div>
+					<?php
+				}
+				else
+				{
+					foreach ($prods as $key => $p)
+					{
+						$product = $p;
+						$post = $product->post;
+						setup_postdata( $product->post ); 
+						?>
 
-			<div class="img1"> 
-          
-               
-				<a href="<?php echo get_permalink(); ?>">
-                 <div class="conta">
-				<?php woocommerce_template_loop_product_thumbnail(); ?>
-                </div>
-				<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
-				<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
-				<p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
-			</div>
+						<div class="img1"> 
+					  
+						   
+							<a href="<?php echo get_permalink(); ?>">
+							 <div class="conta">
+							<?php woocommerce_template_loop_product_thumbnail(); ?>
+							</div>
+							<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
+							<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
+							<p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
+						</div>
 
-            
-			<?php
-
-			if ($i % 4 == 0)
-			{
-				echo '<div class="content">'.pll__("Active brochure category").'</div>';
-				echo '</li>';
-			}
-     endwhile;
-			if ($i % 4 != 0)
-			{
+						
+						<?php
+					}
+				}
+			
 				echo '<div class="content">'.pll__("Active brochure category").'</div>';
 				echo '</li>';
 			}
@@ -73,47 +104,8 @@
 
         wp_reset_postdata();
         ?>
-      
-
-<li>
-    <div class="img2">
-        <a href="<?php echo get_permalink(); ?>">
-        <div class="bigImg">
-            <img  src="<?php bloginfo('template_directory'); ?>/images/i.png" alt=""/>
-        </div>
-        <div class="bigInfo">
-            <h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
-            <a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
-            <p class="listItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    post_excerpt ); ?></p>
-        </div>
-    </div>
-</li>
-
-            
-
   </ul>  
 </div>
-
-<?php
-      //$myArr['usernema']='Yoanna';
-      //$myArr[]=10;
-      $myArr['username']=array(1,7,8,4);
-      print_r($myArr);
-        ?>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
-
-
  
 <script>
     jQuery(document).ready(function ($) {
