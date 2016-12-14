@@ -573,10 +573,11 @@ form {
     position: relative;
 }
 input {
-    width: 247px;
+    
     height: 25px;
     position: relative;
 }
+
 input#first {
     background: url(images/search.png) no-repeat scroll;
     background-size: contain;
@@ -584,6 +585,7 @@ input#first {
     border: 1px solid grey;
     height: 27px;
     transition-timing-function: ease-in;
+    width:247px;
 }
 input#first:focus {
     -webkit-box-shadow: 0px 0px 150px 22px rgba(0, 0, 0, 0.75);
@@ -1129,6 +1131,7 @@ footer #sec_input {
 .product_images {
     display: inline-block;
     width: 60%;
+    vertical-align: bottom;
 }
 #price_inner {
     font-size: 30px;
@@ -1142,6 +1145,7 @@ footer #sec_input {
     border-radius: 2px;
 }
 .product_images div div {
+  
     display: inline-block;
     width: auto;
 }
@@ -1174,7 +1178,7 @@ footer #sec_input {
     font-size: 26px;
 }
 .explanation > div {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     vertical-align: top;
 }
 .description {
@@ -2017,13 +2021,35 @@ select {
     font-size: 23px;
     padding: 9px 12px;
 }
-/*#add_payment_method table.cart img,
-.woocommerce-cart table.cart img,
+#add_payment_method table.cart img,
+
 .woocommerce-checkout table.cart img {
-    width: 100%;
-    height: auto;
+    max-width:  100px;
+    max-height: 170px;
     box-shadow: none;
-}*/
+}
+#add_payment_method table.cart img, 
+.woocommerce-cart table.cart img, 
+.woocommerce-checkout table.cart img {
+    max-width:  100px;
+    max-height: 150px;
+    box-shadow: none;
+    text-align: center;
+}
+#add_payment_method table.cart img,
+ .woocommerce-cart table.cart img,
+ .woocommerce-checkout table.cart img {
+   width: auto;
+    box-shadow: none;
+}
+.woocommerce table.shop_table td .product-name {
+    border-top: 2px solid `#000;
+    padding: 6px 12px; 
+    vertical-align: middle;
+    width: 30%;
+
+}
+
 .woocommerce table.shop_table td {
     border-top: 2px solid `#000;
     padding: 6px 12px;
@@ -2325,7 +2351,8 @@ button[name="update_cart"] {
     font-weight: normal;
 }
 .cart_item {
-    height: 190px
+    height: 190px;
+    text-align: center;
 }
 .woocommerce a.remove:hover {
     color: red!important;
@@ -2346,7 +2373,7 @@ button[name="update_cart"] {
     font-size: 35px;
 }
 .woocommerce-cart .woocommerce a.button {
-    width: 200px;
+   /* width: 200px;*/
     float: right;
     font-size: 25px;
 }
@@ -2575,6 +2602,10 @@ td.product-name {
 }
 .cart_item td.product-name {
     text-align: left !important;
+    width: 35%;
+}
+.woocommerce-checkout-review-order-table td.product-name{
+    width: 70%;
 }
 .order_details td.product-name {
     text-align: left !important;

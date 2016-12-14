@@ -31,7 +31,7 @@
 
             while ( $loop->have_posts() ) : $loop->the_post(); $i++;
 			global $product ;
-            echo $product->get_attribute("pageslider");
+        
             
 
 			if ($i % 4 == 1)
