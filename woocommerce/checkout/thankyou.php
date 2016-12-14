@@ -32,9 +32,9 @@ if ( $order ) : ?>
 </div>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
-		<p class="woocommerce-thankyou-order-failed" style="color: #FF0000;"><?php echo get_post_meta($order->id, '_payment_error', true); ?></p>
+
 		<p class="woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
-		
+
 		<p class="woocommerce-thankyou-order-failed-actions">
 			<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
 			<?php if ( is_user_logged_in() ) : ?>
@@ -63,40 +63,6 @@ if ( $order ) : ?>
 			<li class="method">
 				<?php _e( 'Payment Method:', 'woocommerce' ); ?>
 				<strong><?php echo $order->payment_method_title; ?></strong>
-			</li>
-			<?php endif; ?>
-			<?php if ( $transaction_id = get_post_meta($order->id, '_transaction_id', true) ) : ?>
-			<li class="paid">
-				<?php pll_e('Payment status'); ?>
-				<strong style="color: #00FF00;"><?php pll_e('Paid'); ?></strong>
-			</li>
-			<li class="tran">
-				Transaction ID
-				<strong><?php echo $transaction_id; ?></strong>
-			</li>
-			<?php endif; ?>
-			<?php if ( $payment_id = get_post_meta($order->id, '_payment_id', true) ) : ?>
-			<li class="payment">
-				Payment ID
-				<strong><?php echo $payment_id; ?></strong>
-			</li>
-			<?php endif; ?>
-			<?php if ( $ref_id = get_post_meta($order->id, '_payment_ref', true) ) : ?>
-			<li class="ref">
-				Reference #
-				<strong><?php echo $ref_id; ?></strong>
-			</li>
-			<?php endif; ?>
-			<?php if ( $postdate = get_post_meta($order->id, '_payment_postdate', true) ) : ?>
-			<li class="ref">
-				Post date
-				<strong><?php echo $postdate; ?></strong>
-			</li>
-			<?php endif; ?>
-			<?php if ( $authcode = get_post_meta($order->id, '_payment_auth', true) ) : ?>
-			<li class="ref">
-				Auth Code
-				<strong><?php echo $authcode; ?></strong>
 			</li>
 			<?php endif; ?>
 		</ul>

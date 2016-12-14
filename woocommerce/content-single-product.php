@@ -73,9 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			echo '<i>'.$product->get_sku().'</i> '; 
 			the_title(); 
 			?></div>
-			<div itemprop="description">
-				<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
-			</div>
+			
 			<div id="price_inner" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<?php echo $product->get_price_html(); ?>
 
@@ -106,11 +104,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 			woocommerce_template_single_add_to_cart();
 			?>
+			<div itemprop="description">
+				<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+			</div>
 			</div>
 			<div class="description">
 			<?php
 		 woocommerce_output_product_data_tabs();
 		?>
+
 				<!--<fieldset>
 
 					<legend id="descr">Description</legend>
@@ -154,6 +156,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 
 			<meta itemprop="url" content="<?php the_permalink(); ?>" />
+
 		</div>
 	</div>
 </div>
