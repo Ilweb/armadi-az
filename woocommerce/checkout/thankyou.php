@@ -33,7 +33,10 @@ if ( $order ) : ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 		<p class="woocommerce-thankyou-order-failed" style="color: #FF0000;"><?php echo get_post_meta($order->id, '_payment_error', true); ?></p>
-		<p class="woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
+		<p class="woocommerce-thankyou-order-failed"><?php
+			//_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); 
+			pll_e( 'Faild transaction text' );
+		?></p>
 		
 		<p class="woocommerce-thankyou-order-failed-actions">
 			<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
@@ -46,6 +49,8 @@ if ( $order ) : ?>
 
 		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
+		<p><?php pll_e('Merchant name'); ?></p>
+		<p><?php pll_e('Merchant website'); ?></p>
 		<ul class="woocommerce-thankyou-order-details order_details">
 			<li class="order">
 				<?php _e( 'Order Number:', 'woocommerce' ); ?>
@@ -101,7 +106,10 @@ if ( $order ) : ?>
 			<?php endif; ?>
 		</ul>
 		<div class="clear"></div>
-
+		<?php if ( $transaction_id = get_post_meta($order->id, '_transaction_id', true) ) : ?>
+			<p style="color: #888888;"><?php pll_e('Please print'); ?></p>
+			<a href="#" style="font-size: 20px;" class="hvr-shadow-radial" onclick="window.print();"><?php pll_e('Print'); ?></a>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>

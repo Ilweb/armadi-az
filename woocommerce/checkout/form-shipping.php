@@ -65,3 +65,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
 </div>
+<script type="text/javascript">
+$(function() { 
+	var checker = document.getElementById('ship-to-different-address-checkbox');
+	$('.shipping_address').toggle(checker.checked);
+	
+	$('#ship-to-different-address-checkbox').on("change",function() {
+		$('.shipping_address').toggle(this.checked);
+	}); 
+});
+</script>

@@ -50,6 +50,11 @@ function my_theme_setup()
 	pll_register_string('back', 'BACK');
 	pll_register_string('UBB', 'Payment status');
 	pll_register_string('UBB', 'Paid');
+	pll_register_string('UBB', 'Please print');
+	pll_register_string('UBB', 'Print');
+	pll_register_string('UBB', 'Merchant name');
+	pll_register_string('UBB', 'Merchant website');
+	pll_register_string('UBB', 'Faild transaction text');
 }
 
 function wooc_extra_register_fields() {
