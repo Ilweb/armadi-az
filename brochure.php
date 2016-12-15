@@ -44,6 +44,7 @@
 				}
 			}
 			
+			ksort($products);
 			
             foreach ($products as $page => $prods)
 			{
