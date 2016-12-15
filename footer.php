@@ -58,16 +58,16 @@
 			));
 
 			?>
-			<li class="pay_for">
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/american.png')"></div></a>
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/maestro.png')"></div></a>
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/visa.png')"></div></a>
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/pay.png')"></div></a>
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/master.png')"></div></a>
-			<a href="#"><div style="background:url('<?php bloginfo('template_directory'); ?>/images/electron.png')"></div></a>
-				
-				</li>
 		</ul>
+		<div >
+			<img src="<?php bloginfo('template_directory'); ?>/images/VISA.png" style="height: 23px; margin-right: 2px;"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/vpay.png" style="height: 23px; margin-right: 2px;"/>
+			<a href="http://www.mastercard.com/index.html"><img src="<?php bloginfo('template_directory'); ?>/images/mc_accpt_023_gif.gif" style="height: 23px; margin-right: 2px;"/></a>
+			<a href="http://www.maestrocard.com/"><img src="<?php bloginfo('template_directory'); ?>/images/ms_accpt_023_gif.gif" style="height: 23px;"/></a>
+			<br/><br/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/vbyvisa_wht.png" style="height: 34px; margin-right: 15px"/>
+			<img src="<?php bloginfo('template_directory'); ?>/images/sclogo_62x34.gif" style="height: 34px;"/>
+		</div>
 	</div>
 	<div>
 		<ul>
