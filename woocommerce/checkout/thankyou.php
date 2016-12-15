@@ -51,6 +51,13 @@ if ( $order ) : ?>
 
 		<p><?php pll_e('Merchant name'); ?></p>
 		<p><?php pll_e('Merchant website'); ?></p>
+		<p><?php pll_e('Buyer name'); echo ': <strong>'.$order->billing_first_name.' '.$order->billing_last_name.'</strong>'; ?></p>
+		<style>
+		.woocommerce-thankyou-order-details.order_details li
+		{
+			padding: 20px 0;
+		}
+		</style>
 		<ul class="woocommerce-thankyou-order-details order_details">
 			<li class="order">
 				<?php _e( 'Order Number:', 'woocommerce' ); ?>

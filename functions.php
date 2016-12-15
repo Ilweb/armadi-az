@@ -54,6 +54,7 @@ function my_theme_setup()
 	pll_register_string('UBB', 'Print');
 	pll_register_string('UBB', 'Merchant name');
 	pll_register_string('UBB', 'Merchant website');
+	pll_register_string('UBB', 'Buyer name');
 	pll_register_string('UBB', 'Faild transaction text');
 }
 
