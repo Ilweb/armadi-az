@@ -56,6 +56,7 @@ function my_theme_setup()
 	pll_register_string('UBB', 'Merchant website');
 	pll_register_string('UBB', 'Buyer name');
 	pll_register_string('UBB', 'Faild transaction text');
+	pll_register_string('welcome', 'WELCOME to your');
 }
 
 function wooc_extra_register_fields() {
