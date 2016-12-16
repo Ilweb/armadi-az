@@ -3909,4 +3909,11 @@ margin-left: 0;
 .text1{
     float: right;
     width: 200px;
+}*/
+
+@media print{
+    header, footer,
+    .second{
+        display: none;
+    }
 }
