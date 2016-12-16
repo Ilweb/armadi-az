@@ -3056,6 +3056,7 @@ p.txt1 {
     .supply {
         margin-top: 15px;
     }
+
    
 
 }
@@ -3415,6 +3416,8 @@ p.txt1 {
 
 @media only screen and (max-width: 1024px) {
 
+
+ 
     
     .myImage {
         height: 86%
@@ -3428,6 +3431,7 @@ p.txt1 {
     .aboutText p {
         margin-top: 9px;
     }
+  
 }
 @media only screen and (max-width: 860px) {
 
@@ -3925,4 +3929,10 @@ p.txt1 {
     .second{
         display: none;
     }
+}
+
+@media only screen and (max-width: 1024px){
+  footer .margin-lr div {
+    margin-left: 0 !important;
+  }
 }
