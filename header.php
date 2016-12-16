@@ -84,11 +84,11 @@ global $woocommerce;
 <?php global $current_user; get_currentuserinfo(); ?>
 <div id="welcome">
 <h1><?php pll_e('Hi')?> <?php echo $current_user->user_login  ?></h1>
-<p><?php pll_e('Enjoy shopping with us!')?></p>
+<p><?php pll_e('Enjoy shopping with us! :)')?></p>
 </div>
 <?php } else {   ?>
 	<div id= "welcome">
-<?php pll_e('WELCOME'); ?>  <br/> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php pll_e('Login	to your Armadiaz.com')?><br/><?php pll_e('and your personal proposals')?></a></p>
+<?php pll_e('WELCOME ,'); ?>  <br/> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php pll_e('Login	to your Armadiaz.com')?><br/><?php pll_e('and your personal proposals')?></a></p>
 </div>
 <?php } ?>
 
