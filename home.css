@@ -2936,13 +2936,9 @@ p.txt1 {
     margin-right: 24%;
 }
 .yourOrder:nth-of-type(3) {
-    margin-right: 17%;
+    margin-right: 11%;
 }
-    .items .choice {
   
-    left: 43px;
-    
-}
     .filter_boxes select {
    
     width: calc(100% / 3 - -40px);
@@ -3070,6 +3066,22 @@ p.txt1 {
 }
 
 @media only screen and (max-width: 860px) {
+    .product-remove{
+        display: none;
+    }
+    .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+  
+    width: 100%;
+}
+    
+
+    .bl{
+        display: none;
+    }
+
+    div.line{
+        display: none;
+    }
     .second ul{
         height: 50px;
     }
