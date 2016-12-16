@@ -2910,6 +2910,14 @@ p.txt1 {
     }
 }
 @media only screen and (max-width: 1024px) {
+
+    footer.margin-lr div {
+    top: 20px;
+    margin-left: 4%;
+    margin-right: 0 !important;
+    display: inline-block;
+    vertical-align: top;
+}
     #slider ul li{
         height: 400px;
     }
@@ -3931,8 +3939,4 @@ p.txt1 {
     }
 }
 
-@media only screen and (max-width: 1024px){
-  footer .margin-lr div {
-    margin-left: 0 !important;
-  }
-}
+
