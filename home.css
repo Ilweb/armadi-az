@@ -1734,6 +1734,15 @@ p.meta {
     width: 100%;
     height: 100%;
 }
+.woocommerce div.product form.cart .variations select {
+    max-width: 100%;
+    border-radius: 14px;
+    padding: 9px;
+    height: 36px;
+    min-width: 75%;
+    display: inline-block;
+    margin-right: 1em;
+}
 @-webkit-keyframes fade {
     from {
         opacity: .4
