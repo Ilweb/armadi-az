@@ -929,6 +929,7 @@ a {
     display: inline-block;
     width: 24%;
     text-align: center;
+        vertical-align: text-top;
 }
 .home .second ul li {
     width: auto;
@@ -3060,16 +3061,24 @@ p.txt1 {
 }
 
 @media only screen and (max-width: 860px) {
+    .second ul{
+        height: 50px;
+    }
+    .second ul li {
+      width: 32%;
+    }
     .the_content p:first-of-type {
         width: 100%;
         border-bottom: 2px solid #efefef;
         margin-bottom: 20px;
     }
+    footer.margin-lr div {
+        margin-right: 0;
+    }
     .home .second ul {
-
-margin-left: 0;
-}
-.home .second ul li {
+        margin-left: 0;
+    }
+    .home .second ul li {
    
     margin-right:0;
 }
