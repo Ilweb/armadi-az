@@ -277,6 +277,8 @@ function check_obb_response()
 	{
 		$url = pll_home_url(pll_current_language('slug')).'wc-api/failed/';
 		
+		unset($_REQUEST['Error']);
+		unset($_REQUEST['ErrorText']);
 		$url = add_query_arg( $_REQUEST, $url );
 	}
 	
@@ -290,8 +292,8 @@ add_action( 'woocommerce_api_failed', 'obb_failed' );
 function obb_failed()
 {	
 	$paymentID  = $_REQUEST['paymentid'];
-	$error      = $_REQUEST['Error'];			
-	$errortext  = $_REQUEST['ErrorText']; 
+	//$error      = $_REQUEST['Error'];			
+	//$errortext  = $_REQUEST['ErrorText']; 
 	
 	$order_id = $_SESSION['payments'][$paymentID];
 	
@@ -299,7 +301,7 @@ function obb_failed()
 	
 	$order->update_status( 'failed', $errortext );
 	
-	update_post_meta( $order_id, '_payment_error', $error.': '.$errortext);
+	//update_post_meta( $order_id, '_payment_error', $error.': '.$errortext);
 	update_post_meta( $order_id, '_payment_id', $paymentID);
 	
 	$url = $order->get_checkout_order_received_url( );

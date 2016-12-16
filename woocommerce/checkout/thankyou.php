@@ -32,7 +32,6 @@ if ( $order ) : ?>
 </div>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
-		<p class="woocommerce-thankyou-order-failed" style="display: none; color: #FF0000;"><?php echo get_post_meta($order->id, '_payment_error', true); ?></p>
 		<p class="woocommerce-thankyou-order-failed"><?php
 			//_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); 
 			pll_e( 'Faild transaction text' );
