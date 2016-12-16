@@ -3685,7 +3685,6 @@ p.txt1 {
     .the_content {
         background-color: #fff;
         color: #000;
-        text-transform: capitalize;
         padding: 10px;
         text-align: justify;
         margin-top: -6px;
