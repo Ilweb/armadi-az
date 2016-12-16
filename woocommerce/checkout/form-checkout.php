@@ -79,5 +79,5 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 		</div>
 <?php 
 global $woocommerce ?>
-<a class="back hvr-shadow-radial" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">back</a>;
+<a class="back hvr-shadow-radial" href="<?php echo $woocommerce->cart->get_cart_url(); ?>">back</a>
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

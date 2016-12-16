@@ -2239,7 +2239,7 @@ label {
     color: #000;
     height: 50px;
     position: absolute;
-    bottom: -55px;
+    bottom: -70px;
     right: 0;
 }
 /*.woocommerce-page #payment #place_order:hover{
@@ -2900,9 +2900,7 @@ p.txt1 {
     .filter_boxes {
         width: 100%;
     }
-    .filter_boxes div {
-        width: 40%;
-    }
+   
 }
 @media only screen and (max-width: 1045px) {
     .boreto {
@@ -2910,6 +2908,12 @@ p.txt1 {
     }
 }
 @media only screen and (max-width: 1024px) {
+     .filter_boxes select {
+  
+    width: calc(100% / 3 - 43px)
+    
+}
+
 
     footer.margin-lr div {
     top: 20px;
@@ -2922,6 +2926,7 @@ p.txt1 {
         height: 400px;
     }
     div.line{
+        background-size: 100%;
         width: 100%;
         margin-left: 0;
         float: left;
