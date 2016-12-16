@@ -56,11 +56,11 @@ function my_theme_setup()
 	pll_register_string('UBB', 'Merchant website');
 	pll_register_string('UBB', 'Buyer name');
 	pll_register_string('UBB', 'Faild transaction text');
-	pll_register_string('welcome', 'WELCOME to your');
-	pll_register_string('welcome1', 'Login to your Armadiaz.com');
-	pll_register_string('welcome2', 'and your personal proposals');
-	pll_register_string('welcome3', 'Hi');
-	pll_register_string('welcome4', 'Enjoy shopping with us!');	
+	pll_register_string('welcome', 'WELCOME');
+	pll_register_string('welcome', 'Login to your Armadiaz.com');
+	pll_register_string('welcome', 'and your personal proposals');
+	pll_register_string('welcome', 'Hi');
+	pll_register_string('welcome', 'Enjoy shopping with us!');	
 }
 
 function wooc_extra_register_fields() {
