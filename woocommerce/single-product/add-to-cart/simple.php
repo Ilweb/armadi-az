@@ -25,7 +25,9 @@ global $product;
 if ( ! $product->is_purchasable() ) {
 	return;
 }
-
+$q = $product->get_attribute("quantity-in-1-package");
+$dimension = $product->get_attribute("package-size");
+echo $q.$dimension;
 ?>
 
 <?php
@@ -61,7 +63,7 @@ if ( ! $product->is_purchasable() ) {
 		</div>
 		
 		<div class="choice">
-			<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( pll__('Add to Cart') ); ?></button>
 			<div class="hvr-shadow-radial wishlist"><?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' ); ?></div>
 		</div>
 		

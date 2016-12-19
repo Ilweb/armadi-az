@@ -40,7 +40,7 @@ global $product;
 		</div>
 		
 		<div class="choice">
-			<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( pll__('Add to Cart') ); ?></button>
 			<div class="hvr-shadow-radial wishlist"><?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' ); ?></div>
 		</div>
 		

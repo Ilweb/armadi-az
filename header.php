@@ -88,7 +88,7 @@ global $woocommerce;
 </div>
 <?php } else {   ?>
 	<div id= "welcome">
-<p style= "color:orange; font-size:24px"><?php pll_e('WELCOME'); ?> </p> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php pll_e('Login to your Armadiaz.com')?><br/><?php pll_e('and your personal proposals')?></a></p>
+<h1><?php pll_e('WELCOME'); ?> </h1> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php pll_e('Login to your Armadiaz.com')?><br/><?php pll_e('and your personal proposals')?></a></p>
 </div>
 <?php } ?>
 

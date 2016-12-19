@@ -368,4 +368,28 @@ function performGatewayRedirect($url, $paymentId) {
 					}
 			return $value;}, 10, 3);
 
+function filter_gateways($gateways){
 
+	$payment_NAME = 'UBB'; // <--------------- change this
+	$category_ID = array(41, 670, 684, 686);  // <----------- and this
+
+	global $woocommerce;
+	//var_dump($gateways);
+	foreach ($woocommerce->cart->cart_contents as $key => $values ) {
+		$terms = get_the_terms( $values['product_id'], 'product_cat' );
+		//var_dump($terms);
+		foreach ($terms as $term) {
+			if(in_array($term->term_id, $category_ID)){
+				unset($gateways[$payment_NAME]);
+				// If you want to remove another payment gateway, add it here i.e. unset($gateways['cod']);
+				break;
+			}
+		}
+
+	}
+	
+	return $gateways;
+
+}
+
+add_filter('woocommerce_available_payment_gateways','filter_gateways');
