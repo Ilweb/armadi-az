@@ -4,6 +4,7 @@ if (!session_id()) {
     session_start();
 }
 
+
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup()
 {
@@ -287,6 +288,7 @@ function check_obb_response()
 	exit;
 }
 
+
 add_action( 'woocommerce_api_failed', 'obb_failed' );
 
 function obb_failed()
@@ -359,3 +361,11 @@ function performGatewayRedirect($url, $paymentId) {
 	// End of HTML CODE
 
 }
+
+	add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
+				if ($value['price_html'] == '') {
+					$value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+					}
+			return $value;}, 10, 3);
+
+

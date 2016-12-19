@@ -1605,12 +1605,13 @@ label {
 .explanation .add_to_wishlist,
 .explanation .yith-wcwl-wishlistexistsbrowse a,
 #second_butt {
-    padding: 10px;
-    font-size: 14px;
-    height: 16px;
-    width: 150px;
-    font-weight: normal;
-    box-sizing: content-box;
+   padding: 10px;
+font-size: 11px;
+height: 16px;
+width: 150px;
+font-weight: normal;
+box-sizing: content-box;
+text-align: center;
 }
 p.meta:nth-of-type(0) {
     text-align: none;
@@ -1932,12 +1933,19 @@ select {
 /*.recommended  .yith-wcwl-add-button{
 	width: 24%;
 }*/
-
+.woocommerce div.product form.cart .reset_variations {
+ visibility: visible;
+    font-size: .83em;
+}
 .items .choice {
     position: relative;
     top: 0;
     left: 11px;
     margin-top: 15px;
+}
+.product .price > .amount {
+color:#fff !important;
+background-color: red;
 }
 .yith-wcwl-add-to-wishlist {
     position: absolute;
@@ -2354,7 +2362,7 @@ button[name="update_cart"] {
     display: none;
 }
 .woocommerce a.remove {
-    top: 50px;
+    top: 20px;
     display: block;
     font-size: 11px;
     width: 100%;
@@ -2388,7 +2396,7 @@ button[name="update_cart"] {
 .woocommerce-cart .woocommerce a.button {
    /* width: 200px;*/
     float: right;
-    font-size: 25px;
+    font-size: 18px;
 }
 .fa-times {
     font-size: 20px;
@@ -3600,6 +3608,9 @@ p.txt1 {
     }
 }
 @media only screen and (max-width: 480px) {
+    .woocommerce div.product form.cart .variations select {
+        width: 100%;
+    }
     .woocommerce-cart .woocommerce a.button {
  
    float: left; 
@@ -3793,6 +3804,10 @@ p.txt1 {
     a.control_next .fa {
     margin-right: 0;
     }
+    .margin-lr div:first-of-type {
+    margin: 1px;
+}
+   
     #slider .img2{
         bottom: 0;
 

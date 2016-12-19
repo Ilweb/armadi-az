@@ -19,6 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+
 global $product;
 
 $attribute_keys = array_keys( $attributes );
@@ -32,23 +33,38 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 	<?php else : ?>
 		<div class="variations" cellspacing="0">
-			
+
+			<?php
+						add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
+									if ($value['price_html'] == '') {
+										$value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+										}
+								return $value;}, 10, 3);
+						?>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					
 						<p class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></p>
 						<p class="value">
 						
+
 							<?php
 								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( urldecode( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ) : $product->get_variation_default_attribute( $attribute_name );
 								wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
-								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
+								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="">' . __( 'Clear', 'woocommerce' ) . '</a>' ) : '';
+								
+								
+							
 							?>
 
+					
 						</p>
+
 					
 				<?php endforeach;?>
 			</tbody>
+
 		</div>
+
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
