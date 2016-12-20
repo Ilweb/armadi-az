@@ -16,7 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-?><div class="bundled_product_images"><?php
+?>
+<div class="conta">
+<div class="bundled_product_images"><?php
 
 	if ( has_post_thumbnail( $post_id ) ) {
 
@@ -31,4 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		echo apply_filters( 'woocommerce_bundled_product_image_html', sprintf( '<a href="%1$s" class="bundled_product_image zoom" title="%2$s" data-rel="prettyPhoto"><img src="%1$s" alt="%2$s" /></a>', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post_id );
 	}
 
-?></div>
+?>
+	</div>
+</div>
+
