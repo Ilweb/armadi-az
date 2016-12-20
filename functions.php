@@ -261,7 +261,7 @@ function check_obb_response()
 	$order_id   = $_REQUEST['trackid'];
 	$tran_id = $_REQUEST['tranid'];
 	
-	if (!strcmp($error, "")) {
+	if ($_REQUEST['result'] == "CAPTURED") {
 		$order = new WC_Order( $order_id );
 		
 		$order->payment_complete( $tran_id );
