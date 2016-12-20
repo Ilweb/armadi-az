@@ -3652,6 +3652,21 @@ p.txt1 {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
+   .bundle_button .choice{
+    float: left;
+
+    }
+
+    div[itemprop="description"]
+    {
+       width: auto;
+    text-align: center;
+    padding: 20px;
+    }
+    .details {
+    width: calc(100% - 94px);
+   
+}
     .woocommerce-cart .woocommerce a.button {
  
    float: left; 
