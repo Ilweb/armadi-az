@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div class="conta">
+<div class="conta1">
 <div class="bundled_product_images"><?php
 
 	if ( has_post_thumbnail( $post_id ) ) {
