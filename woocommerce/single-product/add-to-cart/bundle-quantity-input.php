@@ -34,3 +34,17 @@ if ( ! $product->is_sold_individually() ) {
    </div>
 	<input class="qty" type="hidden" name="quantity" value="1" /><?php
 }
+?>
+
+
+<script type="text/javascript">
+	
+		
+ $('.plus').click(function () {
+    $(this).prev().val(+$(this).prev().val() + 1);
+});
+$('.minus').click(function () {
+    if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+});
+</script>
+

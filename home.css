@@ -1161,7 +1161,7 @@ footer #sec_input {
     width: 29%;
 }
 .bundled_product_images {
-    width: calc(39% - 120px);
+   /* width: calc(39% - 120px);*/
 }
 .conta1{
     vertical-align: middle;
@@ -1178,7 +1178,7 @@ footer #sec_input {
     max-height: 100%;
 }
 .details{
-    width: 70px;
+    width: 200px;
     font-size: 12px;
     text-align: justify;
 }
@@ -2399,7 +2399,7 @@ button[name="update_cart"] {
     position: relative;
     font-weight: normal;
 }
-.cart_item {
+.woocommerce-cart .cart_item {
     height: 190px;
     text-align: center;
 }
