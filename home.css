@@ -1166,22 +1166,22 @@ footer #sec_input {
    /* width: calc(39% - 120px);*/
 }
 .conta1{
-    width: 25%;
+    width: 50px
     vertical-align: middle;
     text-align: center;
-    line-height: 150px;
-    max-height: 150px;
+    line-height: 50px;
+    max-height: 50px;
 }
 .bundled_product_images img{
     vertical-align: middle;
     cursor: pointer;
     text-align: center;
-    max-width: 50%;
+    max-width: 100%;
     float: left;
     max-height: 100%;
 }
 .details{
-        width: calc(100% - 25%);
+        width: calc(100% - 50px);
     font-size: 12px;
     text-align: justify;
 }
