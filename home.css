@@ -1179,11 +1179,18 @@ footer #sec_input {
     max-width: 100%;
     float: left;
     max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.bundled_product_excerpt product_excerpt{
+    display: none;
 }
 .details{
         width: calc(100% - 50px);
     font-size: 12px;
     text-align: justify;
+        padding: 10px;
 }
 
 
