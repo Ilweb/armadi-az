@@ -261,6 +261,7 @@ function check_obb_response()
 	$order_id   = $_REQUEST['trackid'];
 	$tran_id = $_REQUEST['tranid'];
 	
+	
 	if ($_REQUEST['result'] == "CAPTURED") {
 		$order = new WC_Order( $order_id );
 		
@@ -294,17 +295,21 @@ add_action( 'woocommerce_api_failed', 'obb_failed' );
 function obb_failed()
 {	
 	$paymentID  = $_REQUEST['paymentid'];
-	//$error      = $_REQUEST['Error'];			
-	//$errortext  = $_REQUEST['ErrorText']; 
 	
 	$order_id = $_SESSION['payments'][$paymentID];
 	
 	$order = new WC_Order( $order_id );
 	
-	$order->update_status( 'failed', $errortext );
+	if ($order->get_status() != 'failed')
+	{
+		$order->update_status( 'failed' );
+		increase_order_stock($order);
+		
+		update_post_meta( $order_id, '_payment_id', $paymentID);
+	}
 	
 	//update_post_meta( $order_id, '_payment_error', $error.': '.$errortext);
-	update_post_meta( $order_id, '_payment_id', $paymentID);
+	
 	
 	$url = $order->get_checkout_order_received_url( );
 	
@@ -312,6 +317,31 @@ function obb_failed()
 	
 	wp_redirect( $url );
 	exit;
+}
+
+function increase_order_stock($order) {
+	if ( 'yes' === get_option( 'woocommerce_manage_stock' ) && apply_filters( 'woocommerce_can_reduce_order_stock', true, $order ) && sizeof( $order->get_items() ) > 0 ) {
+		foreach ( $order->get_items() as $item ) {
+			if ( $item['product_id'] > 0 ) {
+				$_product = $order->get_product_from_item( $item );
+
+				if ( $_product && $_product->exists() && $_product->managing_stock() ) {
+					$qty       = apply_filters( 'woocommerce_order_item_quantity', $item['qty'], $order, $item );
+					$new_stock = $_product->increase_stock( $qty );
+					$item_name = $_product->get_sku() ? $_product->get_sku(): $item['product_id'];
+
+					if ( isset( $item['variation_id'] ) && $item['variation_id'] ) {
+						$order->add_order_note( sprintf( __( 'Item %1$s variation #%2$s stock increased from %3$s to %4$s.', 'woocommerce' ), $item_name, $item['variation_id'], $new_stock - $qty, $new_stock) );
+					} else {
+						$order->add_order_note( sprintf( __( 'Item %1$s stock increased from %2$s to %3$s.', 'woocommerce' ), $item_name, $new_stock - $qty, $new_stock) );
+					}
+					$order->send_stock_notifications( $_product, $new_stock, $item['qty'] );
+				}
+			}
+		}
+
+		add_post_meta( $order->id, '_order_stock_increased', '1', true );
+	}
 }
 
 function add_your_gateway_class( $methods ) {
