@@ -3653,7 +3653,10 @@ p.txt1 {
         width: 100%;
     }
    .bundle_button .choice{
-    float: left;
+      text-align: left;
+    margin-left: -10%;
+    
+  
 
     }
 
@@ -3663,19 +3666,19 @@ p.txt1 {
     text-align: center;
     padding: 20px;
     }
-    .details {
-    width: calc(100% - 94px);
-   
-}
+  .details {
+        width: calc(100% - 94px);
+
+    }
     .woocommerce-cart .woocommerce a.button {
- 
-   float: left; 
-}
-.woocommerce .woocommerce-cart .button:first-of-type, .woocommerce .cart input.button:first-of-type {
+
+      float: left; 
+    }
+    .woocommerce .woocommerce-cart .button:first-of-type, .woocommerce .cart input.button:first-of-type {
     font-size: 21px;
-    
+
 }
-.cart_item {
+    .cart_item {
     widows: 90%;
 }
     .product_images div.pic_detail {

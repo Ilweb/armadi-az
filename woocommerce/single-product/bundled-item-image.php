@@ -18,9 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="conta1">
-<div class="bundled_product_images"><?php
+<div class="bundled_product_images">
+<img  src="<?php echo esc_url( $props['url'] ); ?>" alt="<?php the_title(); ?>"/>
+<?php
 
 	if ( has_post_thumbnail( $post_id ) ) {
+
 
 		$image_title = esc_attr( get_the_title( get_post_thumbnail_id( $post_id ) ) );
 		$image_link  = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
