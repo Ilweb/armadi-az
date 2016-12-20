@@ -1160,6 +1160,9 @@ footer #sec_input {
     display: inline-block;
     width: 29%;
 }
+.bundled_product_images {
+    width: calc(39% - 120px);
+}
 .conta1{
     vertical-align: middle;
     text-align: center;
@@ -1170,8 +1173,14 @@ footer #sec_input {
     vertical-align: middle;
     cursor: pointer;
     text-align: center;
-    max-width: 100%;
+    max-width: 50%;
+    float: left;
     max-height: 100%;
+}
+.details{
+    width: 70px;
+    font-size: 12px;
+    text-align: justify;
 }
 
 
