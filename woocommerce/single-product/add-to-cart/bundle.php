@@ -21,39 +21,8 @@ global $woocommerce, $product;
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 <form method="post" enctype="multipart/form-data" class="cart cart_group bundle_form <?php echo 'layout_' . $product->get_layout(); ?>"><?php
-
-	/**
-	 * 'woocommerce_before_bundled_items' action.
-	 *
-	 * @param WC_Product_Bundle $product
-	 */
-	do_action( 'woocommerce_before_bundled_items', $product );
-
-	foreach ( $bundled_items as $bundled_item ) {
-
-		/**
-		 * 'woocommerce_bundled_item_details' hook
-		 *
-		 * @hooked wc_pb_template_bundled_item_details_wrapper_open  -   0
-		 * @hooked wc_pb_template_bundled_item_thumbnail             -   5
-		 * @hooked wc_pb_template_bundled_item_details_open          -  10
-		 * @hooked wc_pb_template_bundled_item_title                 -  15
-		 * @hooked wc_pb_template_bundled_item_description           -  20
-		 * @hooked wc_pb_template_bundled_item_product_details       -  25
-		 * @hooked wc_pb_template_bundled_item_details_close         -  30
-		 * @hooked wc_pb_template_bundled_item_details_wrapper_close - 100
-		 */
-		do_action( 'woocommerce_bundled_item_details', $bundled_item, $product );
-	}
-
-	/**
-	 * 'woocommerce_after_bundled_items' action.
-	 *
-	 * @param WC_Product_Bundle $product
-	 */
-	do_action( 'woocommerce_after_bundled_items', $product ); ?>
-
-	<div class="cart bundle_data bundle_data_<?php echo $product->id; ?>" data-bundle_price_data="<?php echo esc_attr( json_encode( $bundle_price_data ) ); ?>" data-bundle_id="<?php echo $product->id; ?>"><?php
+?>
+<div class="cart bundle_data bundle_data_<?php echo $product->id; ?>" data-bundle_price_data="<?php echo esc_attr( json_encode( $bundle_price_data ) ); ?>" data-bundle_id="<?php echo $product->id; ?>"><?php
 
 		if ( $product->is_purchasable() ) {
 
@@ -96,7 +65,40 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	?></div><?php
 
-?></form><?php
+?>
+<?php
+	/**
+	 * 'woocommerce_before_bundled_items' action.
+	 *
+	 * @param WC_Product_Bundle $product
+	 */
+	do_action( 'woocommerce_before_bundled_items', $product );
+
+	foreach ( $bundled_items as $bundled_item ) {
+
+		/**
+		 * 'woocommerce_bundled_item_details' hook
+		 *
+		 * @hooked wc_pb_template_bundled_item_details_wrapper_open  -   0
+		 * @hooked wc_pb_template_bundled_item_thumbnail             -   5
+		 * @hooked wc_pb_template_bundled_item_details_open          -  10
+		 * @hooked wc_pb_template_bundled_item_title                 -  15
+		 * @hooked wc_pb_template_bundled_item_description           -  20
+		 * @hooked wc_pb_template_bundled_item_product_details       -  25
+		 * @hooked wc_pb_template_bundled_item_details_close         -  30
+		 * @hooked wc_pb_template_bundled_item_details_wrapper_close - 100
+		 */
+		do_action( 'woocommerce_bundled_item_details', $bundled_item, $product );
+	}
+
+	/**
+	 * 'woocommerce_after_bundled_items' action.
+	 *
+	 * @param WC_Product_Bundle $product
+	 */
+	do_action( 'woocommerce_after_bundled_items', $product ); ?>
+
+	</form><?php
 	/** WC Core action. */
 	do_action( 'woocommerce_after_add_to_cart_form' );
 ?>

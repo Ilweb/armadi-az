@@ -1172,18 +1172,21 @@ footer #sec_input {
     line-height: 50px;
     height: 50px;
 }
+.product-type-bundle div[itemprop="description"] {
+    display: none;
+}
 .bundled_product_images img{
     vertical-align: middle;
     cursor: pointer;
     text-align: center;
     max-width: 100%;
-    float: left;
+
     max-height: 100%;
     height: auto;
     width: auto;
 }
 
-.bundled_product_excerpt product_excerpt{
+.bundled_product_excerpt .product_excerpt{
     display: none;
 }
 .details{
