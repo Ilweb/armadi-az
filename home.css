@@ -1160,10 +1160,21 @@ footer #sec_input {
     display: inline-block;
     width: 29%;
 }
-.bundled_product_images img{
-    max-height: 100px;
-    width: 100%;
+.conta1{
+    vertical-align: middle;
+    text-align: center;
+    line-height: 150px;
+    max-height: 150px;
 }
+.bundled_product_images img{
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
 
 .bundled_product_summary {
     display: -webkit-inline-box;
