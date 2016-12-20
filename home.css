@@ -1166,11 +1166,11 @@ footer #sec_input {
    /* width: calc(39% - 120px);*/
 }
 .conta1{
-    width: 50px
+    width: 50px;
     vertical-align: middle;
     text-align: center;
     line-height: 50px;
-    max-height: 50px;
+    height: 50px;
 }
 .bundled_product_images img{
     vertical-align: middle;
