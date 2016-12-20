@@ -1118,13 +1118,8 @@ footer #sec_input {
 }
 .chosen_prod .product {
     width: 100%;
-    min-height: 825px;
+    /*min-height: 825px;*/
     background: white;
-}
-
-.bundled_product_summary {
-    min-height: 310px;
-
 }
 .way div,
 .way span {
@@ -1139,7 +1134,7 @@ footer #sec_input {
 .product_images {
     display: inline-block;
     width: 60%;
-    /*vertical-align: bottom;*/
+    vertical-align: bottom;
 }
 #price_inner {
     font-size: 30px;

@@ -26,5 +26,11 @@ if ( ! $product->is_sold_individually() ) {
 	) );
 
 } else {
-	?><input class="qty" type="hidden" name="quantity" value="1" /><?php
+	?>
+	<div id="myForm">
+			<input type='button' value='-' class='minus' field='quantity' />
+			<input type='text' name='quantity' value="1"  class='qty' <?php echo ( isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantityy'] ) : 1 ) ?>/>
+			<input type='button' value='+' class='plus' field='quantity' />
+   </div>
+	<input class="qty" type="hidden" name="quantity" value="1" /><?php
 }

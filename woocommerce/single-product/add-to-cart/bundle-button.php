@@ -18,4 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-?><button type="submit" class="single_add_to_cart_button bundle_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+?>
+<div class="choice">
+	<button type="submit" class="hvr-shadow-radial" id="second_butt"><?php echo esc_html( pll__('Add to Cart') ); ?></button>
+		<div class="hvr-shadow-radial wishlist"><?php echo do_shortcode( '[yith_wcwl_add_to_wishlist]' ); ?></div>
+</div>
+ 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
