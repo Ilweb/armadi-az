@@ -1160,6 +1160,13 @@ footer #sec_input {
     display: inline-block;
     width: 29%;
 }
+.bundled_product_images img{
+    max-height: 100px;
+    width: 100%;
+}
+.bundled_product_summary {
+    display: -webkit-inline-box;
+}
 .smaller_pics div {
     display: block !important;
     border: 1px solid #d1c6bf;
