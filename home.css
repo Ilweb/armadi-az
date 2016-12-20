@@ -597,6 +597,10 @@ input[type="search"]::-webkit-input-placeholder {
     text-align: right;
     font-size: 15px;
 }
+[role=search]{
+    display: inline-block;
+}
+
 input[type="text"]::-webkit-input-placeholder {
     padding-left: 6px;
 }
@@ -605,9 +609,7 @@ label {
     margin-top: 6px;
     right: 10px;
 }
-form {
-    display: inline-block;
-}
+
 #customer_login form {
     display: block;
 }
