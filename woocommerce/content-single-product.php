@@ -43,24 +43,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="whole_contain">
 			
 			<div class="way">	
-
-
-				<!--<<div>Armadiaz</div>
+				<div>Armadiaz</div>
 				<span>></span>
-				<div><?php
-			//	global $product; 
-//echo $product->get_categories( ', ', ' ' . _n( ' ', '  ', $cat_count, 'woocommerce' ) . ' ', ' ' );?></div>
+				<div>Products</div>
 				<span>></span>
 				<div>Drinks</div>
 				<span>></span>
-				<div>Tea</div>-->
-	<!-- <?php
-		 	//global $product;
-            //$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-            //echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '.</span>' ); 
-
-             //echo the_title(); ?>
-
+				<div>Tea</div>
 			</div>
 			
 			<?php
