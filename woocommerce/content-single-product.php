@@ -70,15 +70,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="explanation">
 			<div><?php 
 			global $product;
-			echo '<i>'.$product->get_sku().'</i> '; 
+			echo $product->get_sku(); 
 			the_title(); 
 			?></div>
 			
 			<div id="price_inner" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<?php echo $product->get_price_html(); ?>
 
+
 				<meta itemprop="price" content="<?php echo esc_attr( $product->get_display_price() ); ?>" />
 				<meta itemprop="priceCurrency" content="<?php echo esc_attr( get_woocommerce_currency() ); ?>" />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+					<?php
+						woocommerce_template_single_add_to_cart();
+					?>
 				<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
 			</div>
@@ -101,9 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<!--<div id="review_num">8 reviews</div>-->
 			
-			<?php
-			woocommerce_template_single_add_to_cart();
-			?>
+		
 			<div itemprop="description">
 				<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
 			</div>

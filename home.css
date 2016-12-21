@@ -474,7 +474,7 @@ a {
 }
 .filter_boxes select {
     background: transparent;
-    color: white;
+    color: #fff;
     border: none;
     width: calc(100% / 3 - 15px);
     margin-left: 15px;
@@ -486,6 +486,9 @@ a {
     background-position-x: right;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.filter_boxes option{
+    color: #000;    
 }
 .generals > div:first-child {
     margin-bottom: 20px;
@@ -1218,11 +1221,17 @@ footer #sec_input {
     font-weight: bold;
     text-transform: none;
 }
+.howToPay{
+    font-size: 14px;
+   padding: 20px;
+
+}
 .explanation > div:first-of-type {
-    font-size: 26px;
+    font-size: 23px;
+        margin-top: 35px;
 }
 .explanation > div {
-    margin-bottom: 20px;
+    margin-bottom: 34px;
     vertical-align: top;
 }
 .description {

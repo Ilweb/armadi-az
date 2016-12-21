@@ -25,10 +25,15 @@ global $product;
 if ( ! $product->is_purchasable() ) {
 	return;
 }
+
+
 $q = $product->get_attribute("quantity-in-1-package");
 $dimension = $product->get_attribute("package-size");
 echo $q.$dimension;
 ?>
+<div class="howToPay">
+	<?php echo $page = $product->get_attribute("How to pay");?>
+</div>
 
 <?php
 	// Availability
