@@ -9,6 +9,10 @@
 <p><?php pll_e('Promo line 1'); ?> </p>
 </div>
   <ul>
+  <li>
+  	<img class="pageOne" src="<?php bloginfo('template_directory'); ?>/images/p2.png">
+  </li>
+  
         <?php
         $args = array(
             'post_type' => 'product',
@@ -43,10 +47,13 @@
 					$products[$page][] = clone($product);
 				}
 			}
+
 			
 			ksort($products);
+
 			
             foreach ($products as $page => $prods)
+
 			{
 				echo '<li>';
 				global $post;
@@ -58,6 +65,7 @@
 					setup_postdata( $product->post ); 
 					$props = wc_get_product_attachment_props( get_post_thumbnail_id(), $post );
 					?>
+
 					<div class="img2">
 						<a href="<?php echo get_permalink(); ?>">
 						<div class="bigImg">
