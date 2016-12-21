@@ -2497,10 +2497,10 @@ button[name="update_cart"] {
     background-color: #fff;
 }
 .woocommerce-page div > .way {
-    display: none;
+    display: block;
 }
 .cross-sells {
-    display: none;
+    display: block;
 }
 .woocommerce .cart .button,
 .woocommerce .cart input.button {

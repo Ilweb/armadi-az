@@ -423,3 +423,22 @@ function filter_gateways($gateways){
 }
 
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
+
+
+
+function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
+    $args = array(
+       'hierarchical' => 1,
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => $parent_cat_ID,
+       'taxonomy' => 'product_cat'
+    );
+  $subcats = get_categories($args);
+    echo '<ul class="wooc_sclist">';
+      foreach ($subcats as $sc) {
+        $link = get_term_link( $sc->slug, $sc->taxonomy );
+          echo '<li><a href="'. $link .'">'.$sc->name.'</a></li>';
+      }
+    echo '</ul>';
+}
