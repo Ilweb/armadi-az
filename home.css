@@ -2496,12 +2496,12 @@ button[name="update_cart"] {
 .woocommerce-checkout .the_content {
     background-color: #fff;
 }
-.woocommerce-page div > .way {
+/*.woocommerce-page div > .way {
     display: block;
 }
 .cross-sells {
     display: block;
-}
+}*/
 .woocommerce .cart .button,
 .woocommerce .cart input.button {
     float: right;

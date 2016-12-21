@@ -54,12 +54,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div>Drinks</div>
 				<span>></span>
 				<div>Tea</div>-->
-	 <?php
-		 	global $product;
-            $size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-            echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '.</span>' ); 
+	<!-- <?php
+		 	//global $product;
+            //$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
+            //echo $product->get_categories( ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '.</span>' ); 
 
-             echo the_title(); ?>
+             //echo the_title(); ?>
 
 			</div>
 			
