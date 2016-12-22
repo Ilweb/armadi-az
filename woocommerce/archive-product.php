@@ -74,11 +74,15 @@ get_template_part('left_menu');
 				'hide_empty' => false
 			) );
 			$categories = $wp_query->query_vars['tax_query'][0]['terms'];
+			
+			//var_dump($wp_query->query_vars);
+			
+			$permalink = $category_id ? get_term_link($category_id) : get_permalink( woocommerce_get_page_id( 'shop' ) );;
 		?>
 		<div class="filters">
 			<div>Filters:</div>
 			<div class="filter_boxes">
-				<form method="get" action="<?php echo get_permalink(); ?>">
+				<form method="get" action="<?php echo $permalink; ?>">
 				<div>
 					<?php
 					if (count($subs))
@@ -122,6 +126,13 @@ get_template_part('left_menu');
 			<script type="text/javascript">
 			jQuery(".filter_boxes form select").change(function()
 			{
+				jQuery(".filter_boxes form select").each(function()
+				{
+					if (jQuery(this).val() == "")
+					{
+						jQuery(this).remove();
+					}	
+				});
 				jQuery(".filter_boxes form").submit();
 			});
 			</script>

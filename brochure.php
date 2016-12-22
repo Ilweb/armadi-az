@@ -28,7 +28,6 @@
                 )
             ),
 		);
-
 		
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {
@@ -112,8 +111,9 @@
 			}
 
         } 
-
+		global $post;
         wp_reset_postdata();
+		
         ?>
   </ul>  
 </div>

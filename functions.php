@@ -141,7 +141,8 @@ function armadi_filters($query){
 					array(
 						'taxonomy' => 'product_cat',
 						'terms'    => $categories,
-						'operator' => 'AND'
+						'operator' => 'AND',
+						'include_children' => false
 					)
 				);
 			}
