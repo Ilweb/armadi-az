@@ -80,7 +80,7 @@ get_template_part('left_menu');
 			$permalink = $category_id ? get_term_link($category_id) : get_permalink( woocommerce_get_page_id( 'shop' ) );;
 		?>
 		<div class="filters">
-			<div>Filters:</div>
+			<div><?php pll_e('Filters'); ?>:</div>
 			<div class="filter_boxes">
 				<form method="get" action="<?php echo $permalink; ?>">
 				<div>
