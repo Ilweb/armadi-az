@@ -1250,7 +1250,7 @@ footer #sec_input {
 }
 .howToPay{
     font-size: 14px;
-   padding: 20px 0;
+ 
 
 }
 .qua{
@@ -1259,8 +1259,9 @@ footer #sec_input {
     font-size: 23px !important;
 }
 .woocommerce div.product p.stock {
-    margin-top: 1em;
+
     font-size: .92em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 .explanation > div:first-of-type {

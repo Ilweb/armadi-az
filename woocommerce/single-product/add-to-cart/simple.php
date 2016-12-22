@@ -34,17 +34,18 @@ $dimension = $product->get_attribute("package-size");
 echo $q.$dimension;
 
 ?>
-	
-</div>
-<!--
-<?php 
-	if( $page = $product->get_attribute("How to pay"));
-	{
 
-	echo '<div class="howToPay">';
-	}
+</div>
+<div class="howToPay">
+<?php
+ $page = $product->get_attribute("How to pay");
+
+
+	echo $page;
+	
 	?>
--->
+	</div>
+
 
 
 
