@@ -1192,6 +1192,11 @@ footer #sec_input {
 .bundled_product_images {
    /* width: calc(39% - 120px);*/
 }
+.bundle_button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
 .bundled_product_images{
     width: 50px;
     vertical-align: middle;
@@ -1249,7 +1254,8 @@ footer #sec_input {
     text-transform: none;
 }
 .howToPay{
-    font-size: 14px;
+    font-size: 17px;
+    text-transform: uppercase;
  
 
 }
