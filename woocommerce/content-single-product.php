@@ -76,19 +76,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?></div>
 			
 			<div id="price_inner" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-				<?php echo $product->get_price_html(); ?>
+				<?php echo $product->get_price_html(); ?>&nbsp;&nbsp;
+				<?php
+						woocommerce_template_single_add_to_cart();
+					?>
+
 
 
 				<meta itemprop="price" content="<?php echo esc_attr( $product->get_display_price() ); ?>" />
 				<meta itemprop="priceCurrency" content="<?php echo esc_attr( get_woocommerce_currency() ); ?>" />
-					<?php
-						woocommerce_template_single_add_to_cart();
-					?>
+
+
 				
 
 				<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
+
 			</div>
+
+
 			<div>
 			<?php
 			woocommerce_template_single_rating();

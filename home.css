@@ -695,7 +695,13 @@ meta{
 }
 
 .variations p{
-    font-size: 12px
+    font-size: 12px;
+}
+.woocommerce div.product form.cart .variations {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border: 0;
+    width: 100%;
 }
 
 .cartt.fixed{
@@ -1243,12 +1249,16 @@ footer #sec_input {
    padding: 20px 0;
 
 }
+.qua{
+    display: inline-block;
+    font-size: 10px !important;
+}
 .explanation > div:first-of-type {
     font-size: 23px;
-        margin-top: 35px;
+        margin-top: 1em;
 }
 .explanation > div {
-    margin-bottom: 34px;
+    margin-bottom: 1em;
     vertical-align: top;
 }
 .description {
@@ -1330,7 +1340,7 @@ legend {
 #myForm {
     text-align: center;
     display: inline-block;
-    margin-bottom: 50px;
+    margin-bottom: 1em;
 }
 .qty {
     outline: none;

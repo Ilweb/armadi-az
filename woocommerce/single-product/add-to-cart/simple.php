@@ -26,8 +26,11 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
-
-$q = $product->get_attribute("quantity-in-1-package");
+?>
+<div class="qua"><?php
+$q = $product->get_attribute("quantity-in-1-package");?>
+</div>
+<?php
 $dimension = $product->get_attribute("package-size");
 echo $q.$dimension;
 ?>
