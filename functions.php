@@ -63,7 +63,7 @@ function my_theme_setup()
 	pll_register_string('welcome', 'Hi');
 	pll_register_string('welcome', 'Enjoy shopping with us!');
 	pll_register_string('How to pay', 'preliminary order');		
-		pll_register_string('Filters', 'filters');	
+		pll_register_string('filters', 'Filters');	
 }
 
 function wooc_extra_register_fields() {
