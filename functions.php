@@ -393,12 +393,7 @@ function performGatewayRedirect($url, $paymentId) {
 
 }
 
-	add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
-				if ($value['price_html'] == '') {
-					$value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-					}
-			return $value;}, 10, 3);
-
+	
 function filter_gateways($gateways){
 
 	$payment_NAME = 'UBB'; // <--------------- change this
@@ -425,11 +420,4 @@ function filter_gateways($gateways){
 
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
 
-
-add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
-    if ($value['price_html'] == '') {
-        $value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-    }
-    return $value;
-}, 10, 3);
 
