@@ -10,7 +10,9 @@
 </div>
   <ul>
   <li>
+  <div class="img">
   	<img class="pageOne" src="<?php bloginfo('template_directory'); ?>/images/p2.png">
+  	</div>
   </li>
   
         <?php

@@ -77,9 +77,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<div id="price_inner" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<?php echo $product->get_price_html(); ?>&nbsp;&nbsp;
+
 				<?php
 						woocommerce_template_single_add_to_cart();
 					?>
+					
 
 
 

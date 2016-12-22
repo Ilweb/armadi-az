@@ -27,15 +27,26 @@ if ( ! $product->is_purchasable() ) {
 }
 
 ?>
-<div class="qua"><?php
+<div class="qua">
+<?php
 $q = $product->get_attribute("quantity-in-1-package");
 $dimension = $product->get_attribute("package-size");
 echo $q.$dimension;
-?></div>
 
-<div class="howToPay">
-	<?php echo $page = $product->get_attribute("How to pay");?>
+?>
+	
 </div>
+<!--
+<?php 
+	if( $page = $product->get_attribute("How to pay"));
+	{
+
+	echo '<div class="howToPay">';
+	}
+	?>
+-->
+
+
 
 <?php
 	// Availability
