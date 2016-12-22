@@ -685,6 +685,23 @@ header div:nth-of-type(3) div {
     background: #302824;
     transition: all 0.8s ease;
 }
+meta{
+    display: block;
+}
+[itemprop="price"] {
+
+    display: block;
+    color: #000;
+}
+
+.variations p{
+    font-size: 12px
+}
+
+.cartt.fixed{
+    transition: none;
+}
+
 .cartt.fixed {
     width: 70px;
     z-index: 10000;

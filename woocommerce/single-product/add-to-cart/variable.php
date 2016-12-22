@@ -34,13 +34,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 	<?php else : ?>
 		<div class="variations" cellspacing="0">
 
-			<?php
-						add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
-									if ($value['price_html'] == '') {
-										$value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-										}
-								return $value;}, 10, 3);
-						?>
+			
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					
 						<p class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></p>
@@ -61,7 +55,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 					
 				<?php endforeach;?>
-			</tbody>
+	
 
 		</div>
 

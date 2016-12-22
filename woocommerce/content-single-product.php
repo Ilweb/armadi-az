@@ -70,7 +70,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="explanation">
 			<div><?php 
 			global $product;
-			echo $product->get_sku(); 
+			echo $product->get_sku(); ?>&nbsp;&nbsp;
+			<?php
 			the_title(); 
 			?></div>
 			
@@ -80,10 +81,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<meta itemprop="price" content="<?php echo esc_attr( $product->get_display_price() ); ?>" />
 				<meta itemprop="priceCurrency" content="<?php echo esc_attr( get_woocommerce_currency() ); ?>" />
-				&nbsp;&nbsp;&nbsp;&nbsp;
 					<?php
 						woocommerce_template_single_add_to_cart();
 					?>
+				
+
 				<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
 			</div>
