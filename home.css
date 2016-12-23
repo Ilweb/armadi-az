@@ -2051,8 +2051,9 @@ select {
     margin-top: 15px;
 }
 .product .price > .amount {
-color:#fff !important;
-background-color: red;
+color:#000 !important;
+font-size: 18px;
+
 }
 .yith-wcwl-add-to-wishlist {
     position: absolute;
