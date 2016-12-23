@@ -1622,7 +1622,7 @@ label {
 	background:none;
 	outline: none;
 }*/
-.pageOne img{
+#slider .img .pageOne {
     width: 100%;
 }
 .woocommerce #respond input#submit,
@@ -3041,6 +3041,9 @@ p.txt1 {
     
 }
 
+footer.margin-lr > div {
+    width: 20%;
+}
 
     footer.margin-lr div {
     top: 20px;
@@ -3239,6 +3242,13 @@ p.txt1 {
  
     width: 94%;
 }
+footer.margin-lr > div {
+    width: 43%;  
+    display: inline-block !important;
+
+
+}
+
 
     .diagonal {
     top: 17px;
@@ -3721,6 +3731,9 @@ p.txt1 {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
+    footer.margin-lr > div {
+    width: auto;
+}
    .bundle_button .choice{
       text-align: left;
     margin-left: -10%;
@@ -3943,6 +3956,24 @@ p.txt1 {
     #slider .img2 h4{
         display: none;
     }
+    .home footer.margin-lr > div {
+        display: block !important;
+    }
+    .home footer #sec_input {
+  
+    margin-left: 22%;
+}
+
+    .home footer input,.home footer #sec_input {
+    background: #c2b59b;
+    border: none;
+    border-radius: 2px;
+    height: 40px;
+   
+    width: 200px;
+    /* left: 1%; */
+    margin-bottom: 10px;
+}
 
 
     /*.slide3 .first {
