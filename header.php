@@ -121,15 +121,15 @@ jQuery(".loggo .fa ").click(function()
 	});
 
 </script>
-<!--<script type="text/javascript">	
+<script type="text/javascript">	
 jQuery(".search").click(function()
 
 	{
 		jQuery("#first").fadeToggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
 	});
 
-</script>-->
-<!--<script>
+</script>
+<script>
 $(document).ready(function() {
     // This will fire when document is ready:
     $(window).resize(function() {
@@ -143,7 +143,7 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
-</script>-->
+</script>
 <script>
 jQuery(document).ready(function() {
     // This will fire when document is ready:
