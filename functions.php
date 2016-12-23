@@ -36,19 +36,22 @@ function my_theme_setup()
 		'contact us'=>__('Contact us menu', 'armadiaz')
 	));
 	
-	pll_register_string('Info menu', 'Info');
-	pll_register_string('Contact us menu', 'Contact Us');
-	pll_register_string('Follow Us', 'Follow Us');
-	pll_register_string('Newsletter', 'Newsletter');
-	pll_register_string('Next', 'Next');
-	pll_register_string('Promo line', 'Promo line 1');
+	pll_register_string('header', 'Customer Support');
+	pll_register_string('header', 'Phone');
+	pll_register_string('footer', 'Info');
+	pll_register_string('footer', 'Contact Us');
+	pll_register_string('footer', 'Follow Us');
+	pll_register_string('footer', 'Newsletter');
 	pll_register_string('Filters', 'Subcategory');
+	pll_register_string('Filters', 'Filters');	
 	pll_register_string('Promo line', 'Active brochure category');
+	pll_register_string('Promo line', 'Promo line 1');
 	pll_register_string('yourOrder', 'YOUR ORDER');
 	pll_register_string('yourOrder', 'Delivery');
 	pll_register_string('yourOrder', 'Payment');
 	pll_register_string('yourOrder', 'Confirmation');
-	pll_register_string('back', 'BACK');
+	pll_register_string('yourOrder', 'Next');
+	pll_register_string('yourOrder', 'BACK');
 	pll_register_string('UBB', 'Payment status');
 	pll_register_string('UBB', 'Paid');
 	pll_register_string('UBB', 'Please print');
@@ -63,7 +66,6 @@ function my_theme_setup()
 	pll_register_string('welcome', 'Hi');
 	pll_register_string('welcome', 'Enjoy shopping with us!');
 	pll_register_string('How to pay', 'preliminary order');		
-		pll_register_string('filters', 'Filters');	
 }
 
 function wooc_extra_register_fields() {

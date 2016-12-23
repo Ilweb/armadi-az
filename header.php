@@ -22,13 +22,13 @@ global $woocommerce;
 	<div>
 		<span>
 			<img class="info" src="<?php bloginfo('template_directory'); ?>/images/info.png">
-			<p class="supp">Customer Support</p>
+			<p class="supp"><?php pll_e('Customer Support'); ?></p>
 		</span>
 		<span>
-			<p>Phone: +359 889 217 397</p>
+			<p><?php pll_e('Phone'); ?>: +359 889 217 397</p>
 		</span>
 		<span>
-			<p>e-mail:info@armadiaz.com</p>
+			<p>e-mail: <a href="mailto:info@armadiaz.com">info@armadiaz.com</a></p>
 		</span>
 		<span class="lang">
 		<a href="<?php echo pll_home_url('bg') ?>">bg</a>
@@ -36,7 +36,7 @@ global $woocommerce;
 			
 			<form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>" img class="search" src="<?php bloginfo('template_directory'); ?>/images/search.png">
 
-			<input id="first" type="search" placeholder="SEARCH"   value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
+			<input id="first" type="search" placeholder="<?php esc_attr_e( 'Search'); ?>"   value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
 
 	<input type="hidden" name="post_type" value="product" /> 
 
@@ -59,15 +59,15 @@ global $woocommerce;
 ?>
 <div>
 	<?php if ( is_user_logged_in() ) { ?>
-	<spna><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php echo $current_user->user_login  ?></a></span>	
-	<span><a href="<?php echo wp_logout_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?> ">logout</a></span>
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php echo $current_user->user_login  ?></a></span>	
+	<span><a href="<?php echo wp_logout_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?> "><?php esc_attr_e( 'Logout', 'woocommerce' ); ?></a></span>
 	<?php } else { ?>
-	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
-	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
-	<span><a href="<?php echo get_permalink( get_option('woocommerce_wishlist_page_id') ); ?>">wishlist</a></span>
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php esc_attr_e( 'Login', 'woocommerce' ); ?></a></span>	
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php esc_attr_e( 'Register', 'woocommerce' ); ?></a></span>
 
 	<?php } ?>
 	
+	<span><a href="<?php echo site_url().'/wishlist/view/'; ?>"><?php pll_e('Browse Wishlist'); ?></a></span>
 	<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div>
 </div>
 
@@ -86,7 +86,7 @@ global $woocommerce;
 
 <?php global $current_user; get_currentuserinfo(); ?>
 <div id="welcome">
-<h1><?php pll_e('Hi')?> <?php echo $current_user->user_login  ?></h1>
+<h1><?php pll_e('Hi'); ?> <?php echo $current_user->user_login  ?></h1>
 <p><?php pll_e('Enjoy shopping with us!')?></p>
 </div>
 <?php } else {   ?>
