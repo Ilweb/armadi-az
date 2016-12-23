@@ -34,13 +34,12 @@ $dimension = $product->get_attribute("package-size");
 echo $q.$dimension;
 
 ?>
-
 </div>
+
 <div class="howToPay">
+<p><?php pll__("preliminary order"); ?></p>
 <?php
  $page = $product->get_attribute("How to pay");
-
-
 	echo $page;
 	
 	?>
