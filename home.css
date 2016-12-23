@@ -764,8 +764,8 @@ p {
     margin: 5px 0;
 }
 .bundled_product_summary .details {
- float: none;
-    width: 100%;
+ float: none !important;   
+
 }
 header div span .supp {
     font-weight: bold;
