@@ -832,7 +832,7 @@ header div:nth-of-type(2) {
     font-size: 13px;
     border-bottom: 1px solid white;
 }
-header div:nth-of-type(2) span:first-of-type {
+header div:nth-of-type(2) span:first-of-type, span:nth-of-type(2) {
     border-right: 2px solid white;
 }
 header div span:last-of-type {
@@ -1745,7 +1745,7 @@ p.meta {
 #sticky-anchor ul li a {
     padding: 15px;
     display: inline-block;
-}
+    width: 100%;}
 .cartt {
     vertical-align: middle;
     right: 0;
@@ -3000,13 +3000,23 @@ p.txt1 {
 }
 @media only screen and (max-width: 1110px) {
 
-    .loggo .fa {
+    .loggo .fa
+     {
         display: block !important;
         position: absolute;
-        top: 144px;
+        top: 97px;
         left: 10px;
         color: white;
     }
+    .cartt {
+     
+        display: block !important;
+        position: absolute;
+        top: 97px;
+        right: 0;
+        color: white;
+    }
+   
      .firstt li {
         display: block !important;
         text-align: center;
