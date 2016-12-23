@@ -670,6 +670,9 @@ header div:nth-of-type(3) div {
 .margin-lr.loggo {
     width: 100%;
 }
+#wpadminbar{
+    position: absolute;
+}
 .home .margin-lr div:first-of-type {
     margin-right: 20%;
 }

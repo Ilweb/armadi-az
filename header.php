@@ -59,12 +59,15 @@ global $woocommerce;
 ?>
 <div>
 	<?php if ( is_user_logged_in() ) { ?>
-	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php echo $current_user->user_login  ?></a></span>	
+	<spna><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> "><?php echo $current_user->user_login  ?></a></span>	
 	<span><a href="<?php echo wp_logout_url( get_permalink( get_option('woocommerce_myaccount_page_id') ) ); ?> ">logout</a></span>
 	<?php } else { ?>
 	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> ">login</a></span>	
 	<span><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">register</a></span>
+	<span><a href="<?php echo get_permalink( get_option('woocommerce_wishlist_page_id') ); ?>">wishlist</a></span>
+
 	<?php } ?>
+	
 	<span class="cartt"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><p><?php echo $woocommerce->cart->get_cart_contents_count( ); ?></p><img src="<?php bloginfo('template_directory'); ?>/images/cart.png"></a></span></div>
 </div>
 
