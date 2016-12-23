@@ -1066,7 +1066,7 @@ input:focus:-ms-input-placeholder {
     color: white;
     list-style: none;
 }
-.home footer.margin-lr  div {
+.home footer.margin-lr > div {
     width: auto;
     top: 20px;
     margin-left: 0;
@@ -1085,8 +1085,8 @@ footer.margin-lr > div {
 footer.margin-lr > div:first-of-type{
     margin-left: 2%;
 } 
-.home footer.margin-lr  div:nth-of-type(2),
-.home footer.margin-lr   div:nth-of-type(3) {
+.home footer.margin-lr > div:nth-of-type(2),
+.home footer.margin-lr > div:nth-of-type(3) {
     margin-right: 5% !important;
 }
 /*footer.margin-lr div:nth-of-type(2),
@@ -1130,7 +1130,8 @@ footer #sec_input {
 .social li {
     margin-bottom: 10px;
 }
-.social div {
+footer.margin-lr .social div,
+footer.margin-lr .social div:first-of-type {
     width: 65px;
     height: 65px;
     background-size: contain !important;
