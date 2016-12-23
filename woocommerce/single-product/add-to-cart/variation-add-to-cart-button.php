@@ -53,13 +53,15 @@ global $product;
 
 <?php endif; ?>
 </div>
+
+
 <script type="text/javascript">
 	
 		
- $('.plus').click(function () {
-    $(this).prev().val(+$(this).prev().val() + 1);
+jQuery('.plus').click(function () {
+    jQuery(this).prev().val(+jQuery(this).prev().val() + 1);
 });
-$('.minus').click(function () {
-    if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+jQuery('.minus').click(function () {
+    if (jQuery(this).next().val() > 0) jQuery(this).next().val(+jQuery(this).next().val() - 1);
 });
 </script>
