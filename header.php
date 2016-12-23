@@ -121,15 +121,15 @@ jQuery(".loggo .fa ").click(function()
 	});
 
 </script>
-<!--<script type="text/javascript">	
+<script type="text/javascript">	
 jQuery(".search").click(function()
 
 	{
 		jQuery("#first").fadeToggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
 	});
 
-</script>-->
-<!--<script>
+</script>
+<script>
 $(document).ready(function() {
     // This will fire when document is ready:
     $(window).resize(function() {
@@ -143,7 +143,7 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
-</script>-->
+</script>
 <script>
 jQuery(document).ready(function() {
     // This will fire when document is ready:
@@ -179,44 +179,6 @@ jQuery(document).ready(function() {
             currentValue += valueToAdd;
             document.getElementById('number').innerHTML = currentValue;
         };
-</script>
-<!--<script type="text/javascript">	
-jQuery("#recommendation").click(function()
-
-	{
-		jQuery(this).css("border-bottom","none").css("background","white");
-	});
-
-</script>-->
-<script>
-(function() {
-jQuery('.additional_information_tab').click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");
-	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-
-});
-});
-</script>
-<script>
-jQuery(function() {
-jQuery('.reviews_tab').click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");	
-	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-
-});
-});
-</script>
-<script>
-jQuery(function() {
-jQuery('.description_tab').css("background", "#fff").css("border-bottom","#fff").click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");
-	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-
-});
-});
 </script>
 
 

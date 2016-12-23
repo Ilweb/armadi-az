@@ -59,6 +59,11 @@ jQuery(document).ready(function(){
 	jQuery('.wc-tabs li').click(function(event) {  
 		jQuery('.woocommerce-Tabs-panel').hide();
 		jQuery("#tab-" + jQuery(this).data("key")).show();
+		
+		jQuery(".wc-tabs li").css("background", "#fff5e6").css("border-bottom-color","#d1c6bf");
+		jQuery(this).css("background", "white").css("border-bottom-color","white");
 	});
+	
+	jQuery('.wc-tabs li').first().click();
 });
 </script>
