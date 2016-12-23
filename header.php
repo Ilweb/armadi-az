@@ -121,15 +121,15 @@ jQuery(".loggo .fa ").click(function()
 	});
 
 </script>
-<script type="text/javascript">	
+<!--<script type="text/javascript">	
 jQuery(".search").click(function()
 
 	{
 		jQuery("#first").fadeToggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
 	});
 
-</script>
-<script>
+</script>-->
+<!--<script>
 $(document).ready(function() {
     // This will fire when document is ready:
     $(window).resize(function() {
@@ -143,7 +143,7 @@ $(document).ready(function() {
         }
     }).resize(); // This will simulate a resize to trigger the initial run.
 });
-</script>
+</script>-->
 <script>
 jQuery(document).ready(function() {
     // This will fire when document is ready:
@@ -194,7 +194,7 @@ jQuery('.additional_information_tab').click(function() {
 	jQuery(this).css("background","white").css("border-bottom-color","white");
 	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('The text you are adding');
+
 });
 });
 </script>
@@ -204,7 +204,7 @@ jQuery('.reviews_tab').click(function() {
 	jQuery(this).css("background","white").css("border-bottom-color","white");	
 	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('Bore');
+
 });
 });
 </script>
@@ -214,7 +214,7 @@ jQuery('.description_tab').css("background", "#fff").css("border-bottom","#fff")
 	jQuery(this).css("background","white").css("border-bottom-color","white");
 	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
 	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
+
 });
 });
 </script>
