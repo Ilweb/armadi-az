@@ -3766,6 +3766,9 @@ footer.margin-lr > div {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
+    .explanation .choice #second_butt, .explanation .choice .wishlist {
+    display: block;
+   ;}
     footer.margin-lr > div {
     width: auto;
 }
@@ -3802,9 +3805,9 @@ footer.margin-lr > div {
         width: 100%;
         float: left;
     }
-    #second_butt{
+    /*#second_butt{
         left: 20%;
-    }
+    }*/
     div.coupon{
         display: none;
     }
