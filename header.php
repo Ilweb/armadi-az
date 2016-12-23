@@ -180,44 +180,6 @@ jQuery(document).ready(function() {
             document.getElementById('number').innerHTML = currentValue;
         };
 </script>
-<!--<script type="text/javascript">	
-jQuery("#recommendation").click(function()
-
-	{
-		jQuery(this).css("border-bottom","none").css("background","white");
-	});
-
-</script>-->
-<script>
-(function() {
-jQuery('.additional_information_tab').click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");
-	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('The text you are adding');
-});
-});
-</script>
-<script>
-jQuery(function() {
-jQuery('.reviews_tab').click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");	
-	jQuery('.description_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('Bore');
-});
-});
-</script>
-<script>
-jQuery(function() {
-jQuery('.description_tab').css("background", "#fff").css("border-bottom","#fff").click(function() {
-	jQuery(this).css("background","white").css("border-bottom-color","white");
-	jQuery('.additional_information_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.reviews_tab').css("background","#fff5e6").css("border-bottom-color","#d1c6bf");
-	jQuery('.new_member_box_display').html('Herbal remedy that supports weight loss designed for people over the age of 12, who have a tendency to gain weight and who do not lead a healthy life style.During weight reduction therapy it is recommended that fruit and vegetables be consumed.');
-});
-});
-</script>
 
 
 <script>
