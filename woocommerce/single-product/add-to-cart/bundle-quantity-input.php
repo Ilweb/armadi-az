@@ -19,20 +19,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 if ( ! $product->is_sold_individually() ) {
-	woocommerce_quantity_input( array(
-		'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 1, $product ),
-		'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->backorders_allowed() ? '' : $product->get_stock_quantity(), $product ),
-		'input_value' => ( isset( $_POST[ 'quantity' ] ) ? wc_stock_amount( $_POST[ 'quantity' ] ) : 1 )
-	) );
-
-} else {
 	?>
 	<div id="myForm">
 			<input type='button' value='-' class='minus' field='quantity' />
 			<input type='text' name='quantity' value="1"  class='qty' <?php echo ( isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantityy'] ) : 1 ) ?>/>
 			<input type='button' value='+' class='plus' field='quantity' />
    </div>
-	<input class="qty" type="hidden" name="quantity" value="1" /><?php
+	<?php
+
+} else {
+	?>
+	<input class="qty" type="hidden" name="quantity" value="1" />
+	<?php
 }
 ?>
 
@@ -40,11 +38,11 @@ if ( ! $product->is_sold_individually() ) {
 <script type="text/javascript">
 	
 		
- $('.plus').click(function () {
-    $(this).prev().val(+$(this).prev().val() + 1);
+jQuery('.plus').click(function () {
+    jQuery(this).prev().val(+jQuery(this).prev().val() + 1);
 });
-$('.minus').click(function () {
-    if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+jQuery('.minus').click(function () {
+    if (jQuery(this).next().val() > 0) jQuery(this).next().val(+jQuery(this).next().val() - 1);
 });
 </script>
 
