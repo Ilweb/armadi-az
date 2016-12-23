@@ -1622,9 +1622,9 @@ label {
 	background:none;
 	outline: none;
 }*/
-#slider .img .pageOne {
+/*#slider .img .pageOne {
     width: 100%;
-}
+}*/
 .woocommerce #respond input#submit,
 .woocommerce input.button {
     border: none;
@@ -2764,7 +2764,7 @@ td.product-name {
 }
 #slider .img{
     width: 100%;
-    position: absolute;
+  
     bottom: 0
 
 }
