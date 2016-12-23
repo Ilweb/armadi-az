@@ -12,7 +12,7 @@ function my_theme_setup()
 	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
+	
 	add_theme_support( 'woocommerce' );
 	
 	/*
@@ -191,6 +191,11 @@ class WC_Gateway_MyPayment extends WC_Payment_Gateway {
 
 		// Reduce stock levels
 		$order->reduce_order_stock();
+		
+		if ($order->get_status() == 'failed')
+		{
+			$order->update_status('pending'); 
+		}
 
 		// Remove cart
 		$woocommerce->cart->empty_cart();
@@ -324,21 +329,30 @@ function obb_failed()
 
 function increase_order_stock($order) {
 	if ( 'yes' === get_option( 'woocommerce_manage_stock' ) && apply_filters( 'woocommerce_can_reduce_order_stock', true, $order ) && sizeof( $order->get_items() ) > 0 ) {
+		$_pf = new WC_Product_Factory();  
 		foreach ( $order->get_items() as $item ) {
 			if ( $item['product_id'] > 0 ) {
-				$_product = $order->get_product_from_item( $item );
-
-				if ( $_product && $_product->exists() && $_product->managing_stock() ) {
-					$qty       = apply_filters( 'woocommerce_order_item_quantity', $item['qty'], $order, $item );
-					$new_stock = $_product->increase_stock( $qty );
-					$item_name = $_product->get_sku() ? $_product->get_sku(): $item['product_id'];
-
-					if ( isset( $item['variation_id'] ) && $item['variation_id'] ) {
-						$order->add_order_note( sprintf( __( 'Item %1$s variation #%2$s stock increased from %3$s to %4$s.', 'woocommerce' ), $item_name, $item['variation_id'], $new_stock - $qty, $new_stock) );
-					} else {
-						$order->add_order_note( sprintf( __( 'Item %1$s stock increased from %2$s to %3$s.', 'woocommerce' ), $item_name, $new_stock - $qty, $new_stock) );
+				$languages = pll_languages_list();
+				
+				foreach ($languages as $lang) {					
+					$id = pll_get_post($item['product_id'], $lang);
+					$_product = $_pf->get_product($id);
+					
+					if ( $_product && $_product->exists() && $_product->managing_stock() ) {
+						$qty       = apply_filters( 'woocommerce_order_item_quantity', $item['qty'], $order, $item );
+						$new_stock = $_product->increase_stock( $qty );
+						
+						if (pll_current_language() == $lang) {
+							$item_name = $_product->get_sku() ? $_product->get_sku(): $item['product_id'];
+							
+							if ( isset( $item['variation_id'] ) && $item['variation_id'] ) {
+								$order->add_order_note( sprintf( __( 'Item %1$s variation #%2$s stock increased from %3$s to %4$s.', 'woocommerce' ), $item_name, $item['variation_id'], $new_stock - $qty, $new_stock) );
+							} else {
+								$order->add_order_note( sprintf( __( 'Item %1$s stock increased from %2$s to %3$s.', 'woocommerce' ), $item_name, $new_stock - $qty, $new_stock) );
+							}
+							$order->send_stock_notifications( $_product, $new_stock, $item['qty'] );
+						}
 					}
-					$order->send_stock_notifications( $_product, $new_stock, $item['qty'] );
 				}
 			}
 		}
@@ -421,5 +435,3 @@ function filter_gateways($gateways){
 }
 
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
-
-
