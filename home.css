@@ -569,6 +569,8 @@ a {
     z-index: 2;
 }
 .lang a {
+    font-size: 17px;
+    font-weight: 700;
     margin-right: 13px;
     color: black;
     text-transform: uppercase;
@@ -760,12 +762,12 @@ meta{
 }
 header div span {
     margin-right: 1%;
-    height: calc(100% - 10px);
+    height: calc(100% - 20px);
     margin-top: 10px;
     display: inline-block;
     font-size: 12.5px;
     padding: 0 8px;
-    vertical-align: middle;
+    vertical-align: baseline;
 }
 p {
     margin: 5px 0;
@@ -943,7 +945,7 @@ a {
 .home .second ul {
     height: 20px;
     border-bottom: none;
-    margin-left: 20%;
+   /* margin-left: 20%;*/
     text-align: center;
     text-transform: none !important;
 }
@@ -1124,6 +1126,9 @@ footer #sec_input {
     height: 40px;
     width: 100%;
     margin-bottom: 10px;
+}
+#mquery{
+    display: none;  
 }
 footer #sec_input {
     background: #645a4e;
@@ -1734,6 +1739,7 @@ p.meta:nth-of-type(0) {
 p.meta {
     text-align: center;
 }
+
 .firstt {
     width: 100%;
     z-index: 1
@@ -1745,7 +1751,8 @@ p.meta {
 #sticky-anchor ul li a {
     padding: 15px;
     display: inline-block;
-    width: 100%;}
+  display: block;
+}
 .cartt {
     vertical-align: middle;
     right: 0;
@@ -3010,7 +3017,7 @@ p.txt1 {
     }
     .cartt {
      
-        display: block !important;
+      /*  display: block !important;*/
         position: absolute;
         top: 97px;
         right: 0;
@@ -3184,7 +3191,7 @@ footer.margin-lr > div {
         background: #fff5e6;
     }
     header div div {
-        width: 100% !important;
+ width: 99% !important;
         margin: 0;
     }
     .margin-lr.menu {
@@ -3766,12 +3773,27 @@ footer.margin-lr > div {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
+    #mquery{
+        left: 0;
+    height: 24px;
+    padding: 12px 0 12px 0;
+    }
+       
+    #mquery a{
+        color: #fff;
+        margin-left: 17px;
+
+      
+
+    }
     .explanation .choice #second_butt, .explanation .choice .wishlist {
     display: block;
-   ;}
+   }
     footer.margin-lr > div {
     width: auto;
+    display: block !important;
 }
+
    .bundle_button .choice{
       text-align: left;
     margin-left: -10%;
@@ -4183,7 +4205,7 @@ footer.margin-lr > div {
     float: right;
     width: 200px;
 }*/
-
+}
 @media print{
     body > header, footer,
     .second{

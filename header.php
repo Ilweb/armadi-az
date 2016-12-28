@@ -22,10 +22,17 @@ global $woocommerce;
 	<div>
 		<span>
 			<img class="info" src="<?php bloginfo('template_directory'); ?>/images/info.png">
+			<div id="mquery">
+			<a href="callto:+359 889 217 397"> +359 889 217 397</a>
+			<a href="mailto:info@armadiaz.com">info@armadiaz.com</a>
+
+</div>
 			<p class="supp"><?php pll_e('Customer Support'); ?></p>
 		</span>
 		<span>
-			<p><?php pll_e('Phone'); ?>: +359 889 217 397</p>
+			
+		<p><?php pll_e('Phone'); ?><a href="callto:+359 889 217 397"> +359 889 217 397</a></p>
+			
 		</span>
 		<span>
 			<p>e-mail: <a href="mailto:info@armadiaz.com">info@armadiaz.com</a></p>
@@ -115,7 +122,13 @@ wp_nav_menu(array(
 
 </header>
 <script src=" <?php bloginfo('template_directory'); ?>/js/lightbox.js"></script>
-
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
 <script type="text/javascript">	
 jQuery(".loggo .fa ").click(function()
 
@@ -216,6 +229,16 @@ function goToByScroll( id, correction)
 		});
 	}
 }
+</script>
+
+<script>
+$(document).ready(function(){
+    $(".info").click(function(){
+        $("#mquery").toggle().css("background-color","#000").css("position","absolute").css("top","51px");
+
+
+    });
+});
 </script>
 
 
