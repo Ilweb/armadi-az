@@ -65,7 +65,8 @@ function my_theme_setup()
 	pll_register_string('welcome', 'and your personal proposals');
 	pll_register_string('welcome', 'Hi');
 	pll_register_string('welcome', 'Enjoy shopping with us!');
-	pll_register_string('How to pay', 'preliminary order');		
+	pll_register_string('How to pay', 'preliminary order');	
+	pll_register_string('tabs','Ingredient and Nutrition values');	
 }
 
 function wooc_extra_register_fields() {
@@ -437,3 +438,25 @@ function filter_gateways($gateways){
 }
 
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
+
+add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
+function woo_new_product_tab( $tabs ) {
+	
+	// Adds the new tab
+	
+	$tabs['test_tab'] = array(
+		'title' 	=> pll__( 'Ingredient and Nutrition values', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_new_product_tab_content'
+	);
+
+	return $tabs;
+
+}
+function woo_new_product_tab_content() {
+
+
+	
+	echo '<p>Here\'s your new product tab.</p>';
+	
+}

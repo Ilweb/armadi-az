@@ -31,7 +31,7 @@ global $woocommerce;
 		</span>
 		<span>
 			
-		<p><?php pll_e('Phone'); ?><a href="callto:+359 889 217 397"> +359 889 217 397</a></p>
+		<p><?php pll_e('Phone'); ?><a href="callto:+359889217397"> +359 889 217 397</a></p>
 			
 		</span>
 		<span>
