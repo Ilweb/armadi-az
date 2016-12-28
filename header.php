@@ -23,7 +23,7 @@ global $woocommerce;
 		<span>
 			<img class="info" src="<?php bloginfo('template_directory'); ?>/images/info.png">
 			<div id="mquery">
-			<a href="callto:+359 889 217 397"> +359 889 217 397</a>
+			<a href="tel:+359 889 217 397"> +359 889 217 397</a>
 			<a href="mailto:info@armadiaz.com">info@armadiaz.com</a>
 
 </div>
