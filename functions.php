@@ -458,8 +458,8 @@ function woo_new_product_tab( $tabs ) {
 function woo_new_product_tab_content() {
 
 
-	
-	
+	global $post;
+	echo '<p>'.get_post_meta($post->ID, '_custom_text_field', true).'</p>';
 	
 }
 
@@ -468,9 +468,9 @@ function wc_custom_add_custom_fields() {
     // Print a custom text field
     woocommerce_wp_textarea_input( 
 	array( 
-		'id'          => '_textarea', 
+		'id'          => '_custom_text_field', 
 		'label'       => __( 'My Textarea', 'woocommerce' ), 
-		'placeholder' => '', 
+		'placeholder' => 'The placeolder!', 
 		'description' => __( 'Enter the custom value here.', 'woocommerce' ) 
 	
     ) );
