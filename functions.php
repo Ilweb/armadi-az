@@ -5,6 +5,7 @@ if (!session_id()) {
 }
 
 
+
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup()
 {
@@ -437,6 +438,7 @@ function filter_gateways($gateways){
 
 }
 
+
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
 
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
@@ -457,6 +459,25 @@ function woo_new_product_tab_content() {
 
 
 	
-	echo '<p>Here\'s your new product tab.</p>';
 	
+	
+}
+
+add_action( 'woocommerce_product_options_general_product_data', 'wc_custom_add_custom_fields' );
+function wc_custom_add_custom_fields() {
+    // Print a custom text field
+    woocommerce_wp_textarea_input( 
+	array( 
+		'id'          => '_textarea', 
+		'label'       => __( 'My Textarea', 'woocommerce' ), 
+		'placeholder' => '', 
+		'description' => __( 'Enter the custom value here.', 'woocommerce' ) 
+	
+    ) );
+}
+add_action( 'woocommerce_process_product_meta', 'wc_custom_save_custom_fields' );
+function wc_custom_save_custom_fields( $post_id ) {
+    if ( ! empty( $_POST['_custom_text_field'] ) ) {
+        update_post_meta( $post_id, '_custom_text_field', esc_attr( $_POST['_custom_text_field'] ) );
+    }
 }

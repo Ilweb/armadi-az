@@ -37,6 +37,7 @@ if ( ! empty( $tabs ) ) : ?>
 					<?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?>
 				</li>
 			<?php endforeach; ?>
+			
 		</ul>
 		
 	</div>

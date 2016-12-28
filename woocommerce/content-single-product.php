@@ -98,6 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 			<div>
+
 			<?php
 			woocommerce_template_single_rating();
 			?>
@@ -122,8 +123,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			</div>
 			<div class="description">
+
 			<?php
 		 woocommerce_output_product_data_tabs();
+		
+		 get_post_meta( $product_id, '_custom_text_field', true );
 		?>
 
 				<!--<fieldset>
@@ -140,6 +144,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		
 			
 	</div>
+
 
 				<?php
 					/**
