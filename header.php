@@ -15,6 +15,17 @@ global $woocommerce;
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<?php wp_head(); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/home.css?v=2">
+	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89263770-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body <?php body_class(get_locale()); ?> >
 <header>
