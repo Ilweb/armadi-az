@@ -443,16 +443,16 @@ add_filter('woocommerce_available_payment_gateways','filter_gateways');
 
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
-	
-	
-	// Adds the new tab
+	global $post;
 
-
-	$tabs['test_tab'] = array(
-		'title' 	=> pll__( 'Ingredient and Nutrition values', 'woocommerce' ),
-		'priority' 	=> 50,
-		'callback' 	=> 'woo_new_product_tab_content'
-	);
+	if (trim(get_post_meta($post->ID, '_custom_text_field', true)))
+	{
+		$tabs['test_tab'] = array(
+			'title' 	=> pll__( 'Ingredient and Nutrition values', 'woocommerce' ),
+			'priority' 	=> 50,
+			'callback' 	=> 'woo_new_product_tab_content'
+		);
+	}
 
 	return $tabs;
 
@@ -460,8 +460,8 @@ function woo_new_product_tab( $tabs ) {
 }
 function woo_new_product_tab_content() {
 	global $post;
-		echo '<p>'.get_post_meta($post->ID, '_custom_text_field', true).'</p>';
 	
+	echo '<p>'.get_post_meta($post->ID, '_custom_text_field', true).'</p>';
 	
 }
 
