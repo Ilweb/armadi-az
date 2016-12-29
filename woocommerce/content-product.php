@@ -68,6 +68,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			}
 			
 			$q = $product->get_attribute("quantity-in-1-package");
+			$q1 = explode('|', $q);
+			if (count($q1) > 1)
+			{
+				sort($q1, SORT_NUMERIC);
+				
+				$q = trim($q1[0]).'~'.trim($q1[count($q1) - 1]);
+			}
 			$dimension = $product->get_attribute("package-size");
 	?>
 	</div>
