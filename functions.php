@@ -472,15 +472,12 @@ function wc_custom_add_custom_fields() {
     woocommerce_wp_textarea_input( 
 	array( 
 		'id'          => '_custom_text_field', 
-		'label'       => __( 'My Textarea', 'woocommerce' ), 
-		'placeholder' => 'The placeolder!', 
-		'description' => __( 'Enter the custom value here.', 'woocommerce' ) 
+		'label'       => __( 'Ingredient and Nutrition values', 'woocommerce' ), 
+		'placeholder' => 'If you add text here, a new tab will appear.'
 	
     ) );
 }
 add_action( 'woocommerce_process_product_meta', 'wc_custom_save_custom_fields' );
 function wc_custom_save_custom_fields( $post_id ) {
-    if ( ! empty( $_POST['_custom_text_field'] ) ) {
         update_post_meta( $post_id, '_custom_text_field', esc_attr( $_POST['_custom_text_field'] ) );
-    }
 }
