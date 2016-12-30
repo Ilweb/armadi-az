@@ -19,7 +19,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 global $comment;
 $rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 

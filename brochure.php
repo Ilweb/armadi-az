@@ -1,19 +1,17 @@
 
 
 <div id="slider">
-
-  <a  class="control_next"><i class="fa fa-angle-right"></i></a>
-  <a  class="control_prev"><i class="fa fa-angle-left"></i></a>
-   <div class="diagonal">
- 
-<p><?php pll_e('Promo line 1'); ?> </p>
-</div>
+	<a class="control_next"><i class="fa fa-angle-right"></i></a>
+	<a class="control_prev"><i class="fa fa-angle-left"></i></a>
+		<div class="diagonal">
+			<p><?php pll_e('Promo line 1'); ?> </p>
+		</div>
   <ul>
-  <li>
-  <div class="img">
-  	<img class="pageOne" src="<?php bloginfo('template_directory'); ?>/images/p2.png">
-  	</div>
-  </li>
+  	<li>
+		<div class="img">
+			<img class="pageOne" src="<?php bloginfo('template_directory'); ?>/images/p2.png">
+		</div>
+	</li>
   
         <?php
         $args = array(
@@ -67,17 +65,17 @@
 					$props = wc_get_product_attachment_props( get_post_thumbnail_id(), $post );
 					?>
 
-					<div class="img2">
-						<a href="<?php echo get_permalink(); ?>">
-						<div class="bigImg">
-							<img  src="<?php echo esc_url( $props['url'] ); ?>" alt="<?php the_title(); ?>"/>
-						</div>
-						<div class="bigInfo">
-							<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
+		<div class="img2">
+			<a href="<?php echo get_permalink(); ?>">
+				<div class="bigImg">
+					<img  src="<?php echo esc_url( $props['url'] ); ?>" alt="<?php the_title(); ?>"/>
+				</div>
+					<div class="bigInfo">
+						<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
 							<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
 							<p class="listItem"><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
-						</div>
 					</div>
+		</div>
 					<?php
 				}
 				else
@@ -89,17 +87,15 @@
 						setup_postdata( $product->post ); 
 						?>
 
-						<div class="img1"> 
-					  
-						   
-							<a href="<?php echo get_permalink(); ?>">
-							 <div class="conta">
-							<?php woocommerce_template_loop_product_thumbnail(); ?>
-							</div>
-							<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
-							<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
-							<p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
-						</div>
+		<div class="img1"> 
+			<a href="<?php echo get_permalink(); ?>">
+				 <div class="conta">
+					<?php woocommerce_template_loop_product_thumbnail(); ?>
+				</div>
+					<h4><?php the_title(); ?> - <span><?php woocommerce_template_loop_price(); ?></span></a>
+						<a href="<?php echo $product->add_to_cart_url(); ?>"><i class=" fa-shopping-cart " aria-hidden="true"></i></a></h4>
+						<p><?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?></p>
+		</div>
 
 						
 						<?php

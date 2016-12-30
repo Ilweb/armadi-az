@@ -445,6 +445,7 @@ add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
 function woo_new_product_tab( $tabs ) {
 	
 	
+
 	// Adds the new tab
 
 
@@ -462,7 +463,7 @@ function woo_new_product_tab_content() {
 	global $post;
 		echo '<p>'.get_post_meta($post->ID, '_custom_text_field', true).'</p>';
 	
-	
+
 }
 
 

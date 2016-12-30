@@ -126,10 +126,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php
 		 woocommerce_output_product_data_tabs();
-		
-		 get_post_meta( $product_id, '_custom_text_field', true );
-		?>
 
+		?>
+		
 				<!--<fieldset>
 
 					<legend id="descr">Description</legend>
