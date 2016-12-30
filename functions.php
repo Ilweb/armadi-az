@@ -367,6 +367,18 @@ function increase_order_stock($order) {
 	}
 }
 
+function increase_on_change($order_id)
+{
+	$order = new WC_Order( $order_id );
+	
+	increase_order_stock($order);
+}
+
+add_action('woocommerce_order_status_pending_to_cancelled', 'increase_on_change');
+add_action('woocommerce_order_status_processing_to_cancelled', 'increase_on_change');
+add_action('woocommerce_order_status_on-hold_to_cancelled', 'increase_on_change');
+
+
 function add_your_gateway_class( $methods ) {
 	$methods[] = 'WC_Gateway_MyPayment';
 	return $methods;
@@ -439,8 +451,6 @@ function filter_gateways($gateways){
 	return $gateways;
 
 }
-
-
 add_filter('woocommerce_available_payment_gateways','filter_gateways');
 
 add_filter( 'woocommerce_product_tabs', 'woo_new_product_tab' );
