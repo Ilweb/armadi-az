@@ -62,6 +62,7 @@
 		</div>
 	</div>
 	<div>
+		<form action="<?php echo home_url(); ?>/?na=s" method="post"  onsubmit="return newsletter_check(this)">
 		<ul>
 			<?php
 			echo '<li><h4>';
@@ -69,13 +70,28 @@
 			echo '</h4></li>';
 			?>
 			<li>
-					<input type="text" placeholder="email"></input>
+					<input type="text" name="ne" placeholder="<?php _e( 'Email address', 'woocommerce' ); ?>"></input>
 			</li>
 			<li>
-					<button id="sec_input"><a href="#">subscribe</a></button>
+					<button id="sec_input" type="submit"><?php pll_e('Subscribe'); ?></button>
 			</li>
 		</ul>
+		<form/>
 	</div>
 </footer>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+	window.newsletter_check = function (f) {
+		var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+		if (!re.test(f.elements["ne"].value)) {
+			alert("<?php pll_e('Invalid email address'); ?>");
+			return false;
+		}
+		return true;
+	}
+}
+//]]>
+</script>
 <?php wp_footer(); ?>
 </body>

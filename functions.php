@@ -43,6 +43,8 @@ function my_theme_setup()
 	pll_register_string('footer', 'Contact Us');
 	pll_register_string('footer', 'Follow Us');
 	pll_register_string('footer', 'Newsletter');
+	pll_register_string('footer', 'Subscribe');
+	pll_register_string('footer', 'Invalid email address');
 	pll_register_string('Filters', 'Subcategory');
 	pll_register_string('Filters', 'Filters');	
 	pll_register_string('Promo line', 'Active brochure category');
