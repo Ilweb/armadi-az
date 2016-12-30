@@ -49,6 +49,9 @@ header div:nth-of-type(3) div {
 .woocommerce-result-count {
     color: #FFffff;
 }
+.wishlist_table tr td.product-thumbnail{
+    text-align: center;
+}
 /*Product HEADER*/
 /*Products inner*/
 
