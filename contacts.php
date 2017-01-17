@@ -29,7 +29,7 @@ if (isset($_POST['cemail']) && isset($captcha) && $captcha)
 		echo '<div class="col2" style="padding: 20px 0;">';
 		if (wp_mail( $to, $subject, $message, $headers ))
 		{
-			echo '<h6>'.pll('Your message was sent successfully', 'cmi').'</h6>';
+			echo '<h6>'.pll('Your message was sent successfully').'</h6>';
 		}
 		
 		echo $message;
@@ -76,7 +76,7 @@ else
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<div class="g-recaptcha" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
-				<input type="button" onclick="sendMessage();" class="btn btn-default btn-color-border-solid" value="Изпрати">
+				<input type="button" onclick="sendMessage();" class="btn btn-default btn-color-border-solid" value="<?php _e('Send'); ?>">
 			</div>
 		</div>
 	</form>
