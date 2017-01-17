@@ -709,8 +709,8 @@ p {
 .bundled_product_summary .details {
     float: none !important;
 }
-.bundled_product_summary {
-  padding-left: 0;
+.bundled_form .bundled_product_summary {
+  padding-left: 0 !important;
 }
 header div span .supp {
     font-weight: bold;
