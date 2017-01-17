@@ -76,6 +76,7 @@ function my_theme_setup()
 	pll_register_string('contacts', 'Message');
 	pll_register_string('contacts', 'Invalid E-mail address');
 	pll_register_string('contacts', 'Please, fill in all the required fields');
+	pll_register_string('contacts', 'Send');
 }
 
 function wooc_extra_register_fields() {
