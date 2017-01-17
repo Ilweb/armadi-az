@@ -1504,6 +1504,7 @@ label {
 #brochure {
     min-height: 1100px;
 }
+
 .generals div .fa {
     margin-top: 0;
     display: none;
@@ -1654,6 +1655,7 @@ p.meta {
     vertical-align: middle;
     right: 0;
 }
+
 /******ARTICLES******/
 /* Slideshow container */
 
@@ -1754,6 +1756,11 @@ p.meta {
     min-width: 75%;
     display: inline-block;
     margin-right: 1em;
+}
+
+.col{
+    width: 60%;
+    margin: 0 auto
 }
 @-webkit-keyframes fade {
     from {
@@ -2095,17 +2102,18 @@ div.line {
     margin-right: 17%;
 }
 
-label {
-    z-index: 1;
-    margin-top: 6px;
-    right: 10px;
-}
 .bl {
     height: 200px;
     top: -14%;
     text-align: left;
     width: 100%;
 }
+.col{
+    width: 80%;
+    margin:0 auto;
+}
+.form-group
+
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
@@ -2113,6 +2121,7 @@ label {
     background-color: none;
     color: #000;
 }
+l
 .country {
     font-weight: 700;
 }
