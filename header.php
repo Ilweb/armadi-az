@@ -7,7 +7,6 @@ global $woocommerce;
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo("charset") ?>">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/lightbox.css?v=1">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css?v=1">
 
 	
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -101,7 +100,6 @@ global $woocommerce;
 </div>
 </header>
 <script src=" <?php bloginfo('template_directory'); ?>/js/lightbox.js"></script>
-<script src=" <?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
 <script>
 	$(document).ready(function(){
 	    $("button").click(function(){

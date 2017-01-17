@@ -1,3 +1,5 @@
+<script src=" <?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css?v=1">
 <?php
 if(isset($_POST['g-recaptcha-response']))
 {
@@ -6,7 +8,7 @@ if(isset($_POST['g-recaptcha-response']))
 
 if (isset($_POST['cemail']) && isset($captcha) && $captcha)
 {
-	$secretKey = "6Le7VicTAAAAAEp1H8R_eHUloh1q9n7XtHXGarf4";
+	$secretKey = "6LcrIhIUAAAAAOt4V6l8EijduFaSUpspm04Lmqwf";
 	$ip = $_SERVER['REMOTE_ADDR'];
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
 	$responseKeys = json_decode($response,true);
@@ -42,7 +44,9 @@ else
 	}
 	?>
 
-				
+	
+
+
 	<form id="contact" method="post" accept-charset="utf-8">
 		<div class="row">
 			<div class="col-md-4"></div>
@@ -71,7 +75,7 @@ else
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
-				<div class="g-recaptcha" data-sitekey="6Le7VicTAAAAANFjOD0yrHW55kO7A_41m4DfJGps"></div>
+				<div class="g-recaptcha" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
 				<input type="button" onclick="sendMessage();" class="btn btn-default btn-color-border-solid" value="Изпрати">
 			</div>
 		</div>
