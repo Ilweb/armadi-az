@@ -67,7 +67,7 @@ else
 		<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
 	
 				<div class="g-recaptcha"  style="padding: 10px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
-				<input type="button"   onclick="sendMessage();" class="hvr-shadow-radial" style="margin-left:  10px;" value="<?php pll_e('Send'); ?>">
+				<a href="buttona"   onclick="sendMessage();" class="hvr-shadow-radial"  value="<?php pll_e('Send'); ?>"></a>
 		</div>
 	</form>
 	<?php

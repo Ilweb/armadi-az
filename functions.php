@@ -77,6 +77,7 @@ function my_theme_setup()
 	pll_register_string('contacts', 'Invalid E-mail address');
 	pll_register_string('contacts', 'Please, fill in all the required fields');
 	pll_register_string('contacts', 'Send');
+	pll_register_string('contacts', 'Name');
 }
 
 function wooc_extra_register_fields() {
@@ -500,3 +501,21 @@ add_action( 'woocommerce_process_product_meta', 'wc_custom_save_custom_fields' )
 function wc_custom_save_custom_fields( $post_id ) {
         update_post_meta( $post_id, '_custom_text_field', esc_attr( $_POST['_custom_text_field'] ) );
 }
+
+function my_handling_function( $comment_data ) {
+     //var_dump($_POST, $comment_data);
+	wc_add_notice('Please confirm not robot', 'error');
+	 //exit;
+	$secretKey = "6LcrIhIUAAAAAOt4V6l8EijduFaSUpspm04Lmqwf";
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+	$responseKeys = json_decode($response,true);
+	
+	if(intval($responseKeys["success"]) != 1) 
+	{
+		wp_die(pll__('Please confirm not robot'));
+	}
+	
+	return $comment_data;
+}
+add_filter( 'preprocess_comment', 'my_handling_function' );
