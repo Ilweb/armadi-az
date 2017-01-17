@@ -708,6 +708,10 @@ p {
 .bundled_product_summary .details {
     float: none !important;
 }
+.bundled_product_summary .details {
+    float: left;
+    width: 64%;
+}
 header div span .supp {
     font-weight: bold;
     font-weight: 14px !important;
@@ -3464,10 +3468,7 @@ p.txt1 {
 
         bottom: -68px;
     }
-    .bundled_product_summary .details {
-  
-    width: 58%;
-}
+
     #mquery {
         left: 0;
         height: 24px;
