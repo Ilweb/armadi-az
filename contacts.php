@@ -52,22 +52,23 @@ else
 		<div class="col" style="width: 50%; margin: 0 auto;">
 				<div class="form-group required"  style="padding: 10px;">
 					<label for="name" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e( 'Name', 'woocommerce' ); ?> </label>
-					<input type="text" style="width: 300px;" class="form-control" id="name" name="cname"/>
+					<input type="text" style="width: 100%;" class="form-control" id="name" name="cname"/>
 				</div>
 				<div class="form-group required"  style="padding: 10px;">
 					<label for="email" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e( 'Email address', 'woocommerce' ); ?></label>
-					<input type="text" style="width: 300px;" id="email" class="form-control" name="cemail"/>
+					<input type="text" style="width: 100%;" id="email" class="form-control" name="cemail"/>
 				</div>
 		
 				<div class="form-group required"  style="padding: 10px;">
 					<label for="message" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e('Message'); ?></label>
-					<textarea class="form-control message" style="width: 300px;" id="message" name="cmessage" ></textarea>
+					<textarea class="form-control message" style="width: 100%;" id="message" name="cmessage" ></textarea>
 				</div>
 		
 		<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
 	
 				<div class="g-recaptcha"  style="padding: 10px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
-				<a href="buttona"   onclick="sendMessage();" class="hvr-shadow-radial"  value="<?php pll_e('Send'); ?>"></a>
+			
+				<a href="#" style="padding: 10px;text-align: center;width: 180px; font-weight: 700; text-transform: uppercase;" class="hvr-shadow-radial"  onclick="sendMessage();"><?php pll_e('Send'); ?></a>
 		</div>
 	</form>
 	<?php
