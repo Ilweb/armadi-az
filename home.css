@@ -41,6 +41,7 @@ header div:nth-of-type(3) div {
     -ms-transition: 0.5s left;
     -o-transition: 0.5s left;
 }
+
 .page-title {
     padding: 20px 0;
     margin: 0;
@@ -1942,6 +1943,7 @@ select {
     visibility: visible;
     font-size: .83em;
 }
+
 .items .choice {
     position: relative;
     top: 0;
@@ -1957,6 +1959,13 @@ select {
     left: 48%;
     top: 0;
 }
+.btn-default {
+    color: #333;
+    padding-top: 2px;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
 .yith-wcwl-add-to-wishlist,
 .yith-wcwl-add-to-wishlist div {
     margin: 0 !important;

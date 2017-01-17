@@ -70,6 +70,10 @@ function my_theme_setup()
 	pll_register_string('welcome', 'Enjoy shopping with us!');
 	pll_register_string('How to pay', 'preliminary order');	
 	pll_register_string('tabs','Ingredient and Nutrition values');	
+	pll_register_string('contacts', ' Please confirm not robot');
+	pll_register_string('contacts', 'Message' );
+	pll_register_string('contacts', 'Send' );
+}
 }
 
 function wooc_extra_register_fields() {

@@ -41,33 +41,40 @@ else
 		?><div class="alert alert-danger"><?php pll_e('Please confirm not robot'); ?></div><?php
 	}
 	?>
+
+				
 	<form id="contact" method="post" accept-charset="utf-8">
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="form-group">
-					<label for="name" class="sr-only"><?php pll_e('Name'); ?></label>
-					<i class="glyphicon glyphicon-user"><input type="text" class="form-control" name="cname"/></i>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="form-group required">
+					<label for="name" class="only"><?php pll_e( 'First name', 'woocommerce' ); ?> / <?php pll_e( 'Last name', 'woocommerce' ); ?></label>
+					<input type="text" class="form-control" id="name" name="cname"/>
 				</div>
-				<div class="form-group">
-					<label for="email" class="sr-only"><?php pll_e('email'); ?></label>
-					<i class="glyphicon glyphicon-erase"><input type="text" class="form-control" name="cemail"/></i>
+				<div class="form-group required">
+					<label for="email" class="only"><?php pll_e( 'Email address', 'woocommerce' ); ?></label>
+					<input type="text" id="email" class="form-control" name="cemail"/></i>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-12">
-				<div class="form-group">
-					<label for="message" class="sr-only"><?php pll_e('Message'); ?></label>
-					<i class="glyphicon glyphicon-pencil"><textarea class="form-control message" id="message" name="cmessage" placeholder="<?php _e('Message', 'cmi'); ?>"></textarea></i>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="form-group required">
+					<label for="message" class="only"><?php pll_e('Message'); ?></label>
+					<textarea class="form-control message" id="message" name="cmessage" placeholder="<?php _e('Message'); ?>"></textarea>
 				</div>
 			</div>
 		</div>
 		
 		<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
-
-		<div class="g-recaptcha" data-sitekey="6Le7VicTAAAAANFjOD0yrHW55kO7A_41m4DfJGps"></div>
-		
-		<input type="button" onclick="sendMessage();" class="btn btn-default btn-color-border-solid" value="Изпрати">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="g-recaptcha" data-sitekey="6Le7VicTAAAAANFjOD0yrHW55kO7A_41m4DfJGps"></div>
+				<input type="button" onclick="sendMessage();" class="btn btn-default btn-color-border-solid" value="Изпрати">
+			</div>
+		</div>
 	</form>
 	<?php
 }
