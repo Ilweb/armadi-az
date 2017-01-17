@@ -28,10 +28,10 @@ if (isset($_POST['cemail']) && isset($captcha) && $captcha)
 		echo '<div class="col2" style="padding: 20px 0;">';
 		if (wp_mail( $to, $subject, $message, $headers ))
 		{
-			echo '<h6>'.pll_e('Your message was sent successfully').'</h6>';
+			echo '<strong style="color: green;">'.pll__('Your message was sent successfully').'</strong>';
 		}
 		
-		echo $message;
+		//echo $message;
 		echo '</div>';
 	}
 }
@@ -39,7 +39,7 @@ else
 {
 	if (isset($captcha) && !$captcha)
 	{
-		?><div class="alert alert-danger"><?php pll_e('Please confirm not robot'); ?></div><?php
+		?><div style="text-align: center; color: red;"><?php pll_e('Please confirm not robot'); ?></div><?php
 	}
 	?>
 
@@ -51,16 +51,16 @@ else
 		
 		<div class="col" style="width: 50%; margin: 0 auto;">
 				<div class="form-group required"  style="padding: 10px;">
-					<label for="name" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e( 'Name', 'woocommerce' ); ?> </label>
+					<label for="name" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e( 'Name' ); ?> *</label>
 					<input type="text" style="width: 100%;" class="form-control" id="name" name="cname"/>
 				</div>
 				<div class="form-group required"  style="padding: 10px;">
-					<label for="email" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e( 'Email address', 'woocommerce' ); ?></label>
+					<label for="email" style="display: block; color: #000;font-weight: 700;" class="only"><?php _e( 'Email address', 'woocommerce' ); ?> *</label>
 					<input type="text" style="width: 100%;" id="email" class="form-control" name="cemail"/>
 				</div>
 		
 				<div class="form-group required"  style="padding: 10px;">
-					<label for="message" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e('Message'); ?></label>
+					<label for="message" style="display: block; color: #000;font-weight: 700;" class="only"><?php pll_e('Message'); ?> *</label>
 					<textarea class="form-control message" style="width: 100%;" id="message" name="cmessage" ></textarea>
 				</div>
 		
@@ -68,7 +68,7 @@ else
 	
 				<div class="g-recaptcha"  style="padding: 10px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
 			
-				<a href="#" style="padding: 10px;text-align: center;width: 180px; font-weight: 700; text-transform: uppercase;" class="hvr-shadow-radial"  onclick="sendMessage();"><?php pll_e('Send'); ?></a>
+				<a style="cursor: pointer; padding: 10px;text-align: center;width: 180px; font-weight: 700; text-transform: uppercase;" class="hvr-shadow-radial"  onclick="sendMessage();"><?php pll_e('Send'); ?></a>
 		</div>
 	</form>
 	<?php

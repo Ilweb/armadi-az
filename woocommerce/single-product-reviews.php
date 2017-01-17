@@ -97,12 +97,11 @@ if ( ! comments_open() ) {
 					}
 
 					$comment_form['comment_field'] .= '<p class="comment-form-comment "><label for="comment">' . __( 'Your Review', 'woocommerce' ) . ' <span class="required ">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" required></textarea></p>';
-
+					$comment_form['comment_field'] .= '<script src="https://www.google.com/recaptcha/api.js?hl='.pll_current_language().'"></script>';
+					$comment_form['comment_field'] .= '<div style="text-align: center;"><div class="g-recaptcha"  style="padding: 10px; margin: 0 auto; width: 300px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div></div>';
+					
 					comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
-				<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
-	
-				<div class="g-recaptcha"  style="padding: 10px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
 			</div>
 
 		</div>

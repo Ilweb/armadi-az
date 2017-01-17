@@ -503,9 +503,7 @@ function wc_custom_save_custom_fields( $post_id ) {
 }
 
 function my_handling_function( $comment_data ) {
-     //var_dump($_POST, $comment_data);
-	wc_add_notice('Please confirm not robot', 'error');
-	 //exit;
+    $captcha=$_POST['g-recaptcha-response'];
 	$secretKey = "6LcrIhIUAAAAAOt4V6l8EijduFaSUpspm04Lmqwf";
 	$ip = $_SERVER['REMOTE_ADDR'];
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
