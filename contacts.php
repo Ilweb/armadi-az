@@ -28,7 +28,7 @@ if (isset($_POST['cemail']) && isset($captcha) && $captcha)
 		echo '<div class="col2" style="padding: 20px 0;">';
 		if (wp_mail( $to, $subject, $message, $headers ))
 		{
-			echo '<h6>'.pll('Your message was sent successfully').'</h6>';
+			echo '<h6>'.pll_e('Your message was sent successfully').'</h6>';
 		}
 		
 		echo $message;
