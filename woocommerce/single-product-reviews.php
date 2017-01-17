@@ -100,10 +100,11 @@ if ( ! comments_open() ) {
 
 					comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
-			</div>
-			<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
+				<script src='https://www.google.com/recaptcha/api.js?hl=<?php echo pll_current_language(); ?>'></script>
 	
 				<div class="g-recaptcha"  style="padding: 10px;" data-sitekey="6LcrIhIUAAAAAAxYS6cLGGMdPHKS5Pjgz_GJKhNl"></div>
+			</div>
+
 		</div>
 
 	<?php else : ?>
