@@ -3464,6 +3464,10 @@ p.txt1 {
 
         bottom: -68px;
     }
+    .bundled_product_summary .details {
+  
+    width: 58%;
+}
     #mquery {
         left: 0;
         height: 24px;
