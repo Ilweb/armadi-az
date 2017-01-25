@@ -119,7 +119,7 @@ global $woocommerce;
 	jQuery(".search").click(function()
 
 		{
-			jQuery("#first").fadeToggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
+			jQuery("#first").toggle(1000).css("position","absolute").css("top","18px").css("right","55px").css("background","#fff5e6").css("width","120px")
 		});
 
 </script>

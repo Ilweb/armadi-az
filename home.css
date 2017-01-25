@@ -1855,6 +1855,14 @@ p.meta {
     background: #3c322d;
     color: White;
 }
+.bundled_product_summary .bundled_product_images {
+    float: left;
+    margin-left: 0 !important;
+}
+.bundled_product_summary {
+    padding-left: 0 !important;
+    padding-bottom: 20px;
+}
 .recipe_content div div div:first-of-type {
     border: none;
 }
