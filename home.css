@@ -2674,6 +2674,10 @@ td.product-name {
     width: 100%;
     bottom: 0
 }
+.single .second-part .the_content a{
+    color: blue;
+    text-decoration: underline;
+}
 .one {
     background-image: url('images/i1.png');
 }
