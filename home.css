@@ -2581,7 +2581,8 @@ h1 {
     text-align: center;
     font-weight: 300;
 }
-.blog .containerImg{
+.blog .containerImg,
+.category .containerImg{
     margin-top: 50px;
 }
 .blog h2{
@@ -2591,12 +2592,14 @@ h1 {
     font-size: 30px;
     font-weight: 300;
 }
- .blog .image-container {
+ .blog .image-container,
+ .category .image-container {
     position: relative;
         height: auto;
     width: 100%;
 }
-.blog .image-container .after {
+.blog .image-container .after,
+.category .image-container .after{
     position: relative;
     bottom: 145px;
     left: 0;
@@ -3507,14 +3510,16 @@ p.txt1 {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
-    .blog h2 {
+    .blog h2 ,
+    .category h2{
     color: #fff;
     text-align: left;
     padding: 20px;
     font-size: 18px;
     font-weight: 300;
 }
-.blog .image-container .after {
+.blog .image-container .after,
+.category .image-container .after  {
     position: absolute;
     bottom: 0;
     left: 0;
