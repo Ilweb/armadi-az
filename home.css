@@ -2603,7 +2603,7 @@ h1 {
 }
 .blog .image-container .after,
 .category .image-container .after{
-    position: relative;
+  
     bottom: 145px;
     left: 0;
     width: 100%;
