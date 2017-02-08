@@ -2415,7 +2415,9 @@ button[name="update_cart"] {
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
-.blog .second-part{
+.blog .second-part,
+.category .second-part
+{
     margin: 0 16px;
 }
 .center {
@@ -2585,7 +2587,8 @@ h1 {
 .category .containerImg{
     margin-top: 50px;
 }
-.blog h2{
+.blog h2,
+.category h2{
      color: #fff;
     text-align: left;
     padding:20px;
