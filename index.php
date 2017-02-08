@@ -1,7 +1,6 @@
 <?php
 get_header();
 
-get_template_part('brochure');
 ?>
 <div class="centerPage">
 	<div class="second-part">
