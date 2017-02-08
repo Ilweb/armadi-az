@@ -11,7 +11,8 @@ get_template_part('brochure');
 		{
 			the_post(); 
 			?>
-			<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+			<div class="image-container">
+			<a href="<?php the_permalink(); ?>"><div class="after"><h2><?php the_title(); ?></h2></div>
 				<div class="containerImg">
 				<?php
 				if (has_post_thumbnail())
@@ -30,6 +31,8 @@ get_template_part('brochure');
 			<?php
 		}
 		?>
+		</a>
+		</div>
 		</div>
 
 	</div>

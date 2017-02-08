@@ -2409,15 +2409,20 @@ button[name="update_cart"] {
 .the_content h6 {
     float: right;
 }
-.page-template-default .second-part {
+.page-template-default .second-part,
+.single .second-part
+{
     margin-left: 2.5%;
     margin-right: 2.5%;
+}
+.blog .second-part{
+    margin: 0 16px;
 }
 .center {
     text-align: center;
 }
 .containerImg img {
-    height: 463px;
+    height: auto;
     width: 100%;
 }
 .wishlist_table tr:hover {
@@ -2576,6 +2581,32 @@ h1 {
     text-align: center;
     font-weight: 300;
 }
+.blog .containerImg{
+    margin-top: 50px;
+}
+.blog h2{
+     color: #fff;
+    text-align: left;
+    padding:20px;
+    font-size: 30px;
+    font-weight: 300;
+}
+ .blog .image-container {
+    position: relative;
+        height: auto;
+    width: 100%;
+}
+.blog .image-container .after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+     display: block;
+    background: rgba(0, 0, 0, .6);
+    color: #FFF;
+}
+
 .conta {
     width: 95%;
     vertical-align: middle;
@@ -3472,6 +3503,13 @@ p.txt1 {
     .woocommerce div.product form.cart .variations select {
         width: 100%;
     }
+    .blog h2 {
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
    .woocommerce-page #payment #place_order {
 
         bottom: -68px;
