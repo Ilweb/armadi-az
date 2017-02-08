@@ -12,7 +12,6 @@ get_header();
 			?>
 			<div class="image-container">
 			<a href="<?php the_permalink(); ?>">
-				<div class="containerImg">
 				<?php
 				if (has_post_thumbnail())
 				{
@@ -20,14 +19,21 @@ get_header();
 					$img_srcset = wp_get_attachment_image_srcset( get_post_thumbnail_id(), 'post-thumbnail' );
 					$alt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 					?>
-					<img src="<?php echo esc_url( $img_src ); ?>"
-						 srcset="<?php echo esc_attr( $img_srcset ); ?>"
-						 sizes="(max-width: 100%) 100vh, 100%" alt="<?php echo $alt; ?>"/>
-					<?php echo get_post(get_post_thumbnail_id())->post_content; 
+					<div class="containerImg">
+						<img src="<?php echo esc_url( $img_src ); ?>"
+							 srcset="<?php echo esc_attr( $img_srcset ); ?>"
+							 sizes="(max-width: 100%) 100vh, 100%" alt="<?php echo $alt; ?>"/>
+						<div class="after"><h2><?php the_title(); ?></h2></div>
+					</div>
+					<?php 
+				}
+				else
+				{
+					?>
+					<div class="after"><h2><?php the_title(); ?></h2></div>
+					<?php
 				}
 				?>
-				</div>
-				<div class="after"><h2><?php the_title(); ?></h2></div>
 				</a>
 			</div>
 			<?php
