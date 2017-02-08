@@ -2597,8 +2597,8 @@ h1 {
     width: 100%;
 }
 .blog .image-container .after {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 145px;
     left: 0;
     width: 100%;
     height: auto;
@@ -3513,6 +3513,16 @@ p.txt1 {
     padding: 20px;
     font-size: 18px;
     font-weight: 300;
+}
+.blog .image-container .after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, .6);
+    color: #FFF;
 }
    .woocommerce-page #payment #place_order {
 
