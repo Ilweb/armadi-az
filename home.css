@@ -2674,7 +2674,7 @@ td.product-name {
     width: 100%;
     bottom: 0
 }
-.single .second-part .the_content a{
+.single .second-part .the_content a strong{
     color: blue;
     text-decoration: underline;
 }
