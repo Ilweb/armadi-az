@@ -3523,7 +3523,7 @@ p.txt1 {
 }
 .blog .image-container .after,
 .category .image-container .after  {
-    position: absolute;
+
     bottom: 0;
     left: 0;
     width: 100%;
