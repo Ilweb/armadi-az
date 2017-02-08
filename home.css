@@ -2551,66 +2551,75 @@ button[name="update_cart"] {
     background-color: transparent;
     color: #fff;
 }
-#slider .bigImg {
-    width: 60%;
-    float: left;
-}
-#slider .bigImg img {
-    max-width: 100%;
-    max-height: 100%;
-}
-#slider .bigInfo {
-    text-align: left;
-    width: 38%;
-    float: right;
-}
-#slider .bigInfo p {
-    text-align: justify;
-    line-height: 1.5;
-    width: 80%;
-}
-.img2 h4 {
-    width: 80%;
-    color: #000;
-    height: 60px;
-    border-bottom: 1px solid #000;
-}
-.img2 h4 a {
-    color: #000;
-}
-h1 {
-    color: #fff;
-    text-align: center;
-    font-weight: 300;
-}
-.blog .containerImg,
-.category .containerImg{
-    margin-top: 50px;
-}
-.blog h2,
-.category h2{
-     color: #fff;
-    text-align: left;
-    padding:20px;
-    font-size: 30px;
-    font-weight: 300;
-}
- .blog .image-container,
- .category .image-container {
-    position: relative;
+    #slider .bigImg {
+        width: 60%;
+        float: left;
+    }
+    #slider .bigImg img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #slider .bigInfo {
+        text-align: left;
+        width: 38%;
+        float: right;
+    }
+    #slider .bigInfo p {
+        text-align: justify;
+        line-height: 1.5;
+        width: 80%;
+    }
+    .img2 h4 {
+        width: 80%;
+        color: #000;
+        height: 60px;
+        border-bottom: 1px solid #000;
+    }
+    .img2 h4 a {
+        color: #000;
+    }
+    h1 {
+        color: #fff;
+        text-align: center;
+        font-weight: 300;
+    }
+    .blog .containerImg,
+    .category .containerImg{
+        margin-top: 50px;
+    }
+    .blog h2,
+    .category h2{
+        color: #fff;
+        text-align: left;
+        padding:20px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+     .blog .image-container,
+     .category .image-container {
+        position: relative;
+        min-height: 
+        width: 100%;
+    }
+    .blog .image-container .after,
+    .category .image-container .after{
+      position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
         height: auto;
-    width: 100%;
-}
-.blog .image-container .after,
-.category .image-container .after{
-  position: absolute;
-    bottom: 0;
-    left: 0;
+         display: block;
+        background: rgba(0, 0, 0, .6);
+        color: #FFF;
+    }   
+.blog .alone,
+.category .alone{
     width: 100%;
     height: auto;
-     display: block;
+    display: block;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
+    margin-top: 50px;
 }
 
 .conta {

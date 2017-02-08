@@ -30,7 +30,7 @@ get_header();
 				else
 				{
 					?>
-					<div class="after"><h2><?php the_title(); ?></h2></div>
+					<div class="alone"><h2><?php the_title(); ?></h2></div>
 					<?php
 				}
 				?>
