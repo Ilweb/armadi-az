@@ -25,7 +25,7 @@ get_header( 'shop' );
 <?php
 
 
-get_template_part('brochure');
+//get_template_part('brochure');
 ?>
 
 <div class="whole_products">
