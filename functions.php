@@ -198,78 +198,93 @@ class WC_Gateway_MyPayment extends WC_Payment_Gateway {
 			)
 		);
 	}
+	
+	public function process_payment( $order_id )
+	{
+		return array(
+			'result' => 'success',
+			'redirect' => pll_home_url(pll_current_language('slug')) . 'wc-api/obbpay/?order_id=' . $order_id
+		);
+	}
+}
 
-	public function process_payment( $order_id ) {
-		global $woocommerce;
-		$order = new WC_Order( $order_id );
+add_action( 'woocommerce_api_obbpay', 'obb_pay' );
 
-		// Reduce stock levels
-		$order->reduce_order_stock();
-		
-		if ($order->get_status() == 'failed')
-		{
-			$order->update_status('pending'); 
-		}
+function obb_pay( ) {
+	global $woocommerce;
+	if (!isset($_GET['order_id']) || !is_numeric($_GET['order_id']))
+	{
+		return;
+	}
+	$order_id = (int)$_GET['order_id'];
+	$order = new WC_Order( $order_id );
 
-		// Remove cart
-		$woocommerce->cart->empty_cart();
-		
-		$price = $order->get_total();
-		
-		require_once "./Universal/UniversalPlugin.php";
-		require_once "./Universal/UniversalPluginXMLFileParser.php";
-		require_once "./Universal/Framework.php";
-		
-		$currentContext = pll_home_url(pll_current_language('slug'));
-		//$currentContext = 'http://armadiaz.bg/UniversalTester/';
-		
-		$CGPipe = new UniversalPlugin(false);
-		//$CGPipe->setProtocol("");
-		$CGPipe->set("action", "1");	// 1 - Purchase, 4 - Authorization
-		$CGPipe->set("amt", $price);
-		$CGPipe->set("currencycode", "975");
-		$CGPipe->set("trackid", $order_id);
-		$CGPipe->set("langid", pll_current_language('locale'));
-		$CGPipe->set("responseurl", $currentContext.'wc-api/notify/'  );
-		$CGPipe->set("errorurl", $currentContext.'wc-api/failed/' );
-		
-		$CGPipe->setResourcePath('/home/armadiaz/resource.cgn');
-		$CGPipe->setTerminalAlias('ARMADIAZ OOD');
+	// Reduce stock levels
+	$order->reduce_order_stock();
+	
+	if ($order->get_status() == 'failed')
+	{
+		$order->update_status('pending'); 
+	}
 
-		$CGPipe->setTransactionType("PaymentInit");
-		$CGPipe->setVersion("1");
-		
-		$CGPipe->performTransaction();
-		
-		$respArray = $CGPipe->getResponseFields();
-		
-		if (isset($respArray["ERROR_CODE_TAG"])) {	
-			$error = $respArray["ERROR_CODE_TAG"];
-		}
-		else {
-			$error = '';
-		}
-		if (isset($respArray["ERROR_TEXT"])) {	
-			$errortext = $respArray["ERROR_TEXT"]; 
-		}
-		else {
-			$errortext = '';
-		}
-				
-		if (!empty($error)) {
-			echo "<h2>Error code: $error</h2>\r\n";
-			echo "<h2>Error message: $errortext</h2>\r\n"; 
-			if (!strcmp($error, "CM90100")) {
-				echo "Unable to invoke requested Command.<br/>\r\n";
-			}
-		} else {
-			if(isset($respArray['PAYMENTPAGE']) && isset($respArray['PAYMENTID'])) {	
-				$_SESSION['payments'][$respArray['PAYMENTID']] = $order_id;
+	// Remove cart
+	$woocommerce->cart->empty_cart();
+	
+	$price = $order->get_total();
+	
+	require_once "./Universal/UniversalPlugin.php";
+	require_once "./Universal/UniversalPluginXMLFileParser.php";
+	require_once "./Universal/Framework.php";
+	
+	$currentContext = pll_home_url(pll_current_language('slug'));
+	//$currentContext = 'http://armadiaz.bg/UniversalTester/';
+	
+	$CGPipe = new UniversalPlugin(false);
+	//$CGPipe->setProtocol("");
+	$CGPipe->set("action", "1");	// 1 - Purchase, 4 - Authorization
+	$CGPipe->set("amt", $price);
+	$CGPipe->set("currencycode", "975");
+	$CGPipe->set("trackid", $order_id);
+	$CGPipe->set("langid", pll_current_language('locale'));
+	$CGPipe->set("responseurl", $currentContext.'wc-api/notify/'  );
+	$CGPipe->set("errorurl", $currentContext.'wc-api/failed/' );
+	
+	$CGPipe->setResourcePath('/home/armadiaz/resource.cgn');
+	$CGPipe->setTerminalAlias('ARMADIAZ OOD');
+
+	$CGPipe->setTransactionType("PaymentInit");
+	$CGPipe->setVersion("1");
+	
+	$CGPipe->performTransaction();
+	
+	$respArray = $CGPipe->getResponseFields();
+	
+	if (isset($respArray["ERROR_CODE_TAG"])) {	
+		$error = $respArray["ERROR_CODE_TAG"];
+	}
+	else {
+		$error = '';
+	}
+	if (isset($respArray["ERROR_TEXT"])) {	
+		$errortext = $respArray["ERROR_TEXT"]; 
+	}
+	else {
+		$errortext = '';
+	}
 			
-				performGatewayRedirect($respArray['PAYMENTPAGE'], $respArray['PAYMENTID']);
-			}
-			exit;
+	if (!empty($error)) {
+		echo "<h2>Error code: $error</h2>\r\n";
+		echo "<h2>Error message: $errortext</h2>\r\n"; 
+		if (!strcmp($error, "CM90100")) {
+			echo "Unable to invoke requested Command.<br/>\r\n";
 		}
+	} else {
+		if(isset($respArray['PAYMENTPAGE']) && isset($respArray['PAYMENTID'])) {	
+			$_SESSION['payments'][$respArray['PAYMENTID']] = $order_id;
+		
+			performGatewayRedirect($respArray['PAYMENTPAGE'], $respArray['PAYMENTID']);
+		}
+		exit;
 	}
 }
 
@@ -342,7 +357,7 @@ function obb_failed()
 }
 
 function increase_order_stock($order) {
-	if ( 'yes' === get_option( 'woocommerce_manage_stock' ) && apply_filters( 'woocommerce_can_reduce_order_stock', true, $order ) && sizeof( $order->get_items() ) > 0 ) {
+	if ( 'yes' === get_option( 'woocommerce_manage_stock' ) && sizeof( $order->get_items() ) > 0 ) {
 		$_pf = new WC_Product_Factory();  
 		foreach ( $order->get_items() as $item ) {
 			if ( $item['product_id'] > 0 ) {
@@ -351,12 +366,11 @@ function increase_order_stock($order) {
 				foreach ($languages as $lang) {					
 					$id = pll_get_post($item['product_id'], $lang);
 					$_product = $_pf->get_product($id);
-					
 					if ( $_product && $_product->exists() && $_product->managing_stock() ) {
 						$qty       = apply_filters( 'woocommerce_order_item_quantity', $item['qty'], $order, $item );
 						$new_stock = $_product->increase_stock( $qty );
 						
-						if (pll_current_language() == $lang) {
+						if ('en' == $lang) {
 							$item_name = $_product->get_sku() ? $_product->get_sku(): $item['product_id'];
 							
 							if ( isset( $item['variation_id'] ) && $item['variation_id'] ) {
